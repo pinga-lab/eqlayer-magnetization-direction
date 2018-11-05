@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.11.5)  5 NOV 2018 17:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.11.5)  5 NOV 2018 20:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -225,17 +225,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (./methodology.tex) [3
 
 
-]
+] [4]
 No file eqlayer_magdir_manuscript.bbl.
 (./eqlayer_magdir_manuscript.aux (./abstract.aux) (./methodology.aux)) ) 
 Here is how much of TeX's memory you used:
- 2362 strings out of 494963
- 32103 string characters out of 6179647
- 90258 words of memory out of 5000000
- 5552 multiletter control sequences out of 15000+600000
+ 2365 strings out of 494963
+ 32130 string characters out of 6179647
+ 90282 words of memory out of 5000000
+ 5555 multiletter control sequences out of 15000+600000
  8672 words of font info for 31 fonts, out of 8000000 for 9000
  38 hyphenation exceptions out of 8191
- 41i,5n,28p,1719b,203s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,7n,28p,1719b,203s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive
@@ -247,10 +247,10 @@ blic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 10.pfb>
-Output written on eqlayer_magdir_manuscript.pdf (3 pages, 114956 bytes).
+Output written on eqlayer_magdir_manuscript.pdf (4 pages, 120132 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

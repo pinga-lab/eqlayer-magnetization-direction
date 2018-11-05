@@ -6,12 +6,36 @@
 Considering a Cartesian coordinate system with $x$-, $y$- and $z$-axis being oriented to north, east and downward, respectively. Let $\Delta T (x_i,y_i,z_i)$ be the total field anomaly, at the $i$-th position $(x_i,y_i,z_i)$, produced by a continuos layer located below the observation plane on the depth $z_c$, where $z_c > z_i$, and $p(x',y',z_c)$ is the distribution of magnetic dipoles per unit area over the layer surface. In this case, the total field anomaly produced by this continuous layer is given by the equation 
 
 \begin{equation}
-\Delta T(x_i,y_i,z_i) = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  p(x',y',z_c)  [\gamma_m \hat{\mathbf{F}}_0^T \mathbf{H} \,\hat{\mathbf{h}}] dx' \,dy'.
+\Delta T(x_i,y_i,z_i) = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  p(x',y',z_c)  [\gamma_m \hat{\mathbf{F}}_0^T \mathbf{H} \,\hat{\mathbf{h}}(\mathbf{q})] dx' \,dy',
 \label{eq:continuous_layer}
 \end{equation}
-where $\gamma_m$ is a constant proportional to the vaccum permeability, $\hat{\mathbf{F}}_0$ is a unit vector with the same direction of the geomagnetic field $\mathbf{F}_0$ and 
+where $\gamma_m$ is a constant proportional to the vaccum permeability, $\hat{\mathbf{F}}_0$ is a unit vector with the same direction of the geomagnetic field $\mathbf{F}_0$ and $\mathbf{H}$ is a $3 \times 3$ matrix equal to  
 
+ \begin{equation}
+   \mathbf{H} =
+   \left[ \begin{array}{ccc}
+   \partial_{xx} \phi & \partial_{xy} \phi &\partial_{xz} \phi \\  \partial_{yx} \phi & \partial_{yy} \phi &\partial_{yz} \phi \\  \partial_{zx} \phi &\partial_{zy}\phi  & \partial_{zz} \phi    
+   \end{array} \right] ,
+   \label{eq:H}
+ \end{equation}
+where $\partial_{\alpha \beta}\phi$, $\alpha = x, y, z$, $\beta = x, y, z$, is the second derivative of the function 
 
+\begin{equation}
+   \phi (x-x',y-y',z'- z_c) = \frac{1}{r} ,
+   \label{eq:phi}
+ \end{equation}
+where $r = [(x-x')^2 + (y-y')^2 + (z_c-z')^2]^{1/2}$ and $\hat{\mathbf{h}}(\mathbf{q})$ is a unit vector with the
+magnetization direction of the layer that depends on the vector $\mathbf{q}$ given by 
+
+ \begin{equation}
+   \mathbf{q} =
+   \left[ \begin{array}{c}
+   i  \\ 
+   d     
+   \end{array} \right] ,
+   \label{eq:q_vector}
+ \end{equation}
+ where $i$ and $d$ is the inclination and declination, respectively.
 
 % % Formulating foward problem 
 
