@@ -1,6 +1,9 @@
 \section{Methodology}
 \label{sec:methodology}
 
+\subsection{Fundamentals of magnetic equivalent layer}
+\label{subsec:mag_eqlayer}
+
 % % Explaining the continuous magnetic equivalent layer  
 
 Considering a Cartesian coordinate system with $x$-, $y$- and $z$-axis being oriented to north, east and downward, respectively. Let $\Delta T_i \equiv \Delta T (x_i,y_i,z_i)$ be the total field anomaly, at the $i$-th position $(x_i,y_i,z_i)$, produced by a continuos layer located below the observation plane on the depth $z_c$, where $z_c > z_i$, and $p(x',y',z_c)$ is the distribution of magnetic dipoles per unit area over the layer surface. In this case, the total field anomaly produced by this continuous layer is given by the equation 
@@ -53,14 +56,19 @@ g_{ij} (\mathbf{q})  = \gamma_m \hat{\mathbf{F}}_0^T \mathbf{H}_{ij} \hat{\mathb
 \end{equation}
 is a harmonic function that depends on the direction $\mathbf{q}$ of the dipole and the matrix $\mathbf{H}_{ij}$ is formed by the second derivatives of a function $\phi_{ij}$ that depends on $r_{ij} = [(x_i-x_j)^2 + (y_i-y_j)^2 + (z_i-z_c)^2]^{1/2}$, analogously to equation \ref{eq:H} and \ref{eq:phi}.
 
-Equation \ref{eq:tfa_pred_pos_i} represents the equivalent layer appproach. It is represented by the sum of the total field anomaly at the observation point $(x_i,y_i,z_i)$ produced by a set of $M$ ficticious equivalent sources, that is in this case a set of dipoles of unit volume, distributed on a horizontal plane at a constant depth $z_c$, each one with magnetic moment $p_j$ and magnetization direction $\mathbf{q}$. In matrix notation, the equation \ref{eq:tfa_pred_pos_i} can be represented as (PAREI AQUI!)
+Equation \ref{eq:tfa_pred_pos_i} represents the equivalent layer appproach. It is represented by the sum of the total field anomaly at the observation point $(x_i,y_i,z_i)$ produced by a set of $M$ ficticious equivalent sources, that is in this case a set of dipoles of unit volume, distributed on a horizontal plane at a constant depth $z_c$, each one with magnetic moment $p_j$ and magnetization direction $\mathbf{q}$. In matrix notation, the equation \ref{eq:tfa_pred_pos_i} can be represented as 
 
+\begin{equation}
+\Delta T = \mathbf{G}(\mathbf{q}) \mathbf{p}
+\label{eq:tfa_pred}
+\end{equation}
+where $\mathbb{G}$ is $N \times M$ matrix composed by the elements $g_{ij}$ of the equation \ref{eq:g_ij}.
 
 % % Formulating the inverse problem explaining the iterative method
 
 %Let $\mathbf{\Delta T}^o$ be an \textit{N}-dimensional vector whose $i$th element is the total field anomaly observation produced by a magnetic source at the point $(x_i,y_i,z_i)$, $i = 1, \ldots, N$. 
 
-% % Constraining the magnetic moment of equivalent sources
+% Constraining the magnetic moment of equivalent sources
 
 % % Practical Procedures 
 
