@@ -865,7 +865,9 @@ def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,
             H =  np.dot(G_dir.T,G_dir)
             
             for k in range(itmarq):
-                dp = np.linalg.solve(H + lamb*np.identity(2),-J)
+                dp = 0.
+                for l in range(3):
+                    dp += np.linalg.solve(H + lamb*np.identity(2),-J)
 
                 dp_inc = np.rad2deg(dp[0])
                 dp_dec = np.rad2deg(dp[1])
@@ -910,6 +912,15 @@ def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,
             break
 
     return p0,inc0,dec0,phi_it,i,pest,incs,decs
+
+def residual(do,dp):
+    r = do - dp
+    r_mean = np.mean(r)
+    r_std = np.std(r)
+    r_norm = (r - r_mean)/r_std
+    return r_norm, r_mean, r_std
+
+
 
 #mask = (dp>0)
         #if dp.size == dp[mask].size:
