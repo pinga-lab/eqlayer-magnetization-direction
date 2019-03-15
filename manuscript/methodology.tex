@@ -10,7 +10,18 @@ Considering a Cartesian coordinate system with $x$-, $y$- and $z$-axis being ori
 \Delta T_i = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  p(x',y',z_c)  [\gamma_m \hat{\mathbf{F}}_0^T \mathbf{H} \,\hat{\mathbf{h}}(\mathbf{q})] dx' \,dy',
 \label{eq:continuous_layer}
 \end{equation}
-where $\gamma_m$ is a constant proportional to the vaccum permeability, $\hat{\mathbf{F}}_0$ is a unit vector with the same direction of the geomagnetic field $\mathbf{F}_0$ and $\mathbf{H}$ is a $3 \times 3$ matrix equal to  
+where $\gamma_m$ is a constant proportional to the free space permeability, $\hat{\mathbf{F}}_0$ is a unit vector with the same direction of the geomagnetic field $\mathbf{F}_0$ given by
+
+\begin{equation}
+	\hat{\mathbf{F}}_0 =
+	\left[ \begin{array}{c}
+		 \cos I \cos D \\
+		 \cos I \sin D \\
+		 \sin I     
+	\end{array} \right] ,
+	\label{eq:main_field}
+\end{equation}
+where $I$ and $D$ are the inclination and declination of main field, respectively. The $\mathbf{H}$ is a $3 \times 3$ dimensional matrix equal to  
 
  \begin{equation}
    \mathbf{H} =
@@ -25,7 +36,18 @@ where $\partial_{\alpha \beta}\phi$, $\alpha = x, y, z$, $\beta = x, y, z$, is t
    \phi (x-x', y-y', z-z_c) = \frac{1}{r} ,
    \label{eq:phi}
  \end{equation}
-where $r = [(x-x')^2 + (y-y')^2 + (z-z_c)^2]^{1/2}$ and $\hat{\mathbf{h}}(\mathbf{q})$ is a unit vector with the magnetization direction of the layer that depends on the vector $\mathbf{q}$ given by 
+where $r = [(x-x')^2 + (y-y')^2 + (z-z_c)^2]^{1/2}$. The $\hat{\mathbf{h}}(\mathbf{q})$ is a unit vector with the magnetization direction of the layer given by 
+
+\begin{equation}
+	\hat{\mathbf{h}}(\mathbf{q}) =
+	\left[ \begin{array}{c}
+		\cos i \cos d \\
+		\cos i \sin d \\
+		\sin i     
+	\end{array} \right] 
+	\label{eq:mag_vec}
+\end{equation}
+and $\mathbf{q}$ is a vector with components given by 
 
  \begin{equation}
    \mathbf{q} =
@@ -35,7 +57,7 @@ where $r = [(x-x')^2 + (y-y')^2 + (z-z_c)^2]^{1/2}$ and $\hat{\mathbf{h}}(\mathb
    \end{array} \right] ,
    \label{eq:q_vector}
  \end{equation}
- where $i$ and $d$ is the inclination and declination, respectively.
+ where $i$ and $d$ is the inclination and declination of magnetization of the layer, respectively.
 
 According the theory, we can reproduce a set of $N$ observed total field anomaly produced by a 3D magnetic source using a bidimensional physical-property distribution. In practical situations, the equivalent layer is composed by a set of $M$ equivalent sources distributed with a constant depth $h$ below the observation plane. It is worth pointing out that, in this work, the equivalent source is represented by a dipole with unit volume. For this reason, the vector $\mathbf{p}$ is the \textit{M}-dimensional vector defined as parameter vector, whose $j$th element is the magnetic intensity of the $j$th equivalent source, and the vector $\mathbf{q}$ contains the inclination and the declination of each equivalent dipole. By discretizing the integrand of equation \ref{eq:continuous_layer} in a set of points $(x_j,y_j,z_c)$, $j = 1, \ldots, M$, the integral can be given by
 
@@ -74,8 +96,6 @@ where $\Psi(\mathbf{p}, \mathbf{q})$ is the data misfit, which is the Euclidean 
 The procedure to find a set of $\mathbf{p}^\sharp$ and $\mathbf{q}^\sharp$ which minimize the equation \ref{eq:misfit} consists to solve an inverse problem iteratively from an initial step. To accomplish this process, a initial approximation for the magnetic moment... (PAREI AQUI)   
 
 % Constraining the magnetic moment of equivalent sources
-
-% Practical Procedures 
 
 % % Generalization of all-positive equivalent sources 
 
