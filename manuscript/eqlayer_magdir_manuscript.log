@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  15 MAR 2019 17:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  19 MAR 2019 16:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -234,7 +234,23 @@ Missing character: There is no • in font cmr10!
 [3
 
 
-] [4] [5]) [6] (./eqlayer_magdir_manuscript.bbl
+]
+
+LaTeX Warning: Command \i invalid in math mode on input line 44.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 45.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 46.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 55.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 60.
+
+[4] [5]) [6] (./eqlayer_magdir_manuscript.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 5.
 
@@ -244,7 +260,7 @@ Package natbib Warning: Empty `thebibliography' environment on input line 5.
 Here is how much of TeX's memory you used:
  2392 strings out of 493029
  32598 string characters out of 6136233
- 95304 words of memory out of 5000000
+ 96304 words of memory out of 5000000
  5886 multiletter control sequences out of 15000+600000
  8672 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -256,14 +272,15 @@ ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ti10.pfb>
-Output written on eqlayer_magdir_manuscript.pdf (7 pages, 132868 bytes).
+public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+>
+Output written on eqlayer_magdir_manuscript.pdf (7 pages, 140331 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 72 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
