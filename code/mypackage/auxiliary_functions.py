@@ -815,7 +815,7 @@ def gauss_newton_NNLS_2(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,itmax):
 
     return p0,inc0,dec0,pest,incs,decs
 
-def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,imax,itext,itmarq,eps):
+def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,imax,itext,itmarq,eps_e,eps_i):
     '''
     Apply the Levenberg-Marquardt Method to solve a non-linear problem.
 
@@ -865,9 +865,7 @@ def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,
             H =  np.dot(G_dir.T,G_dir)
             
             for k in range(itmarq):
-                dp = 0.
-                for l in range(3):
-                    dp += np.linalg.solve(H + lamb*np.identity(2),-J)
+                dp = np.linalg.solve(H + lamb*np.identity(2),-J)
 
                 dp_inc = np.rad2deg(dp[0])
                 dp_dec = np.rad2deg(dp[1])
@@ -888,7 +886,8 @@ def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,
                     break
 
             condition_1 = np.abs(dphi)/phi0
-            if (condition_1 < eps):
+            if (condition_1 < eps_i):
+                print condition_1
                 break
             else:
                 r0[:] = r[:]
@@ -908,7 +907,7 @@ def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,
         dphi_ext = phi_ext - phi0
         condition_2 = np.abs(dphi_ext)/phi0
         print condition_2
-        if (condition_2 < eps):
+        if (condition_2 < eps_e):
             break
 
     return p0,inc0,dec0,phi_it,i,pest,incs,decs
