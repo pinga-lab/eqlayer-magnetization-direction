@@ -95,6 +95,8 @@ where $\Psi(\mathbf{p}, \mathbf{q})$ is the data misfit, which is the Euclidean 
 
 The procedure of finding a set of magnetic moment $\mathbf{p}^\sharp$ and magnetization direction $\mathbf{q}^\sharp$ which minimize the equation \ref{eq:misfit} consists to solve an inverse problem for estimating a set of paramaters in two steps. Therefore, we split the inverse problem in a mixed solution of two systems of equations: the first one solves a linear system for estimating the part of magnetic moment and the second is solved through a non-linear process to calculate successive approximations for the part of magnetization direction at each iteration along the process. 
 
+Firstly, the starts with an initial step for the magnetization direction.
+
 %The algorithm starts with an initial step for the magnetization direction $\mathbf{q}_0$. From its initial approximation, we consider, at the $k$th iteration, that the magnetic moment estimate $\mathbf{p}^k$ is calculated by the equation
 %
 %\begin{equation}
