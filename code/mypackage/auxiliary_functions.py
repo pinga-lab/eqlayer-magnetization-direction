@@ -815,7 +815,7 @@ def gauss_newton_NNLS_2(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,itmax):
 
     return p0,inc0,dec0,pest,incs,decs
 
-def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,imax,itext,itmarq,eps_e,eps_i):
+def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,imax,itext,itmarq,eps_e,eps_i,mu):
     '''
     Apply the Levenberg-Marquardt Method to solve a non-linear problem.
 
@@ -836,20 +836,23 @@ def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,
     '''
     N = x.size
     M = xs.size
+    null = np.zeros(M)
+    I = np.identity(M)
+    do = np.hstack([dobs,null])
 
-    
-    
     phi_it = []
     iteration = []
     pest = []
     incs = [inc0]
     decs = [dec0]
     
-    
     for i in range(imax):
         print 'i =', i
+        
         G_mag = sensitivity_mag(x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0)
-        p0,_ = nnls(G_mag,dobs)
+        f0 = np.trace(np.dot(G_mag.T,G_mag))/M
+        GI = np.vstack([G_mag,mu*f0*I])
+        p0,_ = nnls(GI,do)
         tf_ext = tfa_layer(x,y,z,xs,ys,zs,sinc,sdec,p0,inc0,dec0)
         r_ext = dobs - tf_ext
 
@@ -887,7 +890,6 @@ def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,
 
             condition_1 = np.abs(dphi)/phi0
             if (condition_1 < eps_i):
-                print condition_1
                 break
             else:
                 r0[:] = r[:]
