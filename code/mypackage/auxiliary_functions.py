@@ -851,6 +851,7 @@ def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,
         
         G_mag = sensitivity_mag(x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0)
         f0 = np.trace(np.dot(G_mag.T,G_mag))/M
+        print f0
         GI = np.vstack([G_mag,mu*f0*I])
         p0,_ = nnls(GI,do)
         tf_ext = tfa_layer(x,y,z,xs,ys,zs,sinc,sdec,p0,inc0,dec0)
