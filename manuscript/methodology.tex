@@ -4,13 +4,13 @@
 \subsection{Fundamentals of magnetic equivalent layer}
 \label{subsec:mag_eqlayer}
 
-Considering a Cartesian coordinate system with $x$-, $y$- and $z$-axis being oriented to north, east and downward, respectively. Let $\Delta T_i \equiv \Delta T (x_i,y_i,z_i)$ be the total field anomaly, at the $i$-th position $(x_i,y_i,z_i)$, produced by a continuos layer located below the observation plane on the depth $z_c$, where $z_c > z_i$, and $p(x',y',z_c)$ is the distribution of magnetic dipoles per unit area over the layer surface. In this case, the total field anomaly produced by this continuous layer is given by the equation 
+Considering a Cartesian coordinate system with $x$-, $y$- and $z$-axis being oriented to north, east and downward, respectively. Let $\Delta T_i \equiv \Delta T (x_i,y_i,z_i)$ be the total field anomaly, at the $i$th position $(x_i,y_i,z_i)$, produced by a continuos layer located below the observation plane on the depth $z_c$, where $z_c > z_i$, and $p(x',y',z_c)$ is the distribution of magnetic dipoles per unit area over the layer surface. In this case, the total field anomaly produced by this continuous layer is given by the equation 
 
 \begin{equation}
 \Delta T_i = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  p(x',y',z_c)  [\gamma_m \hat{\mathbf{F}}_0^T \mathbf{H} \,\hat{\mathbf{h}}(\mathbf{q})] dx' \,dy',
 \label{eq:continuous_layer}
 \end{equation}
-where $\gamma_m$ is a constant proportional to the free space permeability, $\hat{\mathbf{F}}_0$ is a unit vector with the same direction of the geomagnetic field $\mathbf{F}_0$ given by
+where $\gamma_m$ is a constant proportional to the free space permeability, $\hat{\mathbf{F}}_0$ is a unit vector with the same direction of the geomagnetic field given by
 
 \begin{equation}
 	\hat{\mathbf{F}}_0 =
@@ -59,7 +59,7 @@ and $\mathbf{q}$ is a vector with components given by
  \end{equation}
 where $\tilde{\i} $ and $\tilde{d} $ is the inclination and declination of magnetization of the layer, respectively.
 
-According the theory, we can reproduce a set of $N$ observed total field anomaly produced by a 3D magnetic source using a bidimensional physical-property distribution. In practical situations, the equivalent layer is composed by a set of $M$ equivalent sources distributed with a constant depth $h$ below the observation plane. It is worth pointing out that, in this work, the equivalent source is represented by a dipole with unit volume. For this reason, the vector $\mathbf{p}$ is the \textit{M}-dimensional vector defined as parameter vector, whose $j$th element is the magnetic intensity of the $j$th equivalent source, and the vector $\mathbf{q}$ contains the inclination and the declination of each equivalent dipole. By discretizing the integrand of equation \ref{eq:continuous_layer} in a set of points $(x_j,y_j,z_c)$, $j = 1, \ldots, M$, the integral can be given by
+According to the theory, we can reproduce a set of $N$ observed total field anomaly produced by a 3D magnetic source using a bidimensional physical-property distribution. In practical situations, the equivalent layer is composed by a set of $M$ equivalent sources distributed with a constant depth $h$ below the observation plane. It is worth pointing out that, in this work, the equivalent source is represented by a dipole with unit volume. For this reason, the vector $\mathbf{p}$ is the \textit{M}-dimensional vector defined as parameter vector, whose $j$th element is the magnetic intensity of the $j$th equivalent source, and the vector $\mathbf{q}$ contains the inclination and the declination of each equivalent dipole. By discretizing the integrand of equation \ref{eq:continuous_layer} in a set of points $(x_j,y_j,z_c)$, $j = 1, \ldots, M$, the integral can be given by
 
 \begin{equation}
 \Delta T_i (\mathbf{p},\mathbf{q})   = \sum_{j=1}^{M} p_j g_{ij} (\mathbf{q})
@@ -93,28 +93,30 @@ Let $\mathbf{\Delta T}^o$ be an \textit{N}-dimensional vector whose $i$th elemen
 \end{equation}
 where $\Psi(\mathbf{p}, \mathbf{q})$ is the data misfit, which is the Euclidean norm of the difference between the $\mathbf{\Delta T}^o$ and $\mathbf{\Delta T} (\mathbf{p}, \mathbf{q})$.
 
-The procedure of finding a set of magnetic moment $\mathbf{p}^\sharp$ and magnetization direction $\mathbf{q}^\sharp$ which minimize the equation \ref{eq:misfit} consists to solve an inverse problem for estimating a set of paramaters in two steps. Therefore, we split the inverse problem in a mixed solution of two systems of equations: the first one solves a linear system for estimating the part of magnetic moment and the second is solved through a non-linear process to calculate successive approximations for the part of magnetization direction at each iteration along the process. 
+The procedure of finding a set of magnetic moment $\mathbf{p}^\sharp$ and magnetization direction $\mathbf{q}^\sharp$ which minimize the equation \ref{eq:misfit} consists to solve an inverse problem for estimating a set of parameters in two steps. Therefore, we split the inverse problem in a mixed solution of two systems of equations. The first one solves a linear system for estimating the part of the magnetic moment. Secondly, the problem is solved through a non-linear process to calculate successive approximations for the part of the magnetization direction at each iteration along the process. 
 
-Firstly, the starts with an initial step for the magnetization direction.
+However, at the $k$th iteration, we impose positivity constraint on the magnetic-moment distribution estimate $\mathbf{p}^k$ by solving the following constrained problem of
 
-%The algorithm starts with an initial step for the magnetization direction $\mathbf{q}_0$. From its initial approximation, we consider, at the $k$th iteration, that the magnetic moment estimate $\mathbf{p}^k$ is calculated by the equation
-%
-%\begin{equation}
-%	\mathbf{p}^k = (\mathbf{G}_{p}^{kT} \mathbf{G}_{p}^k)^{-1} \mathbf{G}_{p}^{kT}  \Delta \mathbf{T}^o
-%	\label{eq:linsys_p}
-%\end{equation}
-%where $\mathbf{G}_p^k$ is the sensitivity matrix of the part of magnetic moment of equivalent sources at the $k$th iteration. The elements of this matrix are composed by derivative of equation \ref{eq:tfa_pred_pos_i} in relation of $j$th element of the vector $\mathbf{p}^k$. The equation \ref{eq:linsys_p} is the least squares estimator. Nevertheless, it is necessary to point out by imposing the magnetic moment vector $\mathbf{p}^k$ all positive during iterative process, we have a constraint such that
-%
-%\begin{equation}
-%	\begin{aligned}
-%		& \text{min}
-%		& &\lVert \Delta \mathbf{T}^o - \mathbf{G}_p^k \mathbf{p}^k \rVert_2 \\
-%		& \text{suj.}
-%		& & \mathbf{p}^k \geqslant 0
-%	\end{aligned}
-%	\label{eq:positivity}
-%\end{equation}
-%where $\mathbf{p}^k \geqslant 0$ means that the magnetic moment of all equivalent sources are positive. This problem is solved using an algorithm of Nonnegative least squares proposed by \cite{lawson_and_hanson_1974}.
+\begin{equation}
+	\begin{aligned}
+		& \text{minimizing}
+		& &\lVert \Delta \mathbf{T}^o - \mathbf{G}(\mathbf{q}_{k-1}) \mathbf{p}^k \rVert_{2}^{2} \\
+		& \text{subject to}
+		& & \mathbf{p}^k \geqslant 0
+	\end{aligned}
+	\label{eq:positivity}
+\end{equation}
+where $\mathbf{G}(\mathbf{q}_{k-1})$ is the $N \times M$ matrix defined in equation \ref{eq:tfa_pred},
+$\| \cdot \|_{2}^{2}$ represents the squared Euclidean norm and $\mathbf{p}^k \geqslant 0$ means that the magnetic moments of all equivalent sources are positive. This problem is solved by using the nonnegative least squares (NNLS) proposed by (CITAR LAWSON HANSON 1974). In other words, we solve a linear system with positivity constraint at each $k$th iteration given by the equation 
+
+\begin{equation}
+	\mathbf{p}^k = \left(\mathbf{G}_{p}^{(k)T} \mathbf{G}_{p}^{(k)}\right)^{-1} \mathbf{G}_{p}^{(k)T}  \Delta \mathbf{T}^o
+	\label{eq:linsys_p}
+\end{equation}
+where $\mathbf{G}_p^{(k)}$ is the magnetic-moment sensitivity matrix at the $k$th iteration. The elements of this matrix are composed by derivative of equation \ref{eq:tfa_pred_pos_i} in relation of $j$th element of the vector $\mathbf{p}^k$.
+
+After estimating the magnetic-moment distribution $\mathbf{p}^k$ at the $k$th iteration using the previous estimate $\mathbf{q}_{k-1}$ for the magnetization direction, we estimate a new vector $\mathbf{q}^{k}$ by solving an unconstrained nonlinear inverse problem of minimizing the squared Euclidean norm of the difference between the observed and predicted total-field anomalies. In this nonlinear inversion we use the Levenberg-Marquardt method \citep{aster_2005}. The iterative process stops when the squared Euclidean norm of the difference between the observed data $\Delta \mathbf{T}^{o}$ and predicted data $\Delta\mathbf{T}(\mathbf{p}, \mathbf{q})$ (equation \ref{eq:tfa_pred}) is invariant along succesive iterations.
+
 %
 %However, we have to apply successive corrections $\Delta \mathbf{q}^k$ for calculating the magnetization direction vector $\mathbf{q}^k$ at each $k$th iteration. It is calculated using the Levenberg-Marquardt method (\cite{aster2005}), that is given by equation   
 %
@@ -135,11 +137,6 @@ Firstly, the starts with an initial step for the magnetization direction.
 %	\label{eq:residual_k}
 %\end{equation}
 %The iterative process stops when the data-misfit function (equation \ref{eq:misfit}) is invariant along succesive iterations according a stop criterion.
-
-
-
-
-% Constraining the magnetic moment of equivalent sources
 
 % % Generalization of all-positive equivalent sources 
 
