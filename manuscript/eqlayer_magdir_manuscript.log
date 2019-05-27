@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  22 MAY 2019 18:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  27 MAY 2019 16:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -335,26 +335,17 @@ LaTeX Warning: Command \i invalid in math mode on input line 60.
 
 LaTeX Warning: Command \i invalid in math mode on input line 60.
 
-[4] [5] [6]
-
-Package natbib Warning: Citation `aster_2005' on page 7 undefined on input line
- 118.
-
-) [7] (./eqlayer_magdir_manuscript.bbl
+[4] [5] [6]) [7] (./eqlayer_magdir_manuscript.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 5.
 
-)
-
-Package natbib Warning: There were undefined citations.
-
-[8
+) [8
 
 ] (./eqlayer_magdir_manuscript.aux (./abstract.aux) (./methodology.aux)) ) 
 Here is how much of TeX's memory you used:
  3284 strings out of 493029
- 42620 string characters out of 6136233
- 107349 words of memory out of 5000000
+ 42621 string characters out of 6136233
+ 107358 words of memory out of 5000000
  6743 multiletter control sequences out of 15000+600000
  10581 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -372,7 +363,7 @@ cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
 
-Output written on eqlayer_magdir_manuscript.pdf (8 pages, 151749 bytes).
+Output written on eqlayer_magdir_manuscript.pdf (8 pages, 152851 bytes).
 PDF statistics:
  79 PDF objects out of 1000 (max. 8388607)
  56 compressed objects within 1 object stream
