@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="algorithm_LM_NNLS.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="462.48541"
+     inkscape:cy="642.30942"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1440"
+     inkscape:window-height="848"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g4373">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4197"
+         d="m 259.97299,139.25714 c -36.03168,0.002 -70.58545,38.51428 -96.06342,107.06511 -25.47801,68.55084 -39.79325,161.52533 -39.79334,258.46985 -6e-5,96.94478 14.31533,189.91867 39.79334,258.46982 25.47799,68.55122 60.03166,107.06441 96.06342,107.06665 40.94433,-0.0686 79.69358,-49.81524 105.47095,-135.40492 l -48.50701,0 c -15.29049,50.35257 -34.971,78.20292 -55.36323,78.34591 -46.3442,0 -83.91361,-140.2058 -83.91346,-313.1581 1.2e-4,-172.95171 37.56941,-313.15658 83.91346,-313.15657 21.79261,0.0421 42.68113,31.79319 58.30237,88.22827 l -43.49732,0 34.25921,27.48201 34.25918,27.48201 34.25376,-27.48201 34.25918,-27.48201 -47.93884,0 C 339.7517,189.47371 301.00111,139.41917 259.97299,139.25714 Z"
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.29999995;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4197-7"
+         d="m 287.01253,399.37319 c -9.13692,5.5e-4 -17.89907,10.83156 -24.35976,30.11046 -6.46072,19.27889 -10.09077,45.42659 -10.09081,72.69074 0,27.26431 3.63009,53.41179 10.09081,72.69077 6.46069,19.27899 15.2228,30.11024 24.35976,30.11091 10.38264,-0.0192 20.20869,-14.00978 26.74529,-38.08062 l -12.30039,0 c -3.87737,14.16089 -8.86793,21.99339 -14.03901,22.03364 -11.75196,0 -21.27879,-39.43077 -21.27876,-88.07101 4e-5,-48.64009 9.52683,-88.07062 21.27876,-88.07062 5.52616,0.0118 10.8231,8.94136 14.78433,24.81289 l -11.03007,0 8.68747,7.7289 8.68743,7.7289 8.68607,-7.7289 8.68742,-7.7289 -12.15633,0 c -6.52194,-24.1045 -16.34832,-38.18159 -26.75221,-38.22716 z"
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.29999995;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <flowRoot
+         inkscape:transform-center-y="-25.125273"
+         inkscape:transform-center-x="56.949381"
+         transform="matrix(0.02007494,-0.99979848,0.99979848,0.02007494,-248.33066,-27.800479)"
+         style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="flowRoot4245"
+         xml:space="preserve"><flowRegion
+           id="flowRegion4247"><rect
+             y="337.17419"
+             x="-589.92908"
+             height="173.74623"
+             width="282.84271"
+             id="rect4249" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+           id="flowPara4251">Outer loop</flowPara></flowRoot>      <flowRoot
+         inkscape:transform-center-y="-24.553469"
+         inkscape:transform-center-x="57.717568"
+         transform="matrix(0.01000841,-0.99994992,0.99994992,0.01000841,-130.20454,-17.194829)"
+         style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="flowRoot4245-2"
+         xml:space="preserve"><flowRegion
+           id="flowRegion4247-9"><rect
+             y="337.17419"
+             x="-589.92908"
+             height="173.74623"
+             width="282.84271"
+             id="rect4249-1" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+           id="flowPara4251-2">Inner loop</flowPara></flowRoot>      <flowRoot
+         inkscape:transform-center-y="-60.001774"
+         inkscape:transform-center-x="-22.723206"
+         transform="matrix(0.99976067,-0.02187689,0.02187689,0.99976067,866.76447,130.12873)"
+         style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="flowRoot4245-7"
+         xml:space="preserve"><flowRegion
+           id="flowRegion4247-0"><rect
+             y="337.17419"
+             x="-589.92908"
+             height="52.1548"
+             width="544.16437"
+             id="rect4249-9" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.5px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+           id="flowPara4251-3">Levenberg-Marquardt method  </flowPara></flowRoot>      <flowRoot
+         inkscape:transform-center-y="-60.001774"
+         inkscape:transform-center-x="-22.723206"
+         transform="matrix(0.99976067,-0.02187689,0.02187689,0.99976067,866.37047,-9.38788)"
+         style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="flowRoot4245-7-6"
+         xml:space="preserve"><flowRegion
+           id="flowRegion4247-0-0"><rect
+             y="337.17419"
+             x="-589.92908"
+             height="52.1548"
+             width="544.16437"
+             id="rect4249-9-6" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.5px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+           id="flowPara4251-3-2">Nonnegative least squares  </flowPara></flowRoot>      <flowRoot
+         inkscape:transform-center-y="-60.001774"
+         inkscape:transform-center-x="-22.723206"
+         transform="matrix(0.99976067,-0.02187689,0.02187689,0.99976067,867.34521,296.35847)"
+         style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="flowRoot4245-7-61"
+         xml:space="preserve"><flowRegion
+           id="flowRegion4247-0-8"><rect
+             y="337.17419"
+             x="-589.92908"
+             height="52.1548"
+             width="544.16437"
+             id="rect4249-9-7" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.5px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+           id="flowPara4251-3-9">Test the algorithm convergence  </flowPara></flowRoot>    </g>
+  </g>
+</svg>

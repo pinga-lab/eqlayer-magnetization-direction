@@ -121,7 +121,11 @@ After estimating the magnetic-moment distribution $\mathbf{p}^k$ at the $k$th it
 	\Delta \mathbf{q}^k = (\mathbf{G}_{q}^{(k)T} \mathbf{G}_{q}^{(k)} + \lambda \mathbf{I})^{-1} \mathbf{G}_{q}^{(k)T}  \mathbf{r}^k
 	\label{eq:linsys_q}
 \end{equation}
-where $\lambda$ is the Marquardt parameter that is updated along the iterative process, $\mathbf{I}$ is a indentity matrix, and  the residual at the $k$th iteration $r^k = \Delta \mathbf{T}^o - \mathbf{\Delta T} (\mathbf{p}^k, \mathbf{q}^{k-1})$. $\mathbf{G}_q^k$ is a sensitivity matrix of the magnetization direction part, whose elements are composed by derivative of equation \ref{eq:tfa_pred_pos_i} in relation of each component of the vector $\mathbf{q}^k$, that are the inclination and declination, respectively. The iterative process stops when the squared Euclidean norm of the difference between the observed data $\Delta \mathbf{T}^{o}$ and predicted data $\Delta\mathbf{T}(\mathbf{p}, \mathbf{q})$ (equation \ref{eq:tfa_pred}) is invariant along succesive iterations.
+where $\lambda$ is the Marquardt parameter that is updated along the iterative process, $\mathbf{I}$ is a indentity matrix, and  the residual at the $k$th iteration $r^k = \Delta \mathbf{T}^o - \mathbf{\Delta T} (\mathbf{p}^k, \mathbf{q}^{k-1})$. $\mathbf{G}_q^k$ is a sensitivity matrix of the magnetization direction part, whose elements are composed by derivative of equation \ref{eq:tfa_pred_pos_i} in relation of each component of the vector $\mathbf{q}^k$, that are the inclination and declination, respectively. The iterative process stops when the squared Euclidean norm of the difference between the observed data $\Delta \mathbf{T}^{o}$ and predicted data $\Delta\mathbf{T}(\mathbf{p}, \mathbf{q})$ (equation \ref{eq:tfa_pred}) is invariant along succesive iterations (Figure \ref{fig:scheme_LM_NNLS}).
+
+
+
+
 
 %
 %However, we have to apply successive corrections $\Delta \mathbf{q}^k$ for calculating the magnetization direction vector $\mathbf{q}^k$ at each $k$th iteration. It is calculated using the Levenberg-Marquardt method (\cite{aster2005}), that is given by equation   
@@ -145,6 +149,7 @@ where $\lambda$ is the Marquardt parameter that is updated along the iterative p
 %The iterative process stops when the data-misfit function (equation \ref{eq:misfit}) is invariant along succesive iterations according a stop criterion.
 
 % % Generalization of all-positive equivalent sources 
+
 
 
 
