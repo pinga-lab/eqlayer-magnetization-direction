@@ -4,13 +4,14 @@
 \subsection{Fundamentals of magnetic equivalent layer}
 \label{subsec:mag_eqlayer}
 
-Considering a Cartesian coordinate system with $x$-, $y$- and $z$-axis being oriented to north, east and downward, respectively. Let $\Delta T_i \equiv \Delta T (x_i,y_i,z_i)$ be the total field anomaly, at the $i$th position $(x_i,y_i,z_i)$, produced by a continuos layer located below the observation plane on the depth $z_c$, where $z_c > z_i$, and $p(x',y',z_c)$ is the distribution of magnetic dipoles per unit area over the layer surface. In this case, the total field anomaly produced by this continuous layer is given by the equation 
+%%% Continuous layer
+Considering a Cartesian coordinate system with $x$-, $y$- and $z$-axis being oriented to north, east and downward, respectively. Let $\Delta T_i \equiv \Delta T (x_i,y_i,z_i)$ be the total field anomaly, at the $i$th position $(x_i,y_i,z_i)$, produced by a continuos layer located below the observation plane on the depth $z_c$, where $z_c > z_i$, and $p(x',y',z_c)$ is the distribution of magnetic dipoles per unit area over the layer surface. In this case, the total-field anomaly produced by a continuous layer is given by equation 
 
 \begin{equation}
-\Delta T_i = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  p(x',y',z_c)  [\gamma_m \hat{\mathbf{F}}_0^T \mathbf{H} \,\hat{\mathbf{h}}(\mathbf{q})] dx' \,dy',
+\Delta T_i = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  p(x',y',z_c)  [\gamma_m \hat{\mathbf{F}}_0^T \mathbf{H}(x_i,y_i,z_i,x',y',z_c) \,\hat{\mathbf{h}}(\mathbf{q})] dx' \,dy',
 \label{eq:continuous_layer}
 \end{equation}
-where $\gamma_m$ is a constant proportional to the free space permeability, $\hat{\mathbf{F}}_0$ is a unit vector with the same direction of the geomagnetic field given by
+where $\gamma_m$ is a constant proportional to the vacuum permeability, $\hat{\mathbf{F}}_0$ is a unity vector with the same direction of the main geomagnetic field given by
 
 \begin{equation}
 	\hat{\mathbf{F}}_0 =
@@ -21,22 +22,7 @@ where $\gamma_m$ is a constant proportional to the free space permeability, $\ha
 	\end{array} \right] ,
 	\label{eq:main_field}
 \end{equation}
-where $I$ and $D$ are the inclination and declination of main field, respectively. The $\mathbf{H}$ is a $3 \times 3$ dimensional matrix equal to  
-
- \begin{equation}
-   \mathbf{H} =
-   \left[ \begin{array}{ccc}
-   \partial_{xx} \phi & \partial_{xy} \phi &\partial_{xz} \phi \\  \partial_{yx} \phi & \partial_{yy} \phi &\partial_{yz} \phi \\  \partial_{zx} \phi &\partial_{zy}\phi  & \partial_{zz} \phi    
-   \end{array} \right] ,
-   \label{eq:H}
- \end{equation}
-where $\partial_{\alpha \beta}\phi$, $\alpha = x, y, z$, $\beta = x, y, z$, is the second derivative of the function 
-
-\begin{equation}
-   \phi (x-x', y-y', z-z_c) = \frac{1}{[(x-x')^2 + (y-y')^2 + (z-z_c)^2]^{\frac{1}{2}}} .
-   \label{eq:phi}
- \end{equation}
-The $\hat{\mathbf{h}}(\mathbf{q})$ is a unit vector with the magnetization direction of the layer given by 
+where $I$ and $D$ are the inclination and declination, respectively. The $\hat{\mathbf{h}}(\mathbf{q})$ is a unity vector with the magnetization direction of the layer given by 
 
 \begin{equation}
 	\hat{\mathbf{h}}(\mathbf{q}) =
@@ -47,51 +33,73 @@ The $\hat{\mathbf{h}}(\mathbf{q})$ is a unit vector with the magnetization direc
 	\end{array} \right] 
 	\label{eq:mag_vec}
 \end{equation}
-and $\mathbf{q}$ is a vector with components given by 
-
- \begin{equation}
-   \mathbf{q} =
-   \left[ \begin{array}{c}
-   \tilde{\i} \\ 
-   \tilde{d} 
-   \end{array} \right] ,
-   \label{eq:q_vector}
- \end{equation}
-where $\tilde{\i} $ and $\tilde{d} $ is the inclination and declination of magnetization of the layer, respectively.
-
-According to the theory, we can reproduce a set of $N$ observed total field anomaly produced by a 3D magnetic source using a bidimensional physical-property distribution. In practical situations, the equivalent layer is composed by a set of $M$ equivalent sources distributed with a constant depth $h$ below the observation plane. It is worth pointing out that, in this work, the equivalent source is represented by a dipole with unit volume. For this reason, the vector $\mathbf{p}$ is the \textit{M}-dimensional vector defined as parameter vector, whose $j$th element is the magnetic intensity of the $j$th equivalent source, and the vector $\mathbf{q}$ contains the inclination and the declination of each equivalent dipole. By discretizing the integrand of equation \ref{eq:continuous_layer} in a set of points $(x_j,y_j,z_c)$, $j = 1, \ldots, M$, the integral can be given by
+and $\mathbf{q}$ is a $2 \times 1$ vector with components given by 
 
 \begin{equation}
-\Delta T_i (\mathbf{p},\mathbf{q})   = \sum_{j=1}^{M} p_j g_{ij} (\mathbf{q})
+	\mathbf{q} =
+	\left[ \begin{array}{c}
+		\tilde{\i} \\ 
+		\tilde{d} 
+	\end{array} \right] ,
+	\label{eq:q_vector}
+\end{equation}
+where $\tilde{\i} $ and $\tilde{d} $ is the inclination and declination of magnetization of the layer, respectively. The $\mathbf{H}(x_i,y_i,z_i,x',y',z_c)$ is a $3 \times 3$ matrix equal to  
+\begin{equation}
+   \mathbf{H}(x_i,y_i,z_i,x',y',z_c) =
+   \left[ \begin{array}{ccc}
+   \partial_{xx} \phi & \partial_{xy} \phi &\partial_{xz} \phi \\  \partial_{yx} \phi & \partial_{yy} \phi &\partial_{yz} \phi \\  \partial_{zx} \phi &\partial_{zy}\phi  & \partial_{zz} \phi    
+   \end{array} \right] ,
+   \label{eq:H}
+\end{equation}
+where $\partial_{\alpha \beta} \phi$, $\alpha = x, y, z$ and $\beta = x, y, z$, is the second derivative of the scalar function 
+
+\begin{equation}
+   \phi (x_i,y_i,z_i,x',y',z_c) = \frac{1}{[(x_i-x')^2 + (y_i-y')^2 + (z_i-z_c)^2]^{\frac{1}{2}}} .
+   \label{eq:phi}
+ \end{equation}
+with respect to the Cartesian coordinates $x_i$, $y_i$ and $z_i$ of the observation points.  
+
+
+%%% Formulating the forward problem
+\subsection{Forward problem}
+
+However, in practical situations, its not possible to determine a continuous magnetic-moment distribution $p(x',y',z_c)$ over the layer as shown in equation \ref{eq:continuous_layer}. For this reason, the continuous equivalent layer have to be approximated  by a discrete set of $M$ dipoles with unit volume located at a constant depth $z = z_c$. Let $\mathbf{p}$ be an $M$-dimensional parameter vector, whose $j$th element $p_j$ is the magnetic intensity of the $j$th dipole and $\mathbf{q}$ be a vector containing the inclination $\tilde{i}$ and declination $\tilde{d}$ of all dipole, analogously to equation \ref{eq:q_vector}. Mathematically, by discretizing the integrand of equation \ref{eq:continuous_layer}, the total-field anomaly produced by equivalent layer at the point $(x_i,y_i,z_i)$ is given by     
+
+\begin{equation}
+\Delta T_i (\mathbf{p},\mathbf{q}) = \sum_{j=1}^{M} p_j g_{ij} (\mathbf{q})
 \label{eq:tfa_pred_pos_i}
 \end{equation}    
-where $p_j$ is the magnetic moment of $j$th equivalent source and 
+where 
 
 \begin{equation}
 g_{ij} (\mathbf{q})  = \gamma_m \hat{\mathbf{F}}_0^T \mathbf{H}_{ij} \hat{\mathbf{h}}(\mathbf{q})
 \label{eq:g_ij}
 \end{equation}
-is a harmonic function that depends on the direction $\mathbf{q}$ of the dipole and the matrix $\mathbf{H}_{ij}$ is formed by the second derivatives of a function $\phi_{ij}$ that depends on the inverse of the function $r_{ij} = [(x_i-x_j)^2 + (y_i-y_j)^2 + (z_i-z_c)^2]^{1/2}$, analogously to equation \ref{eq:H} and \ref{eq:phi}.
-
-Equation \ref{eq:tfa_pred_pos_i} represents the equivalent layer appproach. It is represented by the sum of the total field anomaly at the observation point $(x_i,y_i,z_i)$ produced by a set of $M$ ficticious equivalent sources, that is in this case a set of dipoles of unit volume, distributed on a horizontal plane at a constant depth $z_c$, each one with magnetic moment $p_j$ and magnetization direction $\mathbf{q}$. In matrix notation, the equation \ref{eq:tfa_pred_pos_i} can be represented as 
+is an harmonic function representing the total-field anomaly produced at the $i$th position $(x_i,y_i,z_i)$ by a dipole located at $(x_j,y_j,z_c)$ with unitary magnetic-moment intensity. The matrix $\mathbf{H}_{ij}$ is formed by the second derivatives of a function $\phi_{ij}$ that depends on the inverse of the scalar function $r_{ij} = [(x_i-x_j)^2 + (y_i-y_j)^2 + (z_i-z_c)^2]^{1/2}$, analogously to equation \ref{eq:H} and \ref{eq:phi}. In matrix notation, the equation \ref{eq:tfa_pred_pos_i} can be represented as 
 
 \begin{equation}
  \mathbf{\Delta T} (\mathbf{p}, \mathbf{q}) = \mathbf{G}(\mathbf{q}) \mathbf{p}
 \label{eq:tfa_pred}
 \end{equation}
-where $\mathbf{G}$ is $N \times M$ matrix composed by the elements $g_{ij}$ of the equation \ref{eq:g_ij}.
-
-% % Formulating the inverse problem explaining the iterative method
+where $\mathbf{G}(\mathbf{q})$ is an $N \times M$ matrix whose $ij$th element is defined by the harmonic function $g_{ij}(\mathbb{q})$ (equation \ref{eq:g_ij}) and $\mathbf{\Delta T} (\mathbf{p}, \mathbf{q})$ is an $N \times 1$ vector whose the $i$th element is the predicted total-field anomaly $\Delta T_i (\mathbf{p},\mathbf{q})$ (equation \ref{eq:tfa_pred_pos_i}). As can be noticed from equation \ref{eq:tfa_pred_pos_i}-\ref{eq:tfa_pred}, the predicted total-field anomaly produced by equivalent layer has a linear relation with the magnetic moment $\mathbf{p}$ and a nonlinear relation with the magnetization direction $\mathbf{q}$. 
 
 \subsection{Iterative process for magnetization estimation}
 
-Let $\mathbf{\Delta T}^o$ be an \textit{N}-dimensional vector whose $i$th element $\Delta T_i^o$ is the total field anomaly observation produced by a magnetic source at the point $(x_i,y_i,z_i)$, $i = 1, \ldots, N$. The estimation of a set of magnetic moments $\mathbf{p}$ and the magnetization direction $\mathbf{q}$ consists to solve a inverse problem of minimizing the difference between the observed total field anomaly $\mathbf{\Delta T}^o$ and the predicted data $\Delta T (\mathbf{p}, \mathbf{q})$ by the equivalent layer (equation \ref{eq:tfa_pred}). In other words, a stable estimates $\mathbf{p}^\sharp$ and $\mathbf{q}^\sharp$ can be obtained by minimizing the objective function given by
+%%% Defining the objective function
+
+Let $\mathbf{\Delta T}^o$ be an \textit{N}-dimensional vector whose $i$th element $\Delta T_i^o$ is the total field anomaly observation produced by a magnetic source at the point $(x_i,y_i,z_i)$, $i = 1, \ldots, N$. The estimation of the magnetic moments $\mathbf{p}$ and the magnetization direction $\mathbf{q}$ consists to formulate an inverse problem by imposing a positivity constraint on the magnetic-moment distribution. It can be performed by minimizing the difference between the observed data $\mathbf{\Delta T}^o$ and the predicted data $\Delta T (\mathbf{p}, \mathbf{q})$ (equation \ref{eq:tfa_pred}) by imposing a positivity constraint. 
+
+(Parei aqui)
+
+In other words, a stable estimates $\mathbf{p}^\sharp$ and $\mathbf{q}^\sharp$ can be obtained by minimizing the objective function given by
 
 \begin{equation}
 \Psi(\mathbf{p}, \mathbf{q}) =  \parallel \mathbf{\Delta T}^o - \mathbf{\Delta T} (\mathbf{p}, \mathbf{q}) \parallel_{2}^{2},
 \label{eq:misfit}
 \end{equation}
 where $\Psi(\mathbf{p}, \mathbf{q})$ is the data misfit, which is the Euclidean norm of the difference between the $\mathbf{\Delta T}^o$ and $\mathbf{\Delta T} (\mathbf{p}, \mathbf{q})$.
+
+%%% Explaining the iterative process
 
 The procedure of finding a set of magnetic moment $\mathbf{p}^\sharp$ and magnetization direction $\mathbf{q}^\sharp$ which minimize the equation \ref{eq:misfit} consists to solve an inverse problem for estimating a set of parameters in two steps. Therefore, we split the inverse problem in a mixed solution of two systems of equations. The first one solves a linear system for estimating the part of the magnetic moment. Secondly, the problem is solved through a non-linear process to calculate successive approximations for the part of the magnetization direction at each iteration along the process. 
 
@@ -125,9 +133,6 @@ where $\lambda$ is the Marquardt parameter that is updated along the iterative p
 
 
 
-
-
-%
 %However, we have to apply successive corrections $\Delta \mathbf{q}^k$ for calculating the magnetization direction vector $\mathbf{q}^k$ at each $k$th iteration. It is calculated using the Levenberg-Marquardt method (\cite{aster2005}), that is given by equation   
 %
 %\begin{equation}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  28 MAY 2019 19:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  29 MAY 2019 17:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -301,51 +301,46 @@ Missing character: There is no • in font cmr10!
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2])
 \openout2 = `methodology.aux'.
 
- (./methodology.tex [3
+ (./methodology.tex
+
+LaTeX Warning: Command \i invalid in math mode on input line 30.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 30.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 31.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 31.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 32.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 32.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 41.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 41.
+
+[3
 
 
 ]
-
-LaTeX Warning: Command \i invalid in math mode on input line 44.
-
-
-LaTeX Warning: Command \i invalid in math mode on input line 44.
-
-
-LaTeX Warning: Command \i invalid in math mode on input line 45.
-
-
-LaTeX Warning: Command \i invalid in math mode on input line 45.
-
 
 LaTeX Warning: Command \i invalid in math mode on input line 46.
 
 
 LaTeX Warning: Command \i invalid in math mode on input line 46.
 
-
-LaTeX Warning: Command \i invalid in math mode on input line 55.
-
-
-LaTeX Warning: Command \i invalid in math mode on input line 55.
-
-
-LaTeX Warning: Command \i invalid in math mode on input line 60.
-
-
-LaTeX Warning: Command \i invalid in math mode on input line 60.
-
-[4] [5] [6]) [7] (./eqlayer_magdir_manuscript.bbl
-
-Package natbib Warning: Empty `thebibliography' environment on input line 5.
-
-) [8
-
-]
+[4] [5] [6] [7]) [8]
+No file eqlayer_magdir_manuscript.bbl.
 \openout2 = `figures.aux'.
 
- (./figures.tex
-<Fig/algorithm_LM_NNLS.pdf, id=40, 480.8955pt x 587.05032pt>
+(./figures.tex <Fig/algorithm_LM_NNLS.pdf, id=41, 480.8955pt x 587.05032pt>
 File: Fig/algorithm_LM_NNLS.pdf Graphic file (type pdf)
 
 <use Fig/algorithm_LM_NNLS.pdf>
@@ -355,13 +350,13 @@ Package pdftex.def Info: Fig/algorithm_LM_NNLS.pdf used on input line 5.
 (./eqlayer_magdir_manuscript.aux (./abstract.aux) (./methodology.aux)
 (./figures.aux)) ) 
 Here is how much of TeX's memory you used:
- 3300 strings out of 493029
- 42880 string characters out of 6136233
+ 3297 strings out of 493029
+ 42812 string characters out of 6136233
  107753 words of memory out of 5000000
- 6750 multiletter control sequences out of 15000+600000
+ 6749 multiletter control sequences out of 15000+600000
  10581 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,9n,28p,1387b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,9n,28p,1387b,235s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
 2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
@@ -373,11 +368,12 @@ st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/symbols/msam10.pfb>
-Output written on eqlayer_magdir_manuscript.pdf (9 pages, 162070 bytes).
+nts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb>
+Output written on eqlayer_magdir_manuscript.pdf (9 pages, 164229 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 95 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
