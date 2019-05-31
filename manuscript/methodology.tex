@@ -59,10 +59,6 @@ where $\partial_{\alpha \beta} \phi$, $\alpha = x, y, z$ and $\beta = x, y, z$, 
  \end{equation}
 with respect to the Cartesian coordinates $x_i$, $y_i$ and $z_i$ of the observation points.  
 
-
-%%% Formulating the forward problem
-\subsection{Forward problem}
-
 However, in practical situations, its not possible to determine a continuous magnetic-moment distribution $p(x',y',z_c)$ over the layer as shown in equation \ref{eq:continuous_layer}. For this reason, the continuous equivalent layer have to be approximated  by a discrete set of $M$ dipoles with unit volume located at a constant depth $z = z_c$. Let $\mathbf{p}$ be an $M$-dimensional parameter vector, whose $j$th element $p_j$ is the magnetic intensity of the $j$th dipole and $\mathbf{q}$ be a vector containing the inclination $\tilde{i}$ and declination $\tilde{d}$ of all dipole, analogously to equation \ref{eq:q_vector}. Mathematically, by discretizing the integrand of equation \ref{eq:continuous_layer}, the total-field anomaly produced by equivalent layer at the point $(x_i,y_i,z_i)$ is given by     
 
 \begin{equation}
@@ -154,7 +150,7 @@ where $\lambda$ is the Marquardt parameter that is updated along the iterative p
 %The iterative process stops when the data-misfit function (equation \ref{eq:misfit}) is invariant along succesive iterations according a stop criterion.
 
 % % Generalization of all-positive equivalent sources 
-
+\subsection{Positive magnetic-moment distribution over equivalent layer}
 
 
 
