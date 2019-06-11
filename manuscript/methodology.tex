@@ -59,68 +59,36 @@ and $\mathbf{q}$ is a $2 \times 1$ vector with components given by
 \end{equation}
 where $\tilde{\i} $ and $\tilde{d} $ is the inclination and declination of magnetization of the layer, respectively. We can also notice that the vector defined in equation \ref{eq:mag_vec} represents the uniform magnetization direction on the layer. For convenience, this unit vector can be rewritten as follows
 
+%% Explaining the positive property on magnetic layer
 \begin{equation}
 \hat{\mathbf{h}}(\mathbf{q}) = \mathbf{R}\hat{\mathbf{m}} \: ,
 \label{eq:h-rotation-matrix}
 \end{equation}
-where $\hat{\mathbf{m}}$ defines the uniform magnetization direction of an abitrary magnetic source and $\mathbf{R}$ is a $3 \times 3$ matrix obtained from Euler's rotation theorem. This theorem states that any rotation can be parametrized by using three parameters called Euler angles (CITAR GOLDSTEIN). That is, if the unit vector $\hat{\mathbf{h}}(\mathbf{q})$ (equation \ref{eq:mag_vec}) has the same direction as unit vector  $\hat{\mathbf{m}}$ in the direction of the magnetic source, the matrix $\mathbf{R}$ (equation \ref{eq:h-rotation-matrix}) is equal to identity. For this reason, the total-field anomaly produced by equivalent layer at the $i$th position $(x_i,y_i,z_i)$ (equation \ref{eq:continuous_layer}) can be rewritten as 
+where $\hat{\mathbf{m}}$ defines the uniform magnetization direction of an abitrary magnetic source and $\mathbf{R}$ is a $3 \times 3$ matrix obtained from Euler's rotation theorem. This theorem states that any rotation can be parametrized by using three parameters called Euler angles (CITAR GOLDSTEIN). That is, if the unit vector $\hat{\mathbf{h}}(\mathbf{q})$ (equation \ref{eq:mag_vec}) has the same direction as unit vector  $\hat{\mathbf{m}}$ in the direction of the magnetic source, the matrix $\mathbf{R}$ is equal to identity (equation \ref{eq:h-rotation-matrix}). For this reason, the total-field anomaly produced by equivalent layer at the $i$th position $(x_i,y_i,z_i)$ (equation \ref{eq:continuous_layer}) can be rewritten as 
 
 \begin{equation}
 \Delta T_i = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  p(x',y',z_c)  [\gamma_m \hat{\mathbf{F}}_0^T \mathbf{H}(x_i,y_i,z_i,x',y',z_c) \,\hat{\mathbf{m}}] dx' \,dy',
 \label{eq:continuous_layer_source}
 \end{equation} 
-which represents the total-field anomaly produced by continuous layer with the same direction of the arbitrary magnetic source.   
+which represents the total-field anomaly produced by continuous layer with the same direction of the arbitrary magnetic source. Thus, the RTP field $\Delta T_{i}^{PL}$ produced by equivalent layer at the point $(x_i,y_i,z_i)$ is equal to 
 
-%% Explaining the positive property on magnetic layer
+\begin{equation}
+\Delta T_{i}^{PL} = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  p(x',y',z_c)  [\gamma_m \partial_{zz} \phi(x_i,y_i,z_i,x',y',z_c) ] dx' \,dy',
+\label{eq:continuous_layer_pole}
+\end{equation}
+where $\partial_{zz} \phi(x_i,y_i,z_i,x',y',z_c)$ is the second derivative of the inverse of distance (equation \ref{eq:phi}) with respect of $z$, evaluated at the point $(x_i,y_i,z_i)$. However, considering the RTP field $\Delta T_{i}^{PS}$ produced by an arbitrary uniformly magnetized source equal to
 
-%Notice that, if the unit vector $\hat{\vect{h}}$ (equations \ref{eq:h_hat} and \ref{eq:h-hat-rotation-matrix}) has the same direction as the uniform magnetization of the source, the rotation matrix $\vect{R}$ (equation 
-%\ref{eq:h-hat-rotation-matrix}) is equal to the identity.
-%In this case, by combining equations \ref{eq:generalized-integral},
-%\ref{eq:g-mag-dipole} and \ref{eq:h-hat-rotation-matrix}, 
-%the total-field anomaly $\Delta T(x_{i}, y_{i}, z_{i})$
-%(equation \ref{eq:tfanomaly-general}) can be rewritten as
-%\begin{equation}
-%\Delta T(x_{i}, y_{i}, z_{i})
-%= \int \limits_{-\infty}^{+\infty}
-%\int \limits_{-\infty}^{+\infty}
-%p(x, y, z_{c}) \,
-%\left[ c_{m} \, \frac{\mu_{0}}{4\pi} \,
-%\hat{\vect{F}}^{\top} \vect{H} \, 
-%\hat{\vect{m}} \right] \,
-%dx \, dy \: ,
-%\label{eq:tf-p-continuous-mag-positive}
-%\end{equation}
-%which represents the total-field anomaly produced by
-%a continuous layer with the same magnetization direction
-%as the true magnetic source. In this case, according to equation 
-%\ref{eq:tf-p-continuous-mag-positive}, the RTP anomaly 
-%$\Delta T^{P}(x_{i}, y_{i}, z_{i})$ (equation \ref{eq:rtp_anomaly_true}) 
-%can be rewritten as follows:
-%\begin{equation}
-%\Delta T^{P}(x_{i}, y_{i}, z_{i})
-%= \int \limits_{-\infty}^{+\infty}
-%\int \limits_{-\infty}^{+\infty}
-%p(x, y, z_{c}) \,
-%\left[ c_{m} \, \frac{\mu_{0}}{4\pi} \,
-%\partial_{zz}\frac{1}{r} \, \right] dx \, dy \: ,
-%\label{eq:rtp-p-continuous-mag-positive}
-%\end{equation}
-%where $\partial_{zz}\frac{1}{r}$ is the second derivative of the inverse
-%distance function (equation \ref{eq:inv-r}) with respect to $z$.
-%By comparing equations \ref{eq:rtp_anomaly_true} and 
-%\ref{eq:rtp-p-continuous-mag-positive}, we obtain
-%\begin{equation}
-%m \: \partial_{zz} \phi(x_{i}, y_{i}, z_{i})
-%= \int \limits_{-\infty}^{+\infty}
-%\int \limits_{-\infty}^{+\infty}
-%p(x, y, z_{c}) \,
-%\partial_{zz} \frac{1}{r} \, dx \, dy \: ,
-%\label{eq:p-continuous-delzz-theta}
-%\end{equation}
-%where $m$ is the magnetization intensity of the source, $\partial_{zz} \phi(x_{i}, y_{i}, z_{i})$ is the second derivative, evaluated at the observation point $(x_{i},y_{i},z_{i})$, of the 
-%harmonic function $\phi(x, y, z)$ (equation \ref{eq:phi}) 
-%with respect to the variable $z$. In this case, the integration in the function $\phi(x, y, z)$ is conducted over the volume of the magnetic source.
-%
+\begin{equation}
+\Delta T_{i}^{PS} = \gamma_m \partial_{zz} \Gamma(x_i,y_i,z_i) \, m,
+\label{eq:source_pole}
+\end{equation}
+which represents the total-field anomaly produced at the pole and $m$ is the magnetization intensity of the magnetic source. The $\partial_{zz} \Gamma(x_i,y_i,z_i)$ is the second derivative in relation to $z$ of a scalar function $\Gamma(x_i,y_i,z_i)$ that depends on source geometry and the observation point $(x_i,y_i,z_i)$. By comparing equation \ref{eq:continuous_layer_pole} and \ref{eq:source_pole}, we obtain 
+ 
+\begin{equation}
+m \, \partial_{zz} \Gamma(x_i,y_i,z_i) = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  p(x',y',z_c)  \partial_{zz} \phi(x_i,y_i,z_i,x',y',z_c)  dx' \,dy'.
+\label{eq:source_layer_pole}
+\end{equation}
+     
 %Notice that equation \ref{eq:p-continuous-delzz-theta} can be
 %obtained by differentiating the following equation
 %\begin{equation}
@@ -301,25 +269,9 @@ which represents the total-field anomaly produced by continuous layer with the s
 %magnetization of the  that the observed total-field anomaly data be
 %on a plane.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+%% Discretizing layer
 \subsection{Forward problem for magnetic equivalent-layer technique}
 
-%% Discretizing layer
 However, in practical situations, its not possible to determine a continuous magnetic-moment distribution $p(x',y',z_c)$ over the layer as shown in equation \ref{eq:continuous_layer}. For this reason, the continuous equivalent layer have to be approximated  by a discrete set of $M$ dipoles with unit volume located at a constant depth $z = z_c$. Let $\mathbf{p}$ be an $M$-dimensional parameter vector, whose $j$th element $p_j$ is the magnetic intensity of the $j$th dipole and $\mathbf{q}$ be a vector containing the inclination $\tilde{i}$ and declination $\tilde{d}$ of all dipole, analogously to equation \ref{eq:q_vector}. Mathematically, by discretizing the integrand of equation \ref{eq:continuous_layer}, the total-field anomaly produced by equivalent layer at the point $(x_i,y_i,z_i)$ is given by     
 
 \begin{equation}
