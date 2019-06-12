@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  11 JUN 2019 19:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  12 JUN 2019 19:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -335,51 +335,53 @@ LaTeX Warning: Command \i invalid in math mode on input line 60.
 
 LaTeX Warning: Command \i invalid in math mode on input line 60.
 
-[4] [5] [6] [7] [8]) [9]
+[4] [5] [6] [7] [8] [9]) [10]
 No file eqlayer_magdir_manuscript.bbl.
 \openout2 = `figures.aux'.
 
-(./figures.tex <Fig/eqlayer_figure.pdf, id=44, 451.93675pt x 436.13832pt>
+(./figures.tex <Fig/eqlayer_figure.pdf, id=49, 451.93675pt x 436.13832pt>
 File: Fig/eqlayer_figure.pdf Graphic file (type pdf)
 
 <use Fig/eqlayer_figure.pdf>
 Package pdftex.def Info: Fig/eqlayer_figure.pdf used on input line 6.
 (pdftex.def)             Requested size: 303.53267pt x 292.93654pt.
 
-<Fig/algorithm_LM_NNLS.pdf, id=45, 480.8955pt x 587.05032pt>
+<Fig/algorithm_LM_NNLS.pdf, id=50, 480.8955pt x 587.05032pt>
 File: Fig/algorithm_LM_NNLS.pdf Graphic file (type pdf)
 
 <use Fig/algorithm_LM_NNLS.pdf>
 Package pdftex.def Info: Fig/algorithm_LM_NNLS.pdf used on input line 14.
 (pdftex.def)             Requested size: 260.17464pt x 317.61157pt.
-) [10 <./Fig/eqlayer_figure.pdf>] [11 <./Fig/algorithm_LM_NNLS.pdf>] (./eqlayer
+) [11 <./Fig/eqlayer_figure.pdf>] [12 <./Fig/algorithm_LM_NNLS.pdf>] (./eqlayer
 _magdir_manuscript.aux (./abstract.aux)
 (./methodology.aux) (./figures.aux)) ) 
 Here is how much of TeX's memory you used:
- 3308 strings out of 493029
- 43071 string characters out of 6136233
- 107809 words of memory out of 5000000
- 6759 multiletter control sequences out of 15000+600000
- 10581 words of font info for 40 fonts, out of 8000000 for 9000
+ 3317 strings out of 493029
+ 43214 string characters out of 6136233
+ 107837 words of memory out of 5000000
+ 6767 multiletter control sequences out of 15000+600000
+ 11828 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,9n,28p,1387b,235s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,9n,28p,1584b,235s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on eqlayer_magdir_manuscript.pdf (11 pages, 223776 bytes).
+fonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/symbols/msbm10.pfb>
+Output written on eqlayer_magdir_manuscript.pdf (12 pages, 244149 bytes).
 PDF statistics:
- 378 PDF objects out of 1000 (max. 8388607)
- 229 compressed objects within 3 object streams
+ 389 PDF objects out of 1000 (max. 8388607)
+ 237 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
