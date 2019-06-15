@@ -133,7 +133,6 @@ where $\mathbf{G}(\mathbf{q})$ is an $N \times M$ matrix whose $ij$th element is
 \subsection{Iterative process for magnetization estimation}
 
 %%% Defining the objective function
-
 Let $\mathbf{\Delta T}^o$ be an \textit{N}-dimensional vector whose $i$th element $\Delta T_i^o$ is the total-field anomaly observation produced by a magnetic source at the point $(x_i,y_i,z_i)$, $i = 1, \ldots, N$. The estimation of a set of magnetic moments $\mathbf{p}$ and the magnetization direction $\mathbf{q}$ consists to formulate an inverse problem by imposing a positivity constraint on the magnetic-moment distribution. It can be performed by minimizing the difference between the observed data $\mathbf{\Delta T}^o$ and the predicted data $\Delta T (\mathbf{p}, \mathbf{q})$ (equation \ref{eq:tfa_pred}). In other words, a stable estimates $\mathbf{p}^\sharp$ and $\mathbf{q}^\sharp$ can be obtained by minimizing the objective function given by
 
 \begin{equation}
@@ -143,7 +142,6 @@ Let $\mathbf{\Delta T}^o$ be an \textit{N}-dimensional vector whose $i$th elemen
 where $\Psi(\mathbf{p}, \mathbf{q})$ is the data misfit, which is the Euclidean norm of the difference between the $\mathbf{\Delta T}^o$ and $\mathbf{\Delta T} (\mathbf{p}, \mathbf{q})$.
 
 %%% Explaining the iterative process
-
 The procedure of finding a set of magnetic moment $\mathbf{p}^\sharp$ and magnetization direction $\mathbf{q}^\sharp$ which minimize the equation \ref{eq:misfit} consists to solve an inverse problem for estimating a set of parameters in two steps. Therefore, we split the inverse problem in a mixed solution of two systems of equations. The first one solves a linear system for estimating the part of the magnetic moment. Secondly, the problem is solved through a non-linear process to calculate successive approximations for the part of the magnetization direction at each iteration along the process. 
 
 However, at the $k$th iteration, we impose positivity constraint on the magnetic-moment distribution estimate $\mathbf{p}^k$ by solving the following constrained problem of
@@ -174,7 +172,6 @@ After estimating the magnetic-moment distribution $\mathbf{p}^k$ at the $k$th it
 \end{equation}
 where $\lambda$ is the Marquardt parameter that is updated along the iterative process, $\mathbf{I}$ is a indentity matrix, and  the residual at the $k$th iteration $r^k = \Delta \mathbf{T}^o - \mathbf{\Delta T} (\mathbf{p}^k, \mathbf{q}^{k-1})$. $\mathbf{G}_q^k$ is a sensitivity matrix of the magnetization direction part, whose elements are composed by derivative of equation \ref{eq:tfa_pred_pos_i} in relation of each component of the vector $\mathbf{q}^k$, that are the inclination and declination, respectively. The iterative process stops when the squared Euclidean norm of the difference between the observed data $\Delta \mathbf{T}^{o}$ and predicted data $\Delta\mathbf{T}(\mathbf{p}, \mathbf{q})$ (equation \ref{eq:tfa_pred}) is invariant along succesive iterations (Figure \ref{fig:scheme_LM_NNLS}).
 
-
 %However, we have to apply successive corrections $\Delta \mathbf{q}^k$ for calculating the magnetization direction vector $\mathbf{q}^k$ at each $k$th iteration. It is calculated using the Levenberg-Marquardt method (\cite{aster2005}), that is given by equation   
 %
 %\begin{equation}
@@ -195,11 +192,13 @@ where $\lambda$ is the Marquardt parameter that is updated along the iterative p
 %\end{equation}
 %The iterative process stops when the data-misfit function (equation \ref{eq:misfit}) is invariant along succesive iterations according a stop criterion.
 
-\section{High-latitude problem and practical procedures}
-
-\subsection{Consequences of high-latitude estimation}
-
-
 \subsection{The choice of layer depth $\mathbf{z_c}$ and regularization parameter $\mathbf{\mu}$}
 
-%% Overview for the choice of 
+%% Overview for the choice of layer depth and regularization parameter
+The procedure for the use of our methodology for estimating the total magnetization require the choice of two main parameters. The first one is the layer depth $z_c$ as shown in figure \ref{fig:eqlayer_figure} and the second is the regularization parameter $\mu$ shown in equation \ref{eq:linsys_p}.
+
+% % Explain the choice of layer depth
+The method  of the choice of layer is based on a classical approach proposed by (CITAR DAMPNEY). The author pointed out that the layer depth should satisfy an interval from $2.5$ to $6$ times the grid spacing below the observation plane. It should be notice that the rule proposed by (CITAR DAMPNEY) was applied on a regularly spaced data grid. Analogously to (DAMPNEY), the choice for applying our method should correspond to an interval from $2$ to $3$ times to the lower grid spacing in the case of an airborne survey, for example. It is very important to mention that the upper bound in this case was based empirically.
+
+% % Explain the choice of regularization parameter
+To solve the equation \ref{eq:linsys_p} we have to choose a reliable regularization parameter $\mu$. For this purpose, we use the L-curve method proposed by (CITAR HANSEN 1992). This approach is widely used in the literature to find a regularization parameter which filtering out enough noise whithout loosing to much information in the final solution. The procedure of finding the parameter is basically to plot a curve of optimal values between the solution norm and residual norm. The corner of the curve is the final result which gives a threshold between the regularization function and the data misfit. (INVESTIGAR MELHOR)

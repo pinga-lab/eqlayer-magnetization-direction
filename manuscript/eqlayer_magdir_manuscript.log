@@ -1,20 +1,20 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  12 JUN 2019 19:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.11.5)  15 JUN 2019 15:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **eqlayer_magdir_manuscript.tex
 (./eqlayer_magdir_manuscript.tex
-LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 5 languages loaded.
 (./geophysics.cls
 Document Class: geophysics 2007/02/14 v3.0 Geophysics paper
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -33,22 +33,22 @@ Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 95.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
@@ -65,7 +65,7 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@width=\dimen104
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks15
 \verbatim@line=\toks16
 \verbatim@in@stream=\read1
@@ -102,12 +102,12 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \c@@tabls=\count97
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 143.
+Package color Info: Driver file: pdftex.def on input line 130.
 )
 (/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box26
@@ -132,40 +132,40 @@ LaTeX Info: Redefining \refname on input line 274.
 \c@@append=\count100
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/03/03 v2.15a AMS math features
+Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip52
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
+Package: amstext 2000/06/29 v2.01
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
+File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks18
 \ex@=\dimen110
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen111
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count101
-LaTeX Info: Redefining \frac on input line 199.
+LaTeX Info: Redefining \frac on input line 210.
 \uproot@=\count102
 \leftroot@=\count103
-LaTeX Info: Redefining \overline on input line 297.
+LaTeX Info: Redefining \overline on input line 306.
 \classnum@=\count104
 \DOTSCASE@=\count105
-LaTeX Info: Redefining \ldots on input line 394.
-LaTeX Info: Redefining \dots on input line 397.
-LaTeX Info: Redefining \cdots on input line 518.
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box29
 \strutbox@=\box30
 \big@size=\dimen112
-LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count106
 \c@MaxMatrixCols=\count107
 \dotsspace@=\muskip10
@@ -186,8 +186,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \multlinegap=\skip53
 \multlinetaggap=\skip54
 \mathdisplay@stack=\toks22
-LaTeX Info: Redefining \[ on input line 2735.
-LaTeX Info: Redefining \] on input line 2736.
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -200,7 +200,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
 (./eqlayer_magdir_manuscript.aux (./abstract.aux) (./methodology.aux)
-(./figures.aux))
+(./high_latitude.aux) (./figures.aux))
 \openout1 = `eqlayer_magdir_manuscript.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -215,7 +215,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
- (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count113
 \scratchdimen=\dimen119
@@ -284,13 +285,6 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 1.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1.
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ‡ in font cmr10!
 Missing character: There is no Ã in font cmr10!
@@ -335,53 +329,59 @@ LaTeX Warning: Command \i invalid in math mode on input line 60.
 
 LaTeX Warning: Command \i invalid in math mode on input line 60.
 
-[4] [5] [6] [7] [8] [9]) [10]
+[4] [5] [6] [7] [8] [9] [10]) [11]
+\openout2 = `high_latitude.aux'.
+
+ (./high_latitude.tex) [12
+
+
+]
 No file eqlayer_magdir_manuscript.bbl.
 \openout2 = `figures.aux'.
 
-(./figures.tex <Fig/eqlayer_figure.pdf, id=49, 451.93675pt x 436.13832pt>
+(./figures.tex <Fig/eqlayer_figure.pdf, id=55, 451.93675pt x 436.13832pt>
 File: Fig/eqlayer_figure.pdf Graphic file (type pdf)
 
 <use Fig/eqlayer_figure.pdf>
 Package pdftex.def Info: Fig/eqlayer_figure.pdf used on input line 6.
 (pdftex.def)             Requested size: 303.53267pt x 292.93654pt.
 
-<Fig/algorithm_LM_NNLS.pdf, id=50, 480.8955pt x 587.05032pt>
+<Fig/algorithm_LM_NNLS.pdf, id=56, 480.8955pt x 587.05032pt>
 File: Fig/algorithm_LM_NNLS.pdf Graphic file (type pdf)
 
 <use Fig/algorithm_LM_NNLS.pdf>
 Package pdftex.def Info: Fig/algorithm_LM_NNLS.pdf used on input line 14.
 (pdftex.def)             Requested size: 260.17464pt x 317.61157pt.
-) [11 <./Fig/eqlayer_figure.pdf>] [12 <./Fig/algorithm_LM_NNLS.pdf>] (./eqlayer
+) [13 <./Fig/eqlayer_figure.pdf>] [14 <./Fig/algorithm_LM_NNLS.pdf>] (./eqlayer
 _magdir_manuscript.aux (./abstract.aux)
-(./methodology.aux) (./figures.aux)) ) 
+(./methodology.aux) (./high_latitude.aux) (./figures.aux)) ) 
 Here is how much of TeX's memory you used:
- 3317 strings out of 493029
- 43214 string characters out of 6136233
- 107837 words of memory out of 5000000
- 6767 multiletter control sequences out of 15000+600000
- 11828 words of font info for 45 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 3309 strings out of 494963
+ 43026 string characters out of 6179647
+ 103156 words of memory out of 5000000
+ 6444 multiletter control sequences out of 15000+600000
+ 12473 words of font info for 48 fonts, out of 8000000 for 9000
+ 38 hyphenation exceptions out of 8191
  41i,9n,28p,1584b,235s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/symbols/msbm10.pfb>
-Output written on eqlayer_magdir_manuscript.pdf (12 pages, 244149 bytes).
+</usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on eqlayer_magdir_manuscript.pdf (14 pages, 247022 bytes).
 PDF statistics:
- 389 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
+ 396 PDF objects out of 1000 (max. 8388607)
+ 242 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
