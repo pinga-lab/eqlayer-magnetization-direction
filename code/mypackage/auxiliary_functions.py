@@ -364,12 +364,12 @@ def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,
         tf_ext = tfa_layer(x,y,z,xs,ys,zs,sinc,sdec,p0,inc0,dec0)
         r_ext = dobs - tf_ext
 
-        phi_ext = np.sum(r_ext*r_ext)
+        phi_ext = np.linalg.norm(r_ext) + mu*f0*np.linalg.norm(p0)
         
         for j in range(itext):
             tf0 = tfa_layer(x,y,z,xs,ys,zs,sinc,sdec,p0,inc0,dec0)
             r0 = dobs - tf0
-            phi0 = np.sum(r0*r0)
+            phi0 = np.linalg.norm(r0) + mu*f0*np.linalg.norm(p0)
 
             G_dir = sensitivity_dir(x,y,z,xs,ys,zs,sinc,sdec,p0,inc0,dec0)
             J = -np.dot(G_dir.T,r0)
@@ -386,7 +386,7 @@ def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,
 
                 tf = tfa_layer(x,y,z,xs,ys,zs,sinc,sdec,p0,inc,dec)
                 r = dobs - tf
-                phi = np.sum(r*r)
+                phi = np.linalg.norm(r) + mu*f0*np.linalg.norm(p0)
 
                 dphi = phi-phi0
 
