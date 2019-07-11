@@ -416,6 +416,7 @@ def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,
         
         dphi_ext = phi_ext - phi0
         condition_2 = np.abs(dphi_ext)/phi0
+        print condition_2
         if (condition_2 < eps_e):
             break
 
