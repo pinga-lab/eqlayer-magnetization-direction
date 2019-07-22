@@ -5,7 +5,7 @@
 \label{subsec:mag_eqlayer}
 
 %%% Continuous layer
-Considering a Cartesian coordinate system with $x$-, $y$- and $z$-axis being oriented to north, east and downward, respectively. Let $\Delta T_i \equiv \Delta T (x_i,y_i,z_i)$ be the total-field anomaly, at the $i$th position $(x_i,y_i,z_i)$, produced by a continuos layer located below the observation plane at a depth equal to $z_c$, where $z_c > z_i$, and $p(x',y',z_c)$ is the distribution of magnetic dipoles per unit area over the layer. The total-field anomaly produced by this continuous layer is given by equation 
+Considering a Cartesian coordinate system with $x$-, $y$- and $z$-axis being oriented to north, east and downward, respectively. Let $\Delta T_i \equiv \Delta T (x_i,y_i,z_i)$ be the total-field anomaly, at the $i$th position $(x_i,y_i,z_i)$, produced by a continuos layer located below the observation plane at a depth equal to $z_c$, where $z_c > z_i$, and $p(x',y',z_c)$ is the distribution of magnetic dipoles per unit area over the layer. The total-field anomaly produced by this continuous layer is given by 
 
 \begin{equation}
 \Delta T_i = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  p(x',y',z_c)  [\gamma_m \hat{\mathbf{F}}_0^T \mathbf{M}(x_i,y_i,z_i,x',y',z_c) \,\hat{\mathbf{m}}(\mathbf{q})] dx' \,dy',
@@ -22,7 +22,7 @@ where $\gamma_m$ is a constant proportional to the vacuum permeability, $\hat{\m
 	\end{array} \right] ,
 	\label{eq:main_field}
 \end{equation}
-where $I$ and $D$ are the inclination and declination, respectively, and $\mathbf{M}(x_i,y_i,z_i,x',y',z_c)$ is a $3 \times 3$ dimensional matrix equal to  
+where $I$ and $D$ are, respectively, the inclination and declination and $\mathbf{M}(x_i,y_i,z_i,x',y',z_c)$ is a $3 \times 3$ dimensional matrix (PAPER LADY DAI) equal to  
 \begin{equation}
 \mathbf{M}(x_i,y_i,z_i,x',y',z_c) =
 \left[ \begin{array}{ccc}
@@ -36,7 +36,7 @@ where $\partial_{\alpha \beta} \phi$, $\alpha = x, y, z$ and $\beta = x, y, z$, 
 \phi (x_i,y_i,z_i,x',y',z_c) = \frac{1}{[(x_i-x')^2 + (y_i-y')^2 + (z_i-z_c)^2]^{\frac{1}{2}}} .
 \label{eq:phi}
 \end{equation}
-with respect to the Cartesian coordinates $x_i$, $y_i$ and $z_i$ of the observation points. The $\hat{\mathbf{m}}(\mathbf{q})$ is a unit vector with the magnetization direction of the layer given by 
+with respect to the Cartesian coordinates $x_i$, $y_i$ and $z_i$ of the observation points. The $\hat{\mathbf{m}}(\mathbf{q})$ is a unit vector with the magnetization direction of the dipoles over layer given by 
 
 \begin{equation}
 	\hat{\mathbf{m}}(\mathbf{q}) =
@@ -57,14 +57,14 @@ and $\mathbf{q}$ is a $2 \times 1$ vector with components given by
 	\end{array} \right] ,
 	\label{eq:q_vector}
 \end{equation}
-where $\tilde{\i} $ and $\tilde{d} $ is the inclination and declination of magnetization of the layer, respectively. We can also notice that the vector defined in equation \ref{eq:mag_vec} represents the uniform magnetization direction on the layer. For convenience, this unit vector can be rewritten as follows
+where $\tilde{\i} $ and $\tilde{d} $ are the inclination and declination of the magnetization direction of the dipoles on the layer, respectively. We can also notice that the vector defined in equation \ref{eq:mag_vec} has a single and uniform magnetization direction of all dipoles on the layer. For convenience, this unit vector can be rewritten as follows
 
 %% Explaining the positive property on magnetic layer
 \begin{equation}
 \hat{\mathbf{m}}(\mathbf{q}) = \mathbf{R}\hat{\mathbf{h}} \: ,
 \label{eq:h-rotation-matrix}
 \end{equation}
-where $\hat{\mathbf{h}}$ defines the uniform magnetization direction of an abitrary magnetic source and $\mathbf{R}$ is a $3 \times 3$ matrix obtained from Euler's rotation theorem. This theorem states that any rotation can be parametrized by using three parameters called Euler angles (CITAR GOLDSTEIN). That is, if the unit vector $\hat{\mathbf{m}}(\mathbf{q})$ (equation \ref{eq:mag_vec}) has the same direction as unit vector  $\hat{\mathbf{h}}$ in the direction of the magnetic source, the matrix $\mathbf{R}$ is equal to identity (equation \ref{eq:h-rotation-matrix}). For this reason, the total-field anomaly produced by equivalent layer at the $i$th position $(x_i,y_i,z_i)$ (equation \ref{eq:continuous_layer}) can be rewritten as 
+where $\hat{\mathbf{h}}$ defines the uniform magnetization direction of an abitrary magnetic source and $\mathbf{R}$ is a $3 \times 3$ matrix obtained from Euler's rotation theorem. This theorem states that any rotation can be parametrized by using three parameters called Euler angles (CITAR GOLDSTEIN). That is, if all dipoles that set up the equivalent layer have the same magnetization direction $\hat{\mathbf{m}}(\mathbf{q})$ and this direction is the same as the true magnetic source $\hat{\mathbf{h}}$, then the matrix $\mathbf{R}$ (equation \ref{eq:h-rotation-matrix}) is equal to identity. For this reason, the total-field anomaly produced by equivalent layer at the $i$th position $(x_i,y_i,z_i)$ (equation \ref{eq:continuous_layer}) can be rewritten as 
 
 \begin{equation}
 \Delta T_i = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  p(x',y',z_c)  [\gamma_m \hat{\mathbf{F}}_0^T \mathbf{M}(x_i,y_i,z_i,x',y',z_c) \,\hat{\mathbf{h}}] dx' \,dy',
@@ -76,13 +76,13 @@ which represents the total-field anomaly produced by continuous layer with the s
 \Delta T_{i}^{PL} = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  p(x',y',z_c)  [\gamma_m \partial_{zz} \phi(x_i,y_i,z_i,x',y',z_c) ] dx' \,dy',
 \label{eq:continuous_layer_pole}
 \end{equation}
-where $\partial_{zz} \phi(x_i,y_i,z_i,x',y',z_c)$ is the second derivative of the inverse of distance (equation \ref{eq:phi}) with respect of $z$, evaluated at the point $(x_i,y_i,z_i)$. However, considering the RTP field $\Delta T_{i}^{PS}$ produced by an arbitrary uniformly magnetized source equal to
+where $\partial_{zz} \phi(x_i,y_i,z_i,x',y',z_c)$ is the second derivative of the inverse of distance (equation \ref{eq:phi}) with respect of $z_i$, evaluated at the point $(x_i,y_i,z_i)$. However, by considering the RTP field $\Delta T_{i}^{PS}$ produced by an arbitrary uniformly magnetized source, we have
 
 \begin{equation}
 \Delta T_{i}^{PS} = \gamma_m \partial_{zz} \Gamma(x_i,y_i,z_i) \, m,
 \label{eq:source_pole}
 \end{equation}
-which represents the total-field anomaly produced at the pole and $m$ is the magnetization intensity of the magnetic source. The $\partial_{zz} \Gamma(x_i,y_i,z_i)$ is the second derivative in relation to $z$ of a scalar function $\Gamma(x_i,y_i,z_i)$ that depends on source geometry and the observation point $(x_i,y_i,z_i)$. By comparing equation \ref{eq:continuous_layer_pole} and \ref{eq:source_pole}, we obtain 
+which represents the total-field anomaly produced at the pole, where $m$ is the magnetization intensity of the magnetic source. The $\partial_{zz} \Gamma(x_i,y_i,z_i)$ is the second derivative in relation to $z_i$ of a scalar function $\Gamma(x_i,y_i,z_i)$ that depends on source geometry and the observation point $(x_i,y_i,z_i)$. From equation \ref{eq:continuous_layer_pole} and \ref{eq:source_pole}, we obtain 
  
 \begin{equation}
 m \, \partial_{zz} \Gamma(x_i,y_i,z_i) = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  p(x',y',z_c)  \partial_{zz} \phi(x_i,y_i,z_i,x',y',z_c)  dx' \,dy'.
@@ -94,39 +94,27 @@ We can notice that equation \ref{eq:source_layer_pole} can be calculated differe
 m \, \partial_{z} \Gamma(x_i,y_i,z_i) = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  \dfrac{p(x',y',z_c) (z_c - z_i)}{[(x_i-x')^2 + (y_i-y')^2 + (z_i-z_c)^2]^{\frac{3}{2}}}    dx' \,dy',
 \label{eq:mag_upward}
 \end{equation}
-where $z_c > z_i$, with respect to the vertical component $z$. From potential field theory, we can highlight the \textit{classical upward continuation integral} 
+where $z_c > z_i$, with respect to the vertical component $z_i$. From potential-field theory, we can highlight the classical upward continuation integral 
 
 \begin{equation}
 U(x_i,y_i,z_i) = \dfrac{(z_c-z_i)}{2\pi} \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  \dfrac{U(x',y',z_c) }{[(x_i-x')^2 + (y_i-y')^2 + (z_i-z_c)^2]^{\frac{3}{2}}}    dx' \,dy',
 \label{eq:upward_continuation_integral}
 \end{equation}
-where the function $U(x_i,y_i,z_i)$ is an hamornic function at all $(x_i,y_i,z_i)$ (CITAR BLAKELY). In this case, this function represents the total-field anomaly at the point $(x_i,y_i,z_i)$ and also can be reproduced as the convolution between its values $U(x',y',z_c)$ and the vertical derivative in relation to $z$ of the equation \ref{eq:phi}, evaluated on the horizontal plane $z=z_c$. Therefore, according the classical upward continuation function (equation \ref{eq:upward_continuation_integral}), we can notice that the magnetic-moment distribution $p(x',y',z_c)$ in equation \ref{eq:mag_upward} assumes the form 
+where the function $U(x_i,y_i,z_i)$ is an hamornic function at all $(x_i,y_i,z_i)$ (CITAR BLAKELY). In this case, this function represents the total-field anomaly at the point $(x_i,y_i,z_i)$ which can be mathematically interpreted as the convolution between its values $U(x',y',z_c)$ and the vertical derivative in relation to $z_i$ of the equation \ref{eq:phi}, evaluated on the horizontal plane $z_i =z_c$. Therefore, according the classical upward continuation function (equation \ref{eq:upward_continuation_integral}), the magnetic-moment distribution $p(x',y',z_c)$ in equation \ref{eq:mag_upward} assumes the form 
+
 \begin{equation}
 p(x',y',z_c) = \dfrac{m}{2\pi} \, \partial_{z} \Gamma(x',y',z_c) ,
 \label{eq:positivity_prop}
 \end{equation}
-where $\partial_{z} \Gamma(x',y',z_c)$ is the derivative of the scalar function $\partial_{z} \Gamma(x_i,y_i,z_i)$ in relation to $z$ evaluated over the equivalent layer. The most interesting aspect of equation \ref{eq:positivity_prop} is that the magnetic-moment distribution is defined as the product of a positive constant $\dfrac{m}{2\pi}$ and the function $\partial_{z} \Gamma(x',y',z_c)$, which is all positive at all points $(x',y',z_c)$ over the equivalent layer. This relation is simular to that presented by (CITAR PEDERSEN, LI, LIMA and BARATCHART). By following different appproches, they proved the existence of all-positive magnetic moment distribution within a continuous layer. However, until this moment, their approach is valid only for the case in which the observed total-field anomaly is produced by magnetic sources having a purely and vertical induced magnetization. In the case of LIMA AND BARATCHART, their approach uses magnetic microscopy data for the aplication of this property and not relating this property to an analytical mathematical approach to this problem. Our approach is very important owing to some aspects, (1) does not impose an induced magnetization within the layer in any moment of mathematical development, (2) holds true for all cases in which the magnetization of the planar equivalent layer has the same direction of the true magnetic source, whenever is is purely magnetized or not, and (3) does not require that the observed total-field anomay be on a plane.            
-      
+where $\partial_{z} \Gamma(x',y',z_c)$ is the derivative of the scalar function $\partial_{z} \Gamma(x_i,y_i,z_i)$ in relation to $z_i$ evaluated over the equivalent layer. The most interesting aspect of equation \ref{eq:positivity_prop} is that the magnetic-moment distribution is defined as the product of a positive constant $\dfrac{m}{2\pi}$ and the function $\partial_{z} \Gamma(x',y',z_c)$, which is all positive at all points $(x',y',z_c)$ over the equivalent layer. This relation is simular to that presented by CITAR PEDERSEN (1991) and LI (2014). In the wavenumber domain, these authors determined the
+magnetic-moment distribution within a continuous equivalent layer with the same magnetization direction as the local-geomagnetic field at the pole. They also considered a planar equivalent layer located below and parallel to a horizontal plane containing the observed total-field anomaly. They assume a magnetic source having a purely induced magnetization. Under these assumptions, CITAR PEDERSEN (1991) and LI (2014) concluded that the magnetic moment distribution within the continuous equivalent layer is proportional to the pseudogravity anomaly produced by the source on the plane of the equivalent layer. By following different approaches, CITAR BARATCHART (2013) and Lima (2016) pointed out that, by imposing a nonnegativity constraint, the solution to the inverse problem is a unique distribution for the magnetic equivalent sources. Here, we do not follow the same wavenumber-domain reasoning used by these authors.
+Equation \ref{eq:positivity_prop}, however, generalizes this positivity condition because it (1) holds true for all cases in which the magnetization of the equivalent layer has the same direction as the true
+magnetization of the sources, whenever it is purely induced or not, (2) does not require that the observed total-field anomaly data be on a plane and, (3) does not require a planar equivalent layer.
+
 %% Discretizing layer
 \subsection{Forward problem and iterative process for magnetization estimation}
 
 However, in practical situations, its not possible to determine a continuous magnetic-moment distribution $p(x',y',z_c)$ over the layer as shown in equation \ref{eq:continuous_layer}. For this reason, the continuous equivalent layer have to be approximated  by a discrete set of $M$ dipoles with unit volume located at a constant depth $z = z_c$. Let $\mathbf{p}$ be an $M$-dimensional parameter vector, whose $j$th element $p_j$ is the magnetic moment of the $j$th dipole and $\mathbf{q}$ be a vector containing the inclination $\tilde{i}$ and declination $\tilde{d}$ of all dipole, analogously to equation \ref{eq:q_vector}. Mathematically, by discretizing the integrand of equation \ref{eq:continuous_layer}, the total-field anomaly produced by equivalent layer at the point $(x_i,y_i,z_i)$ is given by 
-
-\begin{equation}
-\Delta T_i = f_i (\mathbf{m})
-\label{eq:tfa_pred_pos_i}
-\end{equation}    
-where $f_i (\mathbf{m})$ gives the functional relation between the parameter to be estimated and the predicted data produced by equivalent layer at the observation point $(x_i,y_i,z_i)$ and is given by equation
-
-\begin{equation}
-f_i (\mathbf{m}) = \sum_{j=1}^{M} p_j a_{ij} (\mathbf{q}) = \mathbf{a}_{i}^{T} (\mathbf{q}) \, \mathbf{p} 
-\label{eq:f_i}
-\end{equation}  
-
-
-
-
-
 
 
 %
