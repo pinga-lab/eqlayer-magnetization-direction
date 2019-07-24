@@ -112,44 +112,55 @@ Equation \ref{eq:positivity_prop}, however, generalizes this positivity conditio
 magnetization of the sources, whenever it is purely induced or not, (2) does not require that the observed total-field anomaly data be on a plane and, (3) does not require a planar equivalent layer.
 
 %% Discretizing layer
-\subsection{Forward problem and iterative process for magnetization estimation}
+\subsection{Forward problem}
 
-However, in practical situations, its not possible to determine a continuous magnetic-moment distribution $p(x',y',z_c)$ over the layer as shown in equation \ref{eq:continuous_layer}. For this reason, the continuous equivalent layer have to be approximated  by a discrete set of $M$ dipoles with unit volume located at a constant depth $z = z_c$. Let $\mathbf{p}$ be an $M$-dimensional parameter vector, whose $j$th element $p_j$ is the magnetic moment of the $j$th dipole and $\mathbf{q}$ be a vector containing the inclination $\tilde{i}$ and declination $\tilde{d}$ of all dipole, analogously to equation \ref{eq:q_vector}. Mathematically, by discretizing the integrand of equation \ref{eq:continuous_layer}, the total-field anomaly produced by equivalent layer at the point $(x_i,y_i,z_i)$ is given by 
+In practical situations, its not possible to determine a continuous magnetic-moment distribution $p(x',y',z_c)$ over the layer as shown in equation \ref{eq:continuous_layer}. For this reason, the layer has to be approximated by a discrete set of dipoles with unit volume located at a constant depth $z = z_c$. By discretizing the integrand of equation \ref{eq:continuous_layer}, the predicted total-field anomaly at the point $(x_i,y_i,z_i)$ is given by 
 
+\begin{equation}
+\Delta T_i = f_i(\mathbf{s}) ,
+\label{eq:tfa_pred_i}
+\end{equation}    
+where $\Delta T_i$ is the $i$th element of the $N$-dimensional predicted data vector $\mathbf{\Delta T}(\mathbf{s})$. The function $f_i$ maps the parameter onto the data, in which parameter vector $\mathbf{s}$ is formed by an $M$-dimensional vector $\mathbf{p}$ vector whose $j$th element $p_j$ is the magnetic moment of the $j$th dipole with magnetization direction $\mathbf{q}$ (equation \ref{eq:q_vector}) to all dipoles. Explicitly, the function $f_i$ is described as 
 
-%
-%\begin{equation}
-%\Delta T_i (\mathbf{p},\mathbf{q}) = \sum_{j=1}^{M} p_j g_{ij} (\mathbf{q})
-%\label{eq:tfa_pred_pos_i}
-%\end{equation}    
-%where 
-%
-%\begin{equation}
-%g_{ij} (\mathbf{q})  = \gamma_m \hat{\mathbf{F}}_0^T \mathbf{H}_{ij} \hat{\mathbf{h}}(\mathbf{q})
-%\label{eq:g_ij}
-%\end{equation}
-%is an harmonic function representing the total-field anomaly produced at the $i$th position $(x_i,y_i,z_i)$ by a dipole located at $(x_j,y_j,z_c)$ with unitary magnetic-moment intensity. The matrix $\mathbf{H}_{ij}$ is formed by the second derivatives of a function $\phi_{ij}$ that depends on the inverse of the scalar function $r_{ij} = [(x_i-x_j)^2 + (y_i-y_j)^2 + (z_i-z_c)^2]^{1/2}$, analogously to equation \ref{eq:H} and \ref{eq:phi}. In matrix notation, the equation \ref{eq:tfa_pred_pos_i} can be represented as 
-%
-%\begin{equation}
-% \mathbf{\Delta T} (\mathbf{p}, \mathbf{q}) = \mathbf{G}(\mathbf{q}) \mathbf{p}
-%\label{eq:tfa_pred}
-%\end{equation}
-%where $\mathbf{G}(\mathbf{q})$ is an $N \times M$ matrix whose $ij$th element is defined by the harmonic function $g_{ij}(\mathbb{q})$ (equation \ref{eq:g_ij}) and $\mathbf{\Delta T} (\mathbf{p}, \mathbf{q})$ is an $N \times 1$ vector whose the $i$th element is the predicted total-field anomaly $\Delta T_i (\mathbf{p},\mathbf{q})$ (equation \ref{eq:tfa_pred_pos_i}). As can be noticed from equation \ref{eq:tfa_pred_pos_i}-\ref{eq:tfa_pred}, the predicted total-field anomaly produced by equivalent layer has a linear relation with the magnetic moment $\mathbf{p}$ and a nonlinear relation with the magnetization direction $\mathbf{q}$. 
-%
+\begin{equation}
+f_i (\mathbf{s}) = \sum_{j=1}^{M} p_j g_{ij} (\mathbf{q}) = \mathbf{p}^T \mathbf{g}_i(\mathbf{q})
+\label{eq:f_i}
+\end{equation}
+where
+
+\begin{equation}
+g_{ij} (\mathbf{q})  = \gamma_m \hat{\mathbf{F}}_0^T \mathbf{M}_{ij} \hat{\mathbf{m}}(\mathbf{q})
+\label{eq:g_ij}
+\end{equation}
+is an harmonic function representing the total-field anomaly produced at the $i$th position $(x_i,y_i,z_i)$ by a dipole located at $(x_j,y_j,z_c)$ with unitary magnetic-moment intensity. The matrix $\mathbf{M}_{ij}$ is formed by the second derivatives of a function $\phi_{ij}$ that depends on the inverse of the scalar function $r_{ij} = [(x_i-x_j)^2 + (y_i-y_j)^2 + (z_i-z_c)^2]^{1/2}$, analogously to equation \ref{eq:H} and \ref{eq:phi}. From equation \ref{eq:tfa_pred_i}-\ref{eq:g_ij}, we can notice that the predicted total-field anomaly $\mathbf{\Delta T} (\mathbf{s})$ has a linear relation with the magnetic moment $\mathbf{p}$ and a nonlinear relation with the magnetizaion direction $\mathbf{q}$.    
+
+\subsection{Iterative process for magnetization estimation}
+
 %%%% Defining the objective function
-%Let $\mathbf{\Delta T}^o$ be an \textit{N}-dimensional vector whose $i$th element $\Delta T_i^o$ is the total-field anomaly observation produced by a magnetic source at the point $(x_i,y_i,z_i)$, $i = 1, \ldots, N$. The estimation of a set of magnetic moments $\mathbf{p}$ and the magnetization direction $\mathbf{q}$ consists to formulate an inverse problem by imposing a positivity constraint on the magnetic-moment distribution. It can be performed by minimizing the difference between the observed data $\mathbf{\Delta T}^o$ and the predicted data $\Delta T (\mathbf{p}, \mathbf{q})$ (equation \ref{eq:tfa_pred}). In other words, a stable estimates $\mathbf{p}^\sharp$ and $\mathbf{q}^\sharp$ can be obtained by solving the following constrained problem of
-%
-%\begin{equation}
-%\begin{aligned}
-%& \text{minimizing}
-%& &\lVert \Delta \mathbf{T}^o - \mathbf{G}(\mathbf{q}) \mathbf{p} \rVert_{2}^{2} + \, \mu f_0 \parallel \mathbf{p} \parallel_{2}^{2} \\
-%& \text{subject to}
-%& & \mathbf{p} \geqslant 0
-%\end{aligned}
-%\label{eq:positivity_goal_function}
-%\end{equation}
-%where the first term of the upper equation is the data misfit, the second term is a regularizing function, $\mu$ is the regularization parameter and $\| \cdot \|_{2}^{2}$ represents the squared Euclidean norm. Finally, $f_0$ is a normalizing factor defined below. Moreover, $\mathbf{p} \geqslant 0$ means that the magnetic moments of all equivalent sources are positive. This problem is solved by using the nonnegative least squares (NNLS) proposed by (CITAR LAWSON HANSON 1974).     
-%
+Let $\mathbf{\Delta T}^o$ be an \textit{N}-dimensional vector whose $i$th element $\Delta T_i^o$ is the total-field anomaly observation produced by a magnetic source at the point $(x_i,y_i,z_i)$, $i = 1, \ldots, N$. In order to estimate the magnetization direction, we have to formulate an inverse problem by imposing a positivity constraint on the magnetic-moment distribution. It can be performed minimizing the difference between the observed data $\mathbf{\Delta T}^o$ and the predicted data $\mathbf{\Delta T} (\mathbf{s})$ by solving the following constrained problem of
+
+\begin{subequations}
+\begin{align}
+& \text{minimizing}
+& &\Psi(\mathbf{s}) =\lVert \mathbf{\Delta T}^o - \mathbf{\Delta T} (\mathbf{s}) \rVert_{2}^{2} + \, \mu f_0 \parallel \mathbf{p} \parallel_{2}^{2} \\
+& \text{subject to}
+& & \mathbf{p} \geqslant 0
+\end{align}
+\label{eq:positivity_goal_function}
+\end{subequations}
+where in equation \ref{eq:positivity_goal_function}a the first term is the data misfit function, the second term of equation \ref{eq:positivity_goal_function}a is a zeroth-order Tikhonov regularization function, $\mu$ is the regularizing parameter, $\| \cdot \|_{2}^{2}$ represents the squared Euclidean norm and $f_0$ is a normalizing factor. In equation \ref{eq:positivity_goal_function}b, $\mathbf{0}$ is a null vector and the inequality sign is applied element by element. This inequality imposes positivity constraints on the estimated magnetic moments of all dipoles, which is solved by using the nonnegative least squares (NNLS) proposed by (CITAR LAWSON HANSON 1974). 
+
+%% Deducing the equations
+The process of minimizing the goal function shown in equation \ref{eq:positivity_goal_function}a is determined by using a gradient-based iterative optimization method like Gauss-Newton. Such method starts with an initial approximation to the parameter vector $\mathbf{s}_0$ and then solving a sequence of linear problem of estimating, at each $kth$ iteration, a correction $\mathbf{\Delta s}_k$. The procedure is repeated until a minimum of goal function (equation \ref{eq:positivity_goal_function}a) is reached. Mathematically, it can be expressed as a second-order expansion given by
+
+\begin{equation}
+\Psi(\mathbf{s}_0 + \mathbf{\Delta s}) \approx \mathbf{J}(\mathbf{s}_0) + \mathbf{J}^T(\mathbf{s}_0)  \mathbf{\Delta s} + 
+\frac{1}{2} \mathbf{\Delta s}^T \mathbf{H}(\mathbf{s}_0) \mathbf{\Delta s}
+\label{eq:sec_ord_goal}
+\end{equation}
+in which $\mathbf{J}(\mathbf{s}_0)$ and $\mathbf{H}(\mathbf{s}_0)$ are, respectively, the gradient vector and the Hessian matrix of equation \ref{eq:positivity_goal_function}a.
+         
+
 %%%% Explaining the iterative process
 %The procedure of minimizing the equation \ref{eq:positivity_goal_function} consists to solve the inverse problem in two steps. Therefore, we split the inverse problem in a mixed solution of two systems of equations. Firstly, we solve a linear system with positivity constraint at each $k$th iteration given by 
 %
