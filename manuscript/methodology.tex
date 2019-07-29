@@ -112,7 +112,7 @@ Equation \ref{eq:positivity_prop}, however, generalizes this positivity conditio
 magnetization of the sources, whenever it is purely induced or not, (2) does not require that the observed total-field anomaly data be on a plane and, (3) does not require a planar equivalent layer.
 
 %% Discretizing layer
-\subsection{Forward problem}
+\subsection{Parametrization and forward problem}
 
 In practical situations, its not possible to determine a continuous magnetic-moment distribution $p(x',y',z_c)$ over the layer as shown in equation \ref{eq:continuous_layer}. For this reason, the layer has to be approximated by a discrete set of dipoles with unit volume located at a constant depth $z = z_c$. By discretizing the integrand of equation \ref{eq:continuous_layer}, the predicted total-field anomaly at the point $(x_i,y_i,z_i)$ is given by 
 
@@ -134,7 +134,7 @@ g_{ij} (\mathbf{q})  = \gamma_m \hat{\mathbf{F}}_0^T \mathbf{M}_{ij} \hat{\mathb
 \end{equation}
 is an harmonic function representing the total-field anomaly produced at the $i$th position $(x_i,y_i,z_i)$ by a dipole located at $(x_j,y_j,z_c)$ with unitary magnetic-moment intensity. The matrix $\mathbf{M}_{ij}$ is formed by the second derivatives of a function $\phi_{ij}$ that depends on the inverse of the scalar function $r_{ij} = [(x_i-x_j)^2 + (y_i-y_j)^2 + (z_i-z_c)^2]^{1/2}$, analogously to equation \ref{eq:H} and \ref{eq:phi}. From equation \ref{eq:tfa_pred_i}-\ref{eq:g_ij}, we can notice that the predicted total-field anomaly $\mathbf{\Delta T} (\mathbf{s})$ has a linear relation with the magnetic moment $\mathbf{p}$ and a nonlinear relation with the magnetizaion direction $\mathbf{q}$.    
 
-\subsection{Iterative process for magnetization estimation}
+\subsection{Inverse problem}
 
 %%%% Defining the objective function
 Let $\mathbf{\Delta T}^o$ be an \textit{N}-dimensional vector whose $i$th element $\Delta T_i^o$ is the total-field anomaly observation produced by a magnetic source at the point $(x_i,y_i,z_i)$, $i = 1, \ldots, N$. In order to estimate the magnetization direction, we have to formulate an inverse problem by imposing a positivity constraint on the magnetic-moment distribution. It can be performed minimizing the difference between the observed data $\mathbf{\Delta T}^o$ and the predicted data $\mathbf{\Delta T} (\mathbf{s})$ by solving the following constrained problem of
@@ -151,43 +151,112 @@ Let $\mathbf{\Delta T}^o$ be an \textit{N}-dimensional vector whose $i$th elemen
 where in equation \ref{eq:positivity_goal_function}a the first term is the data misfit function, the second term of equation \ref{eq:positivity_goal_function}a is a zeroth-order Tikhonov regularization function, $\mu$ is the regularizing parameter, $\| \cdot \|_{2}^{2}$ represents the squared Euclidean norm and $f_0$ is a normalizing factor. In equation \ref{eq:positivity_goal_function}b, $\mathbf{0}$ is a null vector and the inequality sign is applied element by element. This inequality imposes positivity constraints on the estimated magnetic moments of all dipoles, which is solved by using the nonnegative least squares (NNLS) proposed by (CITAR LAWSON HANSON 1974). 
 
 %% Deducing the equations
-The process of minimizing the goal function shown in equation \ref{eq:positivity_goal_function}a is determined by using a gradient-based iterative optimization method like Gauss-Newton. Such method starts with an initial approximation to the parameter vector $\mathbf{s}_0$ and then solving a sequence of linear problem of estimating, at each $kth$ iteration, a correction $\mathbf{\Delta s}_k$. The procedure is repeated until a minimum of goal function (equation \ref{eq:positivity_goal_function}a) is reached. Mathematically, it can be expressed as a second-order expansion given by
+The process of minimizing the goal function shown in equation \ref{eq:positivity_goal_function}a starts with an initial approximation to the parameter vector $\mathbf{s}_0$ and then solving a sequence of linear problem of estimating a correction $\mathbf{\Delta s}$. The procedure is repeated until a minimum of goal function (equation \ref{eq:positivity_goal_function}a) is reached. This procedure is determined by using a gradient-based iterative optimization method like Gauss-Newton. Mathematically, the correction $\mathbf{\Delta s}$ is expressed as a second-order expansion of the goal function given by     
 
 \begin{equation}
 \Psi(\mathbf{s}_0 + \mathbf{\Delta s}) \approx \mathbf{J}(\mathbf{s}_0) + \mathbf{J}^T(\mathbf{s}_0)  \mathbf{\Delta s} + 
 \frac{1}{2} \mathbf{\Delta s}^T \mathbf{H}(\mathbf{s}_0) \mathbf{\Delta s}
 \label{eq:sec_ord_goal}
 \end{equation}
-in which $\mathbf{J}(\mathbf{s}_0)$ and $\mathbf{H}(\mathbf{s}_0)$ are, respectively, the gradient vector and the Hessian matrix of equation \ref{eq:positivity_goal_function}a.
-         
+in which $\mathbf{J}(\mathbf{s}_0)$ and $\mathbf{H}(\mathbf{s}_0)$ are, respectively, the gradient vector and the Hessian matrix of equation \ref{eq:positivity_goal_function}a. Thus, taking the gradient of the function \ref{eq:sec_ord_goal}, the parameter perturbation vector $\mathbf{\Delta s}^k$ at the $k$th iteration is obtained by solving the linear system
 
-%%%% Explaining the iterative process
-%The procedure of minimizing the equation \ref{eq:positivity_goal_function} consists to solve the inverse problem in two steps. Therefore, we split the inverse problem in a mixed solution of two systems of equations. Firstly, we solve a linear system with positivity constraint at each $k$th iteration given by 
-%
-%\begin{equation}
-%\mathbf{p}^k = \left(\mathbf{G}_{p}^{(k)T} \mathbf{G}_{p}^{(k)} + \mu f_{0}^{k} \mathbf{I} \right)^{-1} \mathbf{G}_{p}^{(k)T}  \Delta \mathbf{T}^o \, ,
-%\label{eq:linsys_p}
-%\end{equation}
-%where $\mathbf{G}_p^{(k)}$ is the magnetic-moment sensitivity matrix at the $k$th iteration and $\mathbf{I}$ is an identity matrix. The elements of the matrix $\mathbf{G}_p^{(k)}$ are composed by the derivative of equation \ref{eq:tfa_pred_pos_i} in relation of $j$th element of the vector $\mathbf{p}^k$. The normalization factor $f_{0}^{k}$ is equal to 
-%
-%\begin{equation}
-%f_{0}^{k} = \dfrac{tr(\mathbf{G}_{p}^{(k)T} \mathbf{G}_{p}^{(k)})}{M} \, ,
-%\label{eq:norm_factor}
-%\end{equation}
-%where $tr$ is denotaded as the trace of the matrix $\mathbf{G}_{p}^{(k)T} \mathbf{G}_{p}^{(k)}$ and $M$ is the total number of dipoles composing the layer. Secondly, after estimating the magnetic-moment distribution $\mathbf{p}^k$ at the $k$th iteration, we estimate a new vector $\mathbf{q}^{k+1}$ by solving an unconstrained nonlinear inverse problem of minimizing the squared Euclidean norm of the difference between the observed and predicted total-field anomalies. In this nonlinear inversion we use the Levenberg-Marquardt method (CITAR ASTER). Mathematically, at the $k$th iteration, the correction on $\mathbf{q}^k$ is given by 
-%
-%\begin{equation}
-%\Delta \mathbf{q}^k = (\mathbf{G}_{q}^{(k)T} \mathbf{G}_{q}^{(k)} + \lambda \mathbf{I})^{-1} \mathbf{G}_{q}^{(k)T}  \mathbf{r}^k
-%\label{eq:linsys_q}
-%\end{equation}
-%where $\lambda$ is the Marquardt parameter that is updated along the iterative process, $\mathbf{I}$ is a indentity matrix, and  the residual at the $k$th iteration is equal to $r^k = \Delta \mathbf{T}^o - \mathbf{\Delta T} (\mathbf{p}^k, \mathbf{q}^{k})$. $\mathbf{G}_q^k$ is a sensitivity matrix of the magnetization direction part, whose elements are composed by derivative of equation \ref{eq:tfa_pred_pos_i} in relation of each component of the vector $\mathbf{q}^k$, that are the inclination and declination, respectively. After estimating the correction, the new magnetization direction vector $\mathbf{q}^{k+1}$ is update such that
-%
-%\begin{equation}
-%\mathbf{q}^{k+1} =  \mathbf{q}^{k} + \Delta \mathbf{q}^k. 
-%\label{eq:correction_p}
-%\end{equation}  
-%The iterative process stops when the squared Euclidean norm of the difference between the observed data $\Delta \mathbf{T}^{o}$ and predicted data $\Delta\mathbf{T}(\mathbf{p}, \mathbf{q})$ (equation \ref{eq:tfa_pred}) is invariant along succesive iterations. Figure \ref{fig:scheme_LM_NNLS} illustrates the scheme of iterative process.
+\begin{equation}
+\mathbf{H}^k (\mathbf{s}_0) \mathbf{\Delta s}^k = - \mathbf{J}^k (\mathbf{s}_0).
+\label{eq:linear_sys_GN}
+\end{equation} 
+However, looking in more detail at the equation \ref{eq:linear_sys_GN}, the linear system can be given by equation 
 
+\begin{equation}
+\left[
+\begin{array}{c|c}
+\mathbf{H}_{pp}^{k} & \mathbf{H}_{pq}^{k} \\
+\hline
+\mathbf{H}_{qp}^{k}& \mathbf{H}_{qq}^{k}
+\end{array}
+\right] \left[ \begin{array}{c}
+\mathbf{\Delta p}^k \\ 
+\mathbf{\Delta q}^k 
+\end{array} \right] = -\left[ \begin{array}{c}
+\mathbf{J}_{p}^{k} \\ 
+\mathbf{J}_{q}^{k} 
+\end{array} \right] ,
+\label{eq:linear_sys_GN_block}
+\end{equation}
+in which $\mathbf{J}_{\alpha}^{k}$ and $\mathbf{H}_{\alpha \beta}^{k}$, where $\alpha = p,q$ and $\beta = p,q$, are the gradient vector and the Hessian matrix calculated in relation to each component of the magnetic-moment vector $\mathbf{p}$ and the magnetization direction vector $\mathbf{q}$, respectively. Besides, in order to simplify the linear system \ref{eq:linear_sys_GN_block}, we consider null cross-derivatives. As we shown earlier, the predicted total-field anomaly has a linear relation with magnetic moments $\mathbf{p}^k$.  For this reason, the gradient vector and the Gauss-Newton approximation of the goal function (equation \ref{eq:positivity_goal_function}a) relative to the part of magnetic moments are, respectively,
+
+\begin{equation}
+\mathbf{J}_{p}^{k} = -2 \mathbf{G}_{p}^{k^T} \mathbf{\Delta T}^o
+\label{eq:grad_p}
+\end{equation}   
+and   
+
+\begin{equation}
+\mathbf{H}_{pp}^{k} = 2 \mathbf{G}_{p}^{k^T} \mathbf{G}_{p}^{k} + 2 \mu f_{0}^{k} \mathbf{I} 
+\label{eq:hess_p}
+\end{equation}
+where $\mathbf{G}_p^{k}$ is the $N \times M$ sensitivity matrix at the $k$th iteration, whose elements are composed by the derivative of equation \ref{eq:positivity_goal_function}a in relation of $j$th element of the vector $\mathbf{p}^k$, $\mathbf{I}$ is an identity matrix and the normalizing factor $f_{0}^{k}$ is equal to
+
+\begin{equation}
+f_{0}^{k} = \dfrac{tr(\mathbf{G}_{p}^{k^T} \mathbf{G}_{p}^{k})}{M} \, ,
+\label{eq:norm_factor}
+\end{equation}
+where $tr$ is denotaded as the trace of the matrix $\mathbf{G}_{p}^{k^T} \mathbf{G}_{p}^{k}$ and $M$ is the total number of dipoles composing the layer. Thus, at the $k$th iteration, we have to solve the linear system given by
+
+\begin{equation}
+\left[ \mathbf{G}_{p}^{k^T} \mathbf{G}_{p}^{k} + \mu f_{0}^{k} \mathbf{I} \right] \mathbf{p}^{k} = \mathbf{G}_{p}^{k^T} \mathbf{\Delta T}^o.
+\label{eq:linear_sys_p}
+\end{equation} 
+Owing to nonlinear relation of the magnetization direction $\mathbf{q}^k$ with the predicted total-field anomaly, the gradient vector and the Hessian matrix for this case are, respectively,
+
+\begin{equation}
+\mathbf{J}_{q}^{k} = -2 \mathbf{G}_{q}^{k^T} [ \mathbf{\Delta T}^o -  \mathbf{\Delta T} (\mathbf{s}^k) ] 
+\label{eq:grad_q}
+\end{equation}   
+and   
+
+\begin{equation}
+\mathbf{H}_{qq}^{k} = 2 \mathbf{G}_{q}^{k^T} \mathbf{G}_{q}^{k} 
+\label{eq:hess_q}
+\end{equation}
+in which $\mathbf{G}_q^k$ is a $N \times 2$ sensitivity matrix, whose elements are composed by derivative of equation \ref{eq:positivity_goal_function} in relation of each component of the vector $\mathbf{q}^k$, that are the inclination and declination, respectively. Nevertheless, in order to calculate the correction $\mathbf{\Delta q}^k$ at the $k$th iteration, we use the Levernberg-Marquardt method (CITAR ASTER) by solving the linear system
+
+\begin{equation}
+\left[ \mathbf{G}_{q}^{k^T} \mathbf{G}_{q}^{k} + \lambda^k \mathbf{I} \right] \mathbf{\Delta q}^k = \mathbf{G}_{q}^{k^T}[ \mathbf{\Delta T}^o -  \mathbf{\Delta T} (\mathbf{s}^k) ],
+\label{eq:linear_sys_q}
+\end{equation}
+where $\lambda$ is the Marquardt parameter that is updated along the iterative process and $\mathbf{I}$ is an indentity matrix.
+
+\subsection{Iterative process for magnetization estimation}
+
+The estimation of the magnetic moments $\mathbf{p}^{\sharp}$ and the magnetization direction $\mathbf{q}^{\sharp}$ is formulated as an inverse problem of minimizing the difference between the observed data $ \mathbf{\Delta T}^o $ and the predicted data $\mathbf{\Delta T} (\mathbf{s})$. As we can notice, the solution of the inversion is given by solving two linear systems, one shown in equation \ref{eq:linear_sys_p} and other in equation \ref{eq:linear_sys_q}. For this reason, we propose a nested algorithm for solving the inverse problem in two steps.           
+
+Our iterative algorithm starts with an initial guess for the magnetization direction $\mathbf{q}_0$. At the $k$th iteration, we  calculated a set of magnetic moment $\mathbf{p}^k$ by imposing a positivity constraint on equation \ref{eq:linear_sys_p}. After estimating the magnetic-moment distribution $\mathbf{p}^k$ at the $k$th iteration using the previous estimate $\mathbf{q}^{k}$ for the magnetization direction, we estimate a new vector $\mathbf{q}^{k+1}$ by solving an unconstrained nonlinear inverse problem an applying the correction $\mathbf{\Delta q}^k$ using the equation \ref{eq:linear_sys_q}. The iterative process stops when the minimum of the goal function (equation \ref{eq:positivity_goal_function}a) is reached. An overview of the algorith is shown in figure \ref{fig:scheme_LM_NNLS} and in the algorithm \ref{cd: LM_NNLS}. 
+
+\begin{algorithm}[H]
+	%\DontPrintSemicolon
+	%\SetAlgoLined
+	\SetKwInOut{Input}{Input}
+	\SetKwInOut{Output}{Output}
+	\Input{$\mathbf{\Delta T}^o$, $\mathbf{q}_0$}
+	\Output{$\mathbf{p}^\sharp$,$\mathbf{q}^\sharp$}
+	
+	\While{(not converge)  or ($i<i_{max}$) }
+	{ \textbf{step 1}: Solve equation \ref{eq:linear_sys_p} using NNLS \;
+	  \textbf{step 2}: Compute goal function (\ref{eq:positivity_goal_function}) \; 
+	  \While{(not converge)  or ($j<j_{max}$) }
+		{ \textbf{step 3}:  Initialize the Levenberg-Marquardt algorithm \;  
+		  \textbf{step 4}: Compute goal function (\ref{eq:positivity_goal_function})\;
+			\While{ $k<k_{marq}$ } {
+				\textbf{step 5}:  Solve equation \ref{eq:linear_sys_q} \;
+				\textbf{step 6}:  Apply the correction for magnetization direction \;
+				\textbf{step 7}: Compute goal function (\ref{eq:positivity_goal_function})\;
+			}
+			\textbf{step 8}:  Analysis of convergence for inner loop.}
+			\textbf{step 9}:  Analysis of convergence for outer loop.}
+		
+		\caption{Nested NNLS and Levenberg-Marquardt method}
+		\label{cd: LM_NNLS}
+	\end{algorithm}
 
 \subsection{The choice of layer depth $\mathbf{z_c}$ and regularization parameter $\mathbf{\mu}$}
 
