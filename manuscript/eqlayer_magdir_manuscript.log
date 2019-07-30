@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  29 JUL 2019 20:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  30 JUL 2019 19:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -252,7 +252,7 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \algocf@algoframe=\box37
 \algocf@algobox=\box38
 ) (./eqlayer_magdir_manuscript.aux (./abstract.aux) (./methodology.aux)
-(./high_latitude.aux) (./figures.aux))
+(./simulations.aux) (./high_latitude.aux) (./figures.aux))
 \openout1 = `eqlayer_magdir_manuscript.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -401,46 +401,53 @@ LaTeX Warning: Reference `eq:linsys_p' on page 13 undefined on input line 263.
 LaTeX Warning: Reference `eq:linsys_p' on page 14 undefined on input line 267.
 
 ) [14]
+\openout2 = `simulations.aux'.
+
+ (./simulations.tex) [15
+
+
+]
 \openout2 = `high_latitude.aux'.
 
- (./high_latitude.tex) [15
+ (./high_latitude.tex) [16
 
 
-] (./eqlayer_magdir_manuscript.bbl
+]
+(./eqlayer_magdir_manuscript.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 5.
 
-) [16
+) [17
 
 ]
 \openout2 = `figures.aux'.
 
  (./figures.tex
-<Fig/eqlayer_figure.pdf, id=68, 451.93675pt x 436.13832pt>
+<Fig/eqlayer_figure.pdf, id=71, 451.93675pt x 436.13832pt>
 File: Fig/eqlayer_figure.pdf Graphic file (type pdf)
 
 <use Fig/eqlayer_figure.pdf>
 Package pdftex.def Info: Fig/eqlayer_figure.pdf used on input line 6.
 (pdftex.def)             Requested size: 303.53267pt x 292.93654pt.
 
-<Fig/algorithm_LM_NNLS.pdf, id=69, 480.8955pt x 587.05032pt>
+<Fig/algorithm_LM_NNLS.pdf, id=72, 480.8955pt x 587.05032pt>
 File: Fig/algorithm_LM_NNLS.pdf Graphic file (type pdf)
 
 <use Fig/algorithm_LM_NNLS.pdf>
 Package pdftex.def Info: Fig/algorithm_LM_NNLS.pdf used on input line 14.
 (pdftex.def)             Requested size: 260.17464pt x 317.61157pt.
-) [17 <./Fig/eqlayer_figure.pdf>] [18 <./Fig/algorithm_LM_NNLS.pdf>] (./eqlayer
+) [18 <./Fig/eqlayer_figure.pdf>] [19 <./Fig/algorithm_LM_NNLS.pdf>] (./eqlayer
 _magdir_manuscript.aux (./abstract.aux)
-(./methodology.aux) (./high_latitude.aux) (./figures.aux))
+(./methodology.aux) (./simulations.aux) (./high_latitude.aux) (./figures.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4257 strings out of 493029
- 58376 string characters out of 6136233
- 133909 words of memory out of 5000000
- 7688 multiletter control sequences out of 15000+600000
+ 4266 strings out of 493029
+ 58513 string characters out of 6136233
+ 134367 words of memory out of 5000000
+ 7690 multiletter control sequences out of 15000+600000
  11828 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,16n,28p,1533b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -458,10 +465,10 @@ r8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on eqlayer_magdir_manuscript.pdf (18 pages, 259361 bytes).
+Output written on eqlayer_magdir_manuscript.pdf (19 pages, 261396 bytes).
 PDF statistics:
- 408 PDF objects out of 1000 (max. 8388607)
- 250 compressed objects within 3 object streams
+ 412 PDF objects out of 1000 (max. 8388607)
+ 253 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
