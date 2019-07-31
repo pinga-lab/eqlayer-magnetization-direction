@@ -1,5 +1,53 @@
-\newcommand{\SortNoop}[1]{}
 \begin{thebibliography}{}
 \itemsep0pt
+
+\bibitem[Aster et~al., 2005]{aster2005}
+Aster, R.~C., B. Borchers, and C.~H. Thurber,  2005, Parameter estimation and
+  inverse problems (international geophysics): Academic Press.
+
+\bibitem[Baratchart et~al., 2013]{baratchart2013}
+Baratchart, L., D.~P. Hardin, E.~A. Lima, E.~B. Saff, and B.~P. Weiss,  2013,
+  Characterizing kernels of operators related to thin-plate magnetizations via
+  generalizations of {Hodge} decompositions: Inverse Problems, {\bf 29},
+  015004(29pp).
+
+\bibitem[Blakely, 1996]{blakely1996}
+Blakely, R.~J.,  1996, Potential theory in gravity and magnetic applications:
+  Cambridge University press.
+
+\bibitem[Dampney, 1969]{dampney1969}
+Dampney, C. N.~G.,  1969, The equivalent source technique: GEOPHYSICS, {\bf
+  34}, 39--53.
+
+\bibitem[H.~Goldstein and Safko, 1980]{goldstein1980}
+H.~Goldstein, C. P. P.~J., and J.~L. Safko,  1980, Classical mechanics:
+  Addison-Wesley.
+
+\bibitem[Hansen and O’Leary, 1993]{hansen1992}
+Hansen, P., and D. O’Leary,  1993, The use of the l-curve in the
+  regularization of discrete ill-posed problems: SIAM Journal on Scientific
+  Computing, {\bf 14}, 1487--1503.
+
+\bibitem[Lawson and Hanson, 1974]{lawson_hanson_1974}
+Lawson, C.~L., and R.~J. Hanson,  1974, Solving least squares problems: SIAM.
+
+\bibitem[Li et~al., 2014]{li_etal_2014}
+Li, Y., M. Nabighian, and D.~W. Oldenburg,  2014, Using an equivalent source
+  with positivity for low-latitude reduction to the pole without striation:
+  GEOPHYSICS, {\bf 79}, J81--J90.
+
+\bibitem[Lima and Weiss, 2016]{lima_weiss_2016}
+Lima, E.~A., and B.~P. Weiss,  2016, Ultra-high sensitivity moment magnetometry
+  of geological samples using magnetic microscopy: Geochemistry, Geophysics,
+  Geosystems, {\bf 17}, 3754--3774.
+
+\bibitem[Oliveira-Jr et~al., 2015]{oliveirajr_etal_2015}
+Oliveira-Jr, V.~C., D.~P. Sales, V.~C.~F. Barbosa, and L. Uieda,  2015,
+  Estimation of the total magnetization direction of approximately spherical
+  bodies: Nonlinear Processes in Geophysics, {\bf 22}, 215--232.
+
+\bibitem[Pedersen, 1991]{pedersen1991}
+Pedersen, L.~B.,  1991, Relations between potential fields and some equivalent
+  sources: GEOPHYSICS, {\bf 56}, 961--971.
 
 \end{thebibliography}

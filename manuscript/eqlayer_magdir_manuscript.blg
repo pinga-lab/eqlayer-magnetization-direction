@@ -3,50 +3,56 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: eqlayer_magdir_manuscript.aux
 A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: methodology.aux
+A level-1 auxiliary file: simulations.aux
 A level-1 auxiliary file: high_latitude.aux
 The style file: seg.bst
 A level-1 auxiliary file: figures.aux
-I found no \citation commands---while reading file eqlayer_magdir_manuscript.aux
-Database file #1: example.bib
-You've used 0 entries,
+Database file #1: references.bib
+Name 1 in "H. Goldstein, C. P. Poole Jr., and J. L. Safko" has a comma at the end for entry goldstein1980
+while executing---line 1491 of file seg.bst
+Name 1 in "H. Goldstein, C. P. Poole Jr., and J. L. Safko" has a comma at the end for entry goldstein1980
+while executing---line 1491 of file seg.bst
+Name 1 in "H. Goldstein, C. P. Poole Jr., and J. L. Safko" has a comma at the end for entry goldstein1980
+while executing---line 1586 of file seg.bst
+You've used 11 entries,
             2639 wiz_defined-function locations,
-            700 strings with 6108 characters,
-and the built_in function-call counts, 22 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 8
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+            778 strings with 7952 characters,
+and the built_in function-call counts, 4225 in all, are:
+= -- 444
+> -- 160
+< -- 7
++ -- 56
+- -- 52
+* -- 359
+:= -- 741
+add.period$ -- 11
+call.type$ -- 11
+change.case$ -- 81
+chr.to.int$ -- 11
+cite$ -- 11
+duplicate$ -- 150
+empty$ -- 318
+format.name$ -- 71
+if$ -- 873
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 5
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 2
-purify$ -- 0
+missing$ -- 15
+newline$ -- 37
+num.names$ -- 33
+pop$ -- 72
+preamble$ -- 1
+purify$ -- 81
 quote$ -- 0
-skip$ -- 0
+skip$ -- 106
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 308
+swap$ -- 7
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 58
 warning$ -- 0
-while$ -- 0
+while$ -- 30
 width$ -- 0
-write$ -- 4
-(There was 1 error message)
+write$ -- 120
+(There were 3 error messages)
