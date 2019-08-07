@@ -3,8 +3,6 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: eqlayer_magdir_manuscript.aux
 A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: methodology.aux
-A level-1 auxiliary file: simulations.aux
-A level-1 auxiliary file: high_latitude.aux
 The style file: seg.bst
 A level-1 auxiliary file: figures.aux
 Database file #1: references.bib
@@ -14,45 +12,45 @@ Name 1 in "H. Goldstein, C. P. Poole Jr., and J. L. Safko" has a comma at the en
 while executing---line 1491 of file seg.bst
 Name 1 in "H. Goldstein, C. P. Poole Jr., and J. L. Safko" has a comma at the end for entry goldstein1980
 while executing---line 1586 of file seg.bst
-You've used 11 entries,
+You've used 12 entries,
             2639 wiz_defined-function locations,
-            778 strings with 7952 characters,
-and the built_in function-call counts, 4225 in all, are:
-= -- 444
-> -- 160
+            783 strings with 8120 characters,
+and the built_in function-call counts, 4647 in all, are:
+= -- 489
+> -- 178
 < -- 7
-+ -- 56
-- -- 52
-* -- 359
-:= -- 741
-add.period$ -- 11
-call.type$ -- 11
-change.case$ -- 81
-chr.to.int$ -- 11
-cite$ -- 11
-duplicate$ -- 150
-empty$ -- 318
-format.name$ -- 71
-if$ -- 873
++ -- 62
+- -- 58
+* -- 398
+:= -- 814
+add.period$ -- 12
+call.type$ -- 12
+change.case$ -- 89
+chr.to.int$ -- 12
+cite$ -- 12
+duplicate$ -- 164
+empty$ -- 348
+format.name$ -- 78
+if$ -- 960
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 15
-newline$ -- 37
-num.names$ -- 33
-pop$ -- 72
+missing$ -- 16
+newline$ -- 40
+num.names$ -- 36
+pop$ -- 78
 preamble$ -- 1
-purify$ -- 81
+purify$ -- 89
 quote$ -- 0
-skip$ -- 106
+skip$ -- 116
 stack$ -- 0
-substring$ -- 308
-swap$ -- 7
+substring$ -- 341
+swap$ -- 8
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 58
+type$ -- 64
 warning$ -- 0
-while$ -- 30
+while$ -- 33
 width$ -- 0
-write$ -- 120
+write$ -- 131
 (There were 3 error messages)
