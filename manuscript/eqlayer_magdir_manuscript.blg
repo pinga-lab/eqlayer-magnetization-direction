@@ -4,54 +4,62 @@ The top-level auxiliary file: eqlayer_magdir_manuscript.aux
 A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: methodology.aux
 A level-1 auxiliary file: simulations.aux
+A level-1 auxiliary file: real_data.aux
 The style file: seg.bst
 A level-1 auxiliary file: figures.aux
 Database file #1: references.bib
+A bad cross reference---entry "dutra_etal_2014"
+refers to entry "10.5327/Z2317-4889201400030003", which doesn't exist
+Warning--I didn't find a database entry for "10.5327/Z2317-4889201400030003"
 Name 1 in "H. Goldstein, C. P. Poole Jr., and J. L. Safko" has a comma at the end for entry goldstein1980
 while executing---line 1491 of file seg.bst
 Name 1 in "H. Goldstein, C. P. Poole Jr., and J. L. Safko" has a comma at the end for entry goldstein1980
 while executing---line 1491 of file seg.bst
+Name 3 in "A. C. Dutra and Y. Marangoni and R. I. F. Trindade," has a comma at the end for entry dutra_etal_2014
+while executing---line 1491 of file seg.bst
+Name 3 in "A. C. Dutra and Y. Marangoni and R. I. F. Trindade," has a comma at the end for entry dutra_etal_2014
+while executing---line 1586 of file seg.bst
 Name 1 in "H. Goldstein, C. P. Poole Jr., and J. L. Safko" has a comma at the end for entry goldstein1980
 while executing---line 1586 of file seg.bst
-You've used 11 entries,
+You've used 17 entries,
             2639 wiz_defined-function locations,
-            777 strings with 7939 characters,
-and the built_in function-call counts, 4225 in all, are:
-= -- 444
-> -- 160
-< -- 7
-+ -- 56
-- -- 52
-* -- 359
-:= -- 741
-add.period$ -- 11
-call.type$ -- 11
-change.case$ -- 81
-chr.to.int$ -- 11
-cite$ -- 11
-duplicate$ -- 150
-empty$ -- 318
-format.name$ -- 71
-if$ -- 873
+            828 strings with 10087 characters,
+and the built_in function-call counts, 7086 in all, are:
+= -- 749
+> -- 308
+< -- 8
++ -- 108
+- -- 104
+* -- 634
+:= -- 1235
+add.period$ -- 19
+call.type$ -- 17
+change.case$ -- 137
+chr.to.int$ -- 17
+cite$ -- 17
+duplicate$ -- 234
+empty$ -- 501
+format.name$ -- 131
+if$ -- 1455
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 15
-newline$ -- 37
-num.names$ -- 33
-pop$ -- 72
+missing$ -- 21
+newline$ -- 57
+num.names$ -- 51
+pop$ -- 113
 preamble$ -- 1
-purify$ -- 81
+purify$ -- 137
 quote$ -- 0
-skip$ -- 106
+skip$ -- 166
 stack$ -- 0
-substring$ -- 308
-swap$ -- 7
+substring$ -- 519
+swap$ -- 13
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 58
+type$ -- 94
 warning$ -- 0
-while$ -- 30
+while$ -- 49
 width$ -- 0
-write$ -- 120
-(There were 3 error messages)
+write$ -- 190
+(There were 6 error messages)

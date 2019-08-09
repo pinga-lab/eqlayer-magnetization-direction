@@ -15,9 +15,21 @@ Baratchart, L., D.~P. Hardin, E.~A. Lima, E.~B. Saff, and B.~P. Weiss,  2013,
 Blakely, R.~J.,  1996, Potential theory in gravity and magnetic applications:
   Cambridge University press.
 
+\bibitem[Carlson et~al., 2007]{carlson_etal_2007}
+Carlson, R.~W., A.~L.~N. Araujo, T.~C. Junqueira-Brod, J.~C. Gaspar, J.~A.
+  Brod, I.~A. Petrinovic, M.~H. B.~M. Hollanda, M.~M. Pimentel, and S. Sichel,
+  2007, Chemical and isotopic relationships between peridotite xenoliths and
+  mafic–ultrapotassic rocks from southern brazil: Chemical Geology, {\bf
+  242}, 415 -- 434.
+
 \bibitem[Dampney, 1969]{dampney1969}
 Dampney, C. N.~G.,  1969, The equivalent source technique: GEOPHYSICS, {\bf
   34}, 39--53.
+
+\bibitem[Dutra et~al., 2014]{dutra_etal_2014}
+Dutra, A.~C., Y. Marangoni, and R.~I.~F. Trindade,  2014, {Aeromagnetic and
+  physical-chemical properties of some complexes from Goi\~A!`s Alkaline
+  Province}: {Brazilian Journal of Geology}, {\bf 44}, 361 -- 373.
 
 \bibitem[H.~Goldstein and Safko, 1980]{goldstein1980}
 H.~Goldstein, C. P. P.~J., and J.~L. Safko,  1980, Classical mechanics:
@@ -27,6 +39,14 @@ H.~Goldstein, C. P. P.~J., and J.~L. Safko,  1980, Classical mechanics:
 Hansen, P., and D. O’Leary,  1993, The use of the l-curve in the
   regularization of discrete ill-posed problems: SIAM Journal on Scientific
   Computing, {\bf 14}, 1487--1503.
+
+\bibitem[Junqueira-Brod et~al., 2005]{junqueira_brod_2005}
+Junqueira-Brod, T.~C., J.~C. Gaspar, J.~A. Brod, and C.~V. Kafino,  2005,
+  Kamafugitic diatremes: their textures and field relationships with examples
+  from the goiás alkaline province, brazil: Journal of South American Earth
+  Sciences, {\bf 18}, 337 -- 353.
+\newblock (Volcanic rocks in Brazil through time and different tectonic
+  settings).
 
 \bibitem[Lawson and Hanson, 1974]{lawson_hanson_1974}
 Lawson, C.~L., and R.~J. Hanson,  1974, Solving least squares problems: SIAM.
@@ -41,6 +61,20 @@ Lima, E.~A., and B.~P. Weiss,  2016, Ultra-high sensitivity moment magnetometry
   of geological samples using magnetic microscopy: Geochemistry, Geophysics,
   Geosystems, {\bf 17}, 3754--3774.
 
+\bibitem[Marangoni et~al., 2016]{marangoni_etal_2016}
+Marangoni, Y., H. Zhang, and H. Ferreira,  2016, Gravity and magnetic
+  integrated data interpretation of the corrÉgo dos bois complex, goiÁs
+  alkaline province, central brazil: Revista Brasileira de Geofísica, {\bf
+  33}, 599--610.
+
+\bibitem[Marangoni and Mantovani, 2013]{marangoni_mantovani_2013}
+Marangoni, Y.~R., and M.~S. Mantovani,  2013, Geophysical signatures of the
+  alkaline intrusions bordering the paraná basin: Journal of South American
+  Earth Sciences, {\bf 41}, 83 -- 98.
+\newblock (Alkaline Magmatism and the Lithospheric Mantle : a special issue in
+  honour of the work of Celso de Barros Gomes on the occasion of his 77th
+  birthday).
+
 \bibitem[Oliveira~Jr et~al., 2015]{oliveirajr_etal_2015}
 Oliveira~Jr, V.~C., D.~P. Sales, V.~C.~F. Barbosa, and L. Uieda,  2015,
   Estimation of the total magnetization direction of approximately spherical
@@ -49,5 +83,10 @@ Oliveira~Jr, V.~C., D.~P. Sales, V.~C.~F. Barbosa, and L. Uieda,  2015,
 \bibitem[Pedersen, 1991]{pedersen1991}
 Pedersen, L.~B.,  1991, Relations between potential fields and some equivalent
   sources: GEOPHYSICS, {\bf 56}, 961--971.
+
+\bibitem[Zhang et~al., 2018]{zhang_etal_2018}
+Zhang, H., D. Ravat, Y.~R. Marangoni, G. Chen, and X. Hu,  2018, Improved total
+  magnetization direction determination by correlation of the normalized source
+  strength derivative and the rtp fields: GEOPHYSICS, {\bf 0}, 1--45.
 
 \end{thebibliography}
