@@ -1,8 +1,7 @@
 
-%\documentclass[paper]{geophysics}
-\documentclass[manuscript,revised]{geophysics}
+\documentclass[manuscript,blind]{geophysics}
 \usepackage{amsmath,amssymb}
-\usepackage[english, ruled]{algorithm2e}
+\usepackage[english,ruled]{algorithm2e}
 
 % An example of defining macros
 \newcommand{\rs}[1]{\mathstrut\mbox{\scriptsize\rm #1}}
@@ -13,7 +12,7 @@
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}} 
 
-\ms{GEO-2019XXXX} % manuscript number
+%\ms{GEO-2019XXXX} % manuscript number
 
 \address{
 \footnotemark[2] Observat\'orio Nacional, Rio de Janeiro, Brazil\\
@@ -29,12 +28,12 @@
 
 % % The body text
 \include{abstract}
-%\include{introduction}
+\include{introduction}
 \include{methodology}
 \include{simulations}
 \include{real_data}
 \include{conclusions}
-\include{acknowledgements}
+%\include{acknowledgements}
 
 % % Apenddix
 \include{high_latitude}

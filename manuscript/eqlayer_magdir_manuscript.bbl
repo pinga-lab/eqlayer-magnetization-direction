@@ -11,6 +11,15 @@ Baratchart, L., D.~P. Hardin, E.~A. Lima, E.~B. Saff, and B.~P. Weiss,  2013,
   generalizations of {Hodge} decompositions: Inverse Problems, {\bf 29},
   015004(29pp).
 
+\bibitem[Barnes and Lumley, 2011]{barnes-lumley_2011}
+Barnes, G., and J. Lumley,  2011, Processing gravity gradient data: GEOPHYSICS,
+  {\bf 76}, I33--I47.
+
+\bibitem[Bhattacharyya, 1966]{bhattacharyya1966}
+Bhattacharyya, B.~K.,  1966, A method for computing the total magnetization
+  vector and the dimensions of a rectangular block shaped from magnetic
+  anomalies: GEOPHYSICS, {\bf 31}, 74--96.
+
 \bibitem[Blakely, 1996]{blakely1996}
 Blakely, R.~J.,  1996, Potential theory in gravity and magnetic applications:
   Cambridge University press.
@@ -22,14 +31,43 @@ Carlson, R.~W., A.~L.~N. Araujo, T.~C. Junqueira-Brod, J.~C. Gaspar, J.~A.
   mafic–ultrapotassic rocks from southern brazil: Chemical Geology, {\bf
   242}, 415 -- 434.
 
+\bibitem[Cordell, 1992]{cordell_1992}
+Cordell, L.,  1992, A scattered equivalent-source method for interpolation and
+  gridding of potential-field data in three dimensions: GEOPHYSICS, {\bf 57},
+  629--636.
+
 \bibitem[Dampney, 1969]{dampney1969}
 Dampney, C. N.~G.,  1969, The equivalent source technique: GEOPHYSICS, {\bf
   34}, 39--53.
+
+\bibitem[Dannemiller and Li, 2006]{dannemiller_li_2006}
+Dannemiller, N., and Y. Li,  2006, A new method for determination of
+  magnetization direction: GEOPHYSICS, {\bf 71}, L69--L73.
 
 \bibitem[Dutra et~al., 2014]{dutra_etal_2014}
 Dutra, A.~C., Y. Marangoni, and R.~I.~F. Trindade,  2014, {Aeromagnetic and
   physical-chemical properties of some complexes from Goi\~A!`s Alkaline
   Province}: {Brazilian Journal of Geology}, {\bf 44}, 361 -- 373.
+
+\bibitem[Emilia and Massey, 1974]{emilia_massey_1974}
+Emilia, D.~A., and R.~L. Massey,  1974, Magnetization estimation for
+  nonuniformly magnetized seamounts: GEOPHYSICS, {\bf 39}, 223--231.
+
+\bibitem[Fedi et~al., 1994]{fedi_etal_1994}
+Fedi, M., G. Florio, and A. Rapolla,  1994, A method to estimate the total
+  magnetization direction from a distortion analysis of magnetic anomalies1:
+  Geophysical Prospecting, {\bf 42}, 261--274.
+
+\bibitem[Gerovska et~al., 2009]{gerovska_etal_2009}
+Gerovska, D., M.~J. Araúzo-Bravo, and P. Stavrev,  2009, Estimating the
+  magnetization direction of sources from southeast bulgaria through
+  correlation between reduced-to-the-pole and total magnitude anomalies:
+  Geophysical Prospecting, {\bf 57}, 491--505.
+
+\bibitem[Gusp\'{i} and Novara, 2009]{guspi-novara_2009}
+Gusp\'{i}, F., and I. Novara,  2009, Reduction to the pole and transformations
+  of scattered magnetic data using newtonian equivalent sources: GEOPHYSICS,
+  {\bf 74}, L67--L73.
 
 \bibitem[H.~Goldstein and Safko, 1980]{goldstein1980}
 H.~Goldstein, C. P. P.~J., and J.~L. Safko,  1980, Classical mechanics:
@@ -39,6 +77,10 @@ H.~Goldstein, C. P. P.~J., and J.~L. Safko,  1980, Classical mechanics:
 Hansen, P., and D. O’Leary,  1993, The use of the l-curve in the
   regularization of discrete ill-posed problems: SIAM Journal on Scientific
   Computing, {\bf 14}, 1487--1503.
+
+\bibitem[Hansen and Miyazaki, 1984]{hansen-miyazaki_1984}
+Hansen, R.~O., and Y. Miyazaki,  1984, Continuation of potential fields between
+  arbitrary surfaces: GEOPHYSICS, {\bf 49}, 787--795.
 
 \bibitem[Junqueira-Brod et~al., 2005]{junqueira_brod_2005}
 Junqueira-Brod, T.~C., J.~C. Gaspar, J.~A. Brod, and C.~V. Kafino,  2005,
@@ -51,15 +93,47 @@ Junqueira-Brod, T.~C., J.~C. Gaspar, J.~A. Brod, and C.~V. Kafino,  2005,
 \bibitem[Lawson and Hanson, 1974]{lawson_hanson_1974}
 Lawson, C.~L., and R.~J. Hanson,  1974, Solving least squares problems: SIAM.
 
-\bibitem[Li et~al., 2014]{li_etal_2014}
-Li, Y., M. Nabighian, and D.~W. Oldenburg,  2014, Using an equivalent source
+\bibitem[Le\~{a}o and Silva, 1989]{leao-silva_1989}
+Le\~{a}o, J. W.~D., and J.~B.~C. Silva,  1989, Discrete linear transformations
+  of potential field data: GEOPHYSICS, {\bf 54}, 497--507.
+
+\bibitem[Lelièvre and Oldenburg, 2009]{lelievre_oldenburg_2009}
+Lelièvre, P.~G., and D.~W. Oldenburg,  2009, A 3d total magnetization
+  inversion applicable when significant, complicated remanence is present:
+  GEOPHYSICS, {\bf 74}, L21--L30.
+
+\bibitem[Li and Li, 2014]{li_li_2014}
+Li, S.-L., and Y. Li,  2014, Inversion of magnetic anomaly on rugged
+  observation surface in the presence of strong remanent magnetization:
+  GEOPHYSICS, {\bf 79}, J11--J19.
+
+\bibitem[Li et~al., 2014a]{li_nabighian_oldenburg_2014}
+Li, Y., M. Nabighian, and D.~W. Oldenburg,  2014a, Using an equivalent source
   with positivity for low-latitude reduction to the pole without striation:
   GEOPHYSICS, {\bf 79}, J81--J90.
+
+\bibitem[Li et~al., 2014b]{li_etal_2014}
+--------, 2014b, Using an equivalent source with positivity for low-latitude
+  reduction to the pole without striation: GEOPHYSICS, {\bf 79}, J81--J90.
+
+\bibitem[Li and Oldenburg, 2010]{li-oldenburg_2010}
+Li, Y., and D.~W. Oldenburg,  2010, Rapid construction of equivalent sources
+  using wavelets: GEOPHYSICS, {\bf 75}, L51--L59.
 
 \bibitem[Lima and Weiss, 2016]{lima_weiss_2016}
 Lima, E.~A., and B.~P. Weiss,  2016, Ultra-high sensitivity moment magnetometry
   of geological samples using magnetic microscopy: Geochemistry, Geophysics,
   Geosystems, {\bf 17}, 3754--3774.
+
+\bibitem[Lima et~al., 2013]{lima2013}
+Lima, E.~A., B.~P. Weiss, L. Baratchart, D.~P. Hardin, and E.~B. Saff,  2013,
+  Fast inversion of magnetic field maps of unidirectional planar geological
+  magnetization: J. Geophys. Res.: Solid Earth, {\bf 118}, 2723--2752.
+
+\bibitem[Liu et~al., 2015]{liu_etal_2015}
+Liu, S., X. Hu, Y. Xi, T. Liu, and S. Xu,  2015, 2d sequential inversion of
+  total magnitude and total magnetic anomaly data affected by remanent
+  magnetization: GEOPHYSICS, {\bf 80}, K1--K12.
 
 \bibitem[Marangoni et~al., 2016]{marangoni_etal_2016}
 Marangoni, Y., H. Zhang, and H. Ferreira,  2016, Gravity and magnetic
@@ -75,14 +149,70 @@ Marangoni, Y.~R., and M.~S. Mantovani,  2013, Geophysical signatures of the
   honour of the work of Celso de Barros Gomes on the occasion of his 77th
   birthday).
 
+\bibitem[Martinez and Li, 2016]{martinez_li_2016}
+Martinez, C., and Y. Li,  2016, Denoising of gravity gradient data using an
+  equivalent source technique: GEOPHYSICS, {\bf 81}, G67--G79.
+
+\bibitem[Medeiros and Silva, 1995]{medeiros_silva_1995}
+Medeiros, W.~E., and J.~B.~C. Silva,  1995, Simultaneous estimation of total
+  magnetization direction and 3-d spatial orientation: GEOPHYSICS, {\bf 60},
+  1365--1377.
+
+\bibitem[Mendon\c{c}a and Silva, 1994]{mendonca-silva_1994}
+Mendon\c{c}a, C.~A., and J.~B.~C. Silva,  1994, The equivalent data concept
+  applied to the interpolation of potential field data: GEOPHYSICS, {\bf 59},
+  722--732.
+
+\bibitem[Nabighian et~al., 2005]{nabighian_etal_2005}
+Nabighian, M.~N., V.~J.~S. Grauch, R.~O. Hansen, T.~R. LaFehr, Y. Li, J.~W.
+  Peirce, J.~D. Phillips, and M.~E. Ruder,  2005, The historical development of
+  the magnetic method in exploration: GEOPHYSICS, {\bf 70}, 33ND--61ND.
+
+\bibitem[Oliveira{ }Jr. et~al., 2013]{oliveirajr-etal_2013}
+Oliveira{ }Jr., V.~C., V.~C.~F. Barbosa, and L. Uieda,  2013, Polynomial
+  equivalent layer: GEOPHYSICS, {\bf 78}, G1--G13.
+
 \bibitem[Oliveira~Jr et~al., 2015]{oliveirajr_etal_2015}
 Oliveira~Jr, V.~C., D.~P. Sales, V.~C.~F. Barbosa, and L. Uieda,  2015,
   Estimation of the total magnetization direction of approximately spherical
   bodies: Nonlinear Processes in Geophysics, {\bf 22}, 215--232.
 
+\bibitem[Parker et~al., 1987]{parker_etal_1987}
+Parker, R.~L., L. Shure, and J.~A. Hildebrand,  1987, The application of
+  inverse theory to seamount magnetism: Reviews of Geophysics, {\bf 25},
+  17--40.
+
 \bibitem[Pedersen, 1991]{pedersen1991}
 Pedersen, L.~B.,  1991, Relations between potential fields and some equivalent
   sources: GEOPHYSICS, {\bf 56}, 961--971.
+
+\bibitem[Phillips, 2005]{phillips2005}
+Phillips, D.~J.,  2005, Can we estimate total magnetization directions from
+  aeromagnetic data using helbig's integrals?: Earth, Planets and Space, {\bf
+  57}, 681--689.
+
+\bibitem[Ryuji and Uchiyama, 2005]{kubota2005}
+Ryuji, K., and A. Uchiyama,  2005, Three-dimensional magnetization vector
+  inversion of a seamount: Earth, Planets and Space, {\bf 57}, 691--699".
+
+\bibitem[Silva, 1986]{silva_1986}
+Silva, J. B.~C.,  1986, Reduction to the pole as an inverse problem and its
+  application to low-latitude anomalies: GEOPHYSICS, {\bf 51}, 369--382.
+
+\bibitem[Siqueira et~al., 2017]{siqueira_etal_2017}
+Siqueira, F. C.~L., V.~C.~O. Jr., and V.~C.~F. Barbosa,  2017, Fast iterative
+  equivalent-layer technique for gravity data processing: A method grounded on
+  excess mass constraint: GEOPHYSICS, {\bf 82}, G57--G69.
+
+\bibitem[Tontini and Pedersen, 2008]{tontini_pedersen_2008}
+Tontini, F.~C., and L.~B. Pedersen,  2008, Interpreting magnetic data by
+  integral moments: Geophysical Journal International, {\bf 174}, 815--824.
+
+\bibitem[Weiss et~al., 2007]{weiss2007}
+Weiss, B.~P., E.~A. Lima, L.~E. Fong, and F.~J. Baudenbacher,  2007,
+  Paleomagnetic analysis using squid microscopy: Journal of Geophysical
+  Research: Solid Earth, {\bf 112}, n/a--n/a.
+\newblock (B09105).
 
 \bibitem[Zhang et~al., 2018]{zhang_etal_2018}
 Zhang, H., D. Ravat, Y.~R. Marangoni, G. Chen, and X. Hu,  2018, Improved total
