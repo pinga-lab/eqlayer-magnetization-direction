@@ -1,35 +1,39 @@
 
-%\documentclass[paper]{geophysics}
-\documentclass[manuscript,revised]{geophysics}
+\documentclass[manuscript,blind]{geophysics}
 \usepackage{amsmath,amssymb}
+\usepackage[english,ruled]{algorithm2e}
 
 % An example of defining macros
 \newcommand{\rs}[1]{\mathstrut\mbox{\scriptsize\rm #1}}
 \newcommand{\rr}[1]{\mbox{\rm #1}}
 
 \begin{document}
-
 \title{Estimating total magnetization direction using equivalent-layer technique}
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}} 
 
-\ms{GEO-2018XXXX} % manuscript number
+%\ms{GEO-2019XXXX} % manuscript number
 
 \address{
 \footnotemark[2] Observat\'orio Nacional, Rio de Janeiro, Brazil\\
 \footnotemark[1] Corresponding author: reisandreluis@gmail.com}
-\author{Andr\'e L. A. Reis\footnotemark[2] \footnotemark[1], Vanderlei C. Oliveira Jr.\footnotemark[2] and Val\'eria C. F. Barbosa \footnotemark[2]}
+\author{Andr\'e L. A. Reis\footnotemark[2] \footnotemark[1], Vanderlei C. Oliveira Jr.\footnotemark[2] and  Val\'eria C. F. Barbosa \footnotemark[2]}
 
-%\footer{Example}
+\footer{Example}
 \lefthead{Reis, A.L.A. \& Oliveira Jr, V.C. \& Barbosa, V. C. F.}
 \righthead{Determining total magnetization direction}
 
 \maketitle
 
+
 % % The body text
 \include{abstract}
-%\include{introduction}
+\include{introduction}
 \include{methodology}
+\include{simulations}
+\include{real_data}
+\include{conclusions}
+%\include{acknowledgements}
 
 % % Apenddix
 \include{high_latitude}
@@ -37,7 +41,7 @@
 \newpage
 
 \bibliographystyle{seg}  % style file is seg.bst
-\bibliography{example}
+\bibliography{references}
 
 \clearpage
 

@@ -72,8 +72,7 @@ def derivative_declination(mag,inc,dec):
 
     dmx = - mag*np.cos(inc_rad)*np.sin(dec_rad)
     dmy =   mag*np.cos(inc_rad)*np.cos(dec_rad)
-    #dmz =   1e-8
-    dmz = 0.
+    dmz = 1e-10
 
     dmag = np.array([dmx,dmy,dmz])
 
