@@ -70,7 +70,7 @@ where $\hat{\mathbf{h}}$ defines the uniform magnetization direction of an abitr
 \Delta T_i = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  p(x',y',z_c)  [\gamma_m \hat{\mathbf{F}}_0^T \mathbf{M}(x_i,y_i,z_i,x',y',z_c) \,\hat{\mathbf{h}}] dx' \,dy',
 \label{eq:continuous_layer_source}
 \end{equation} 
-which represents the total-field anomaly produced by continuous layer with the same direction of the arbitrary magnetic source. Thus, the RTP field $\Delta T_{i}^{PL}$ produced by equivalent layer at the point $(x_i,y_i,z_i)$ is equal to 
+which represents the total-field anomaly produced by continuous layer with the same direction of the arbitrary magnetic source. Thus, the reduction to the pole (RTP) field $\Delta T_{i}^{PL}$ produced by equivalent layer at the point $(x_i,y_i,z_i)$ is equal to 
 
 \begin{equation}
 \Delta T_{i}^{PL} = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  p(x',y',z_c)  [\gamma_m \partial_{zz} \phi(x_i,y_i,z_i,x',y',z_c) ] dx' \,dy',
@@ -97,10 +97,10 @@ m \, \partial_{zz} \Gamma(x_i,y_i,z_i) = \int \limits_{-\infty}^{+\infty } \int 
 We can notice that equation \ref{eq:source_layer_pole} can be calculated differentiating the following equation
 
 \begin{equation}
-m \, \partial_{z} \Gamma(x_i,y_i,z_i) = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  \dfrac{p(x',y',z_c) (z_c - z_i)}{[(x_i-x')^2 + (y_i-y')^2 + (z_i-z_c)^2]^{\frac{3}{2}}}    dx' \,dy',
+m \, \partial_{z} \Gamma(x_i,y_i,z_i) = \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  \dfrac{p(x',y',z_c) (z_c - z_i)}{[(x_i-x')^2 + (y_i-y')^2 + (z_i-z_c)^2]^{\frac{3}{2}}}    dx' \,dy'
 \label{eq:mag_upward}
 \end{equation}
-where $z_c > z_i$, with respect to the vertical component $z_i$. 
+with respect to the vertical component $z_i$, where $z_c > z_i$. 
 
 From potential-field theory, we can highlight the classical upward continuation integral 
 
@@ -108,28 +108,28 @@ From potential-field theory, we can highlight the classical upward continuation 
 U(x_i,y_i,z_i) = \dfrac{(z_c-z_i)}{2\pi} \int \limits_{-\infty}^{+\infty } \int \limits_{-\infty}^{+\infty }  \dfrac{U(x',y',z_c) }{[(x_i-x')^2 + (y_i-y')^2 + (z_i-z_c)^2]^{\frac{3}{2}}}    dx' \,dy',
 \label{eq:upward_continuation_integral}
 \end{equation}
-where the function $U(x_i,y_i,z_i)$ is an hamornic function at all $(x_i,y_i,z_i)$ and  $U(x',y',z_c)$ is the same harmonic function ate $(x',y',z_c)$ \citep{blakely1996}. In this case, if this harmonic function represents the total-field anomaly at the point $(x_i,y_i,z_i)$, it can be mathematically interpreted as the convolution between its values $U(x',y',z_c)$ and the vertical derivative in relation to $z_i$ of the equation \ref{eq:phi}, evaluated on the horizontal plane $z_i =z_c$. Therefore, according to the classical upward continuation function (equation \ref{eq:upward_continuation_integral}), the magnetic-moment distribution $p(x',y',z_c)$ in equation \ref{eq:mag_upward} assumes the form 
+where the function $U(x_i,y_i,z_i)$ is an hamornic function at all $(x_i,y_i,z_i)$ and  $U(x',y',z_c)$ is the same harmonic function at $(x',y',z_c)$ \citep{blakely1996}. In this case, if this harmonic function represents the total-field anomaly at the point $(x_i,y_i,z_i)$, it can be mathematically interpreted as the convolution between its values $U(x',y',z_c)$ and the vertical derivative with respect to $z_i$ of the equation \ref{eq:phi}, evaluated on the horizontal plane $z_i =z_c$. Therefore, according to the classical upward continuation function (equation \ref{eq:upward_continuation_integral}), the magnetic-moment distribution $p(x',y',z_c)$ in equation \ref{eq:mag_upward} assumes the form 
 
 \begin{equation}
 p(x',y',z_c) = \dfrac{m}{2\pi} \, \partial_{z} \Gamma(x',y',z_c) ,
 \label{eq:positivity_prop}
 \end{equation}
-where $\partial_{z} \Gamma(x',y',z_c)$ is the derivative of the scalar function \ref{eq:source_integral} in relation to $z_i$ evaluated over the equivalent layer. The most interesting aspect of equation \ref{eq:positivity_prop} is that the magnetic-moment distribution is defined as the product of a positive constant $\dfrac{m}{2\pi}$ and the function $\partial_{z} \Gamma(x',y',z_c)$, which is all positive at all points $(x',y',z_c)$ over the equivalent layer. This relation is similar to that presented by \cite{pedersen1991} and \cite{li_etal_2014}. In the wavenumber domain, these authors determined the magnetic-moment distribution within a continuous equivalent layer with the same magnetization direction as the local-geomagnetic field at the pole. They also considered a planar equivalent layer located below and parallel to a horizontal plane containing the observed total-field anomaly. They assume a magnetic source having a purely induced magnetization. Under these assumptions, \cite{pedersen1991} and \cite{li_etal_2014} concluded that the magnetic-moment distribution within the continuous equivalent layer is proportional to the pseudogravity anomaly produced by the source on the plane of the equivalent layer. By following different approaches using magnetic microscopy data, \cite{baratchart2013} and \cite{lima_weiss_2016} pointed out by imposing a nonnegativity constraint, the solution to the inverse problem is a unique magnetic-moment distribution. Here we do not follow the same wavenumber-domain reasoning used by all these authors. Moreover, equation \ref{eq:positivity_prop} generalizes this positivity condition because (1) it holds true for all cases in which the magnetization of the equivalent layer has the same direction as the true
-magnetization of the sources, regardless it is purely induced or not, (2) does not require that the observed total-field anomaly data be on a plane and, (3) does not require a planar equivalent layer.
+where $\partial_{z} \Gamma(x',y',z_c)$ is the derivative of the scalar function \ref{eq:source_integral} in relation to $z_i$ evaluated over the equivalent layer. The most interesting aspect of equation \ref{eq:positivity_prop} is that the magnetic-moment distribution is defined as the product of a positive constant $\dfrac{m}{2\pi}$ and the function $\partial_{z} \Gamma(x',y',z_c)$, which is all positive at all points $(x',y',z_c)$ over the equivalent layer. This relation is similar to that presented by \cite{pedersen1991} and \cite{li_etal_2014}. In the wavenumber domain, these authors determined the magnetic-moment distribution within a continuous equivalent layer with the same magnetization direction as the local-geomagnetic field at the pole. They also considered a planar equivalent layer located below and parallel to a horizontal plane containing the observed total-field anomaly. They assume a magnetic source having a purely induced magnetization. Under these assumptions, \cite{pedersen1991} and \cite{li_etal_2014} concluded that the magnetic-moment distribution within the continuous equivalent layer is proportional to the pseudogravity anomaly produced by the source on the plane of the equivalent layer. By following different approaches using magnetic microscopy data, \cite{baratchart2013} and \cite{lima_weiss_2016} pointed out by imposing a nonnegativity constraint, the solution to the inverse problem is a unique magnetic-moment distribution. Here, we do not follow the same wavenumber-domain reasoning used by all these authors. Moreover, equation \ref{eq:positivity_prop} generalizes this positivity condition because (1) it holds true for all cases in which the magnetization of the equivalent layer has the same direction as the true
+magnetization of the sources, whether it is purely induced or not, (2) does not require that the observed total-field anomaly data be on a plane and, (3) does not require a planar equivalent layer.
 
 %% Discretizing layer
 \subsection{Parametrization and forward problem}
 
-In practical situations, its not possible to determine a continuous magnetic-moment distribution $p(x',y',z_c)$ over the layer as shown in equation \ref{eq:continuous_layer}. For this reason, the layer has to be approximated by a discrete set of dipoles with unit volume located at a constant depth $z = z_c$. By discretizing the integrand of equation \ref{eq:continuous_layer}, the predicted total-field anomaly at the point $(x_i,y_i,z_i)$ is given by 
+In practical situations, it is not possible to determine a continuous magnetic-moment distribution $p(x',y',z_c)$ over the layer as shown in equation \ref{eq:continuous_layer}. For this reason, the layer has to be approximated by a discrete set of dipoles with unit volume located at a constant depth $z = z_c$. By discretizing the integrand of equation \ref{eq:continuous_layer}, the predicted total-field anomaly at the point $(x_i,y_i,z_i)$ is given by 
 
 \begin{equation}
 \Delta T_i = f_i(\mathbf{s}) ,
 \label{eq:tfa_pred_i}
 \end{equation}    
-where $\Delta T_i$ is the $i$th element of the $N$-dimensional vector of predicted total-field anomaly $\mathbf{\Delta T}(\mathbf{s})$. The function $f_i$ maps the unknown parameters onto the data, in which the parameter vector $\mathbf{s}$ is formed by an $M$-dimensional vector $\mathbf{p}$ whose $j$th element $p_j$ is the magnetic moment of the $j$th dipole with a single magnetization direction $\mathbf{q}$ (equation \ref{eq:q_vector}) assigned to all dipoles (figure \ref{fig:eqlayer_figure}). Explicitly, the function $f_i$ is described as 
+where $\Delta T_i$ is the $i$th element of the $N$-dimensional vector of predicted total-field anomaly $\mathbf{\Delta T}(\mathbf{s})$. The function $f_i$ maps the unknown parameters onto the data, in which the parameter vector $\mathbf{s}$ is formed by an $M$-dimensional vector $\mathbf{p}$ whose $j$th element $p_j$ is the magnetic moment of the $j$th dipole with a single magnetization direction $\mathbf{q}$ (equation \ref{eq:q_vector}) assigned to all dipoles (Figure \ref{fig:eqlayer_figure}). Explicitly, the function $f_i$ is described as 
 
 \begin{equation}
-f_i (\mathbf{s}) = \sum_{j=1}^{M} p_j g_{ij} (\mathbf{q}) = \mathbf{p}^T \mathbf{g}_i(\mathbf{q}),
+f_i (\mathbf{s}) = \sum_{j=1}^{M} p_j g_{ij} (\mathbf{q}),
 \label{eq:f_i}
 \end{equation}
 where
@@ -143,7 +143,7 @@ is an harmonic function representing the total-field anomaly at the $i$th positi
 \subsection{Inverse problem}
 
 %%%% Defining the objective function
-Let $\mathbf{\Delta T}^o$ be an \textit{N}-dimensional vector whose $i$th element $\Delta T_i^o$ is the total-field anomaly observation produced by a magnetic source at the point $(x_i,y_i,z_i)$, $i = 1, \ldots, N$. In order to estimate the magnetization direction, we have to formulate an inverse problem by imposing a positivity constraint on the magnetic-moment distribution. It can be performed minimizing the difference between the observed data $\mathbf{\Delta T}^o$ and the predicted data $\mathbf{\Delta T} (\mathbf{s})$ by solving the following constrained problem of
+Let $\mathbf{\Delta T}^o$ be an \textit{N}-dimensional vector whose $i$th element $\Delta T_i^o$ is the total-field anomaly observation produced by a magnetic source at the point $(x_i,y_i,z_i)$, $i = 1, \ldots, N$. In order to estimate the magnetization direction, we have to formulate an inverse problem by imposing a positivity constraint on the magnetic-moment distribution. Here, it is accomplished by solving the following constrained problem of
 
 \begin{subequations}
 \begin{align}
@@ -164,13 +164,13 @@ Minimizing the goal function shown in equation \ref{eq:positivity_goal_function}
 \frac{1}{2} \mathbf{\Delta s}^{k^T} \mathbf{H}^k(\mathbf{s}^k) \mathbf{\Delta s}^k
 \label{eq:sec_ord_goal}
 \end{equation}
-in which $\mathbf{J}^{k}(\mathbf{s}^k)$ and $\mathbf{H}^{k}(\mathbf{s}^{k})$ are, respectively, the gradient vector and the Hessian matrix of equation \ref{eq:positivity_goal_function}a. Thus, taking the gradient of the function \ref{eq:sec_ord_goal}, the parameter perturbation vector $\mathbf{\Delta s}^k$ at the $k$th iteration is obtained by solving the linear system
+in which $\mathbf{J}^{k}(\mathbf{s}^k)$ and $\mathbf{H}^{k}(\mathbf{s}^{k})$ are, respectively, the gradient vector and the Hessian matrix of equation \ref{eq:positivity_goal_function}a. Thus, taking the gradient with respect to the parameter perturbation vector $\mathbf{\Delta s}^k$ of the expanded equation \ref{eq:sec_ord_goal} and setting the result equal to the null vector, it is obtained by solving the linear system
 
 \begin{equation}
-\mathbf{H}^k (\mathbf{s}^{k}) \mathbf{\Delta s}^k = - \mathbf{J}^k (\mathbf{s}^k),
+\mathbf{H}^k (\mathbf{s}^{k}) \mathbf{\Delta s}^{\sharp^k} = - \mathbf{J}^k (\mathbf{s}^k),
 \label{eq:linear_sys_GN}
 \end{equation}
-where the estimate $\mathbf{\Delta s}^k$ is a single step of the Gauss-Newton method required to attain the minimum of the expanded function (equation \ref{eq:sec_ord_goal}). The linear system given by equation \ref{eq:linear_sys_GN} can be rewritten as 
+where the estimate $\mathbf{\Delta s}^{\sharp^k}$ is a single step of the Gauss-Newton method required to attain the minimum of the expanded function (equation \ref{eq:sec_ord_goal}). The linear system given by equation \ref{eq:linear_sys_GN} can be rewritten as 
 
 \begin{equation}
 \left[
@@ -188,9 +188,9 @@ where the estimate $\mathbf{\Delta s}^k$ is a single step of the Gauss-Newton me
 \end{array} \right] ,
 \label{eq:linear_sys_GN_block}
 \end{equation}
-in which $\mathbf{J}_{\alpha}^{k}$ and $\mathbf{H}_{\alpha \beta}^{k}$, where $\alpha = p,q$ and $\beta = p,q$, are the gradient vector and the Hessian matrix calculated in relation to each component of the magnetic-moment vector $\mathbf{p}$ and the magnetization direction vector $\mathbf{q}$, respectively. Besides, in order to simplify the linear system \ref{eq:linear_sys_GN_block}, we consider null cross-derivatives. 
+in which $\mathbf{J}_{\alpha}^{k}$ and $\mathbf{H}_{\alpha \beta}^{k}$, where $\alpha = p,q$ and $\beta = p,q$, are the gradient vector and the Hessian matrix calculated in relation to each element of the magnetic-moment vector $\mathbf{p}$ and the magnetization direction vector $\mathbf{q}$, respectively. Besides, in order to simplify the equation \ref{eq:linear_sys_GN_block}, we consider null cross-derivatives. 
 
-However, the gradient vector and the Hessian matrix relative to the part of magnetic moments are, respectively,
+However, The gradient vector and the Hessian matrix relative to the part of magnetic moments are, respectively,
 
 \begin{equation}
 \mathbf{J}_{p}^{k} = -2 \mathbf{G}_{p}^{k^T} [ \mathbf{\Delta T}^o -  \mathbf{\Delta T} (\mathbf{s}^k) ] + 2\mu f_{0}^{k} \mathbf{p}^k 
@@ -202,19 +202,19 @@ and
 \mathbf{H}_{pp}^{k} = 2 \mathbf{G}_{p}^{k^T} \mathbf{G}_{p}^{k} + 2 \mu f_{0}^{k} \mathbf{I} 
 \label{eq:hess_p}
 \end{equation}
-where $\mathbf{G}_p^{k}$ is the $N \times M$ sensitivity matrix at the $k$th iteration, whose elements are composed by the derivative of equation \ref{eq:positivity_goal_function}a in relation of $j$th element of the vector $\mathbf{p}^k$, $\mathbf{I}$ is an identity matrix and the normalizing factor $f_{0}^{k}$ is equal to
+where $\mathbf{G}_p^{k}$ is the $N \times M$ sensitivity matrix at the $k$th iteration, whose $ij$th element is given by equation \ref{eq:g_ij}, $\mathbf{I}$ is an identity matrix and the normalizing factor $f_{0}^{k}$ is equal to
 
 \begin{equation}
 f_{0}^{k} = \dfrac{tr(\mathbf{G}_{p}^{k^T} \mathbf{G}_{p}^{k})}{M} \, ,
 \label{eq:norm_factor}
 \end{equation}
-where $tr$ is denotaded as the trace of the matrix $\mathbf{G}_{p}^{k^T} \mathbf{G}_{p}^{k}$ and $M$ is the total number of dipoles composing the layer. From the correction $\mathbf{\Delta p}^k = \mathbf{p}^{k+1} - \mathbf{p}^k$, we can conclude that the linear system to be solved is given by
+where $tr$ is denotaded as the trace of the matrix $\mathbf{G}_{p}^{k^T} \mathbf{G}_{p}^{k}$ and $M$ is the total number of dipoles composing the layer. From the correction $\mathbf{\Delta p}^{\sharp^k} = \mathbf{p}^{\sharp^{k+1}} - \mathbf{p}^{\sharp^k}$, we can conclude that the linear system to be solved is given by
 
 \begin{equation}
-\left[ \mathbf{G}_{p}^{k^T} \mathbf{G}_{p}^{k} + \mu f_{0}^{k} \mathbf{I} \right] \mathbf{p}^{k+1} = \mathbf{G}_{p}^{k^T} \mathbf{\Delta T}^o.
+\left[ \mathbf{G}_{p}^{k^T} \mathbf{G}_{p}^{k} + \mu f_{0}^{k} \mathbf{I} \right] \mathbf{p}^{\sharp^{k+1}} = \mathbf{G}_{p}^{k^T} \mathbf{\Delta T}^o.
 \label{eq:linear_sys_p}
 \end{equation} 
-Owing to nonlinear relation of the magnetization direction $\mathbf{q}^k$ with the predicted total-field anomaly, the gradient vector and the Hessian matrix for this case are, respectively,
+Owing to nonlinear relation of the magnetization direction $\mathbf{q}^k$ with the predicted total-field anomaly, the gradient vector and the Hessian matrix at the $k$th for this case are, respectively,
 
 \begin{equation}
 \mathbf{J}_{q}^{k} = -2 \mathbf{G}_{q}^{k^T} [ \mathbf{\Delta T}^o -  \mathbf{\Delta T} (\mathbf{s}^k) ] 
@@ -226,19 +226,24 @@ and
 \mathbf{H}_{qq}^{k} = 2 \mathbf{G}_{q}^{k^T} \mathbf{G}_{q}^{k} 
 \label{eq:hess_q}
 \end{equation}
-in which $\mathbf{G}_q^k$ is a $N \times 2$ sensitivity matrix, whose elements are composed by derivative of equation \ref{eq:positivity_goal_function} in relation of each component of the vector $\mathbf{q}^k$, that are the inclination and declination, respectively. Nevertheless, in order to calculate the correction $\mathbf{\Delta q}^k$ at the $k$th iteration, we use the Levernberg-Marquardt method \citep{aster2005} by solving the linear system
+in which $\mathbf{G}_q^k$ is a $N \times 2$ sensitivity matrix, whose elements are composed by derivative of equation \ref{eq:f_i} in relation of each element of the vector $\mathbf{q}^k$, that are the inclination and declination. Nevertheless, to calculate the correction $\mathbf{\Delta q}^{\sharp^k}$ at the $k$th iteration, we use the Levernberg-Marquardt method \citep{aster2005} by solving the linear system
 
 \begin{equation}
-\left[ \mathbf{G}_{q}^{k^T} \mathbf{G}_{q}^{k} + \lambda^k \mathbf{I} \right] \mathbf{\Delta q}^k = \mathbf{G}_{q}^{k^T}[ \mathbf{\Delta T}^o -  \mathbf{\Delta T} (\mathbf{s}^k) ],
+\left[ \mathbf{G}_{q}^{k^T} \mathbf{G}_{q}^{k} + \lambda^k \mathbf{I} \right] \mathbf{\Delta q}^{\sharp^k} = \mathbf{G}_{q}^{k^T}[ \mathbf{\Delta T}^o -  \mathbf{\Delta T} (\mathbf{s}^k) ],
 \label{eq:linear_sys_q}
 \end{equation}
-where $\lambda$ is the Marquardt parameter that is updated along the iterative process and $\mathbf{I}$ is an indentity matrix.
+where $\lambda$ is the Marquardt parameter that is updated along the iterative process and $\mathbf{I}$ is an indentity matrix. After estimating the parameter correction $\mathbf{\Delta q}^{\sharp^k}$ at the $k$th iteration, we update the magnetization direction such that 
+
+\begin{equation}
+\mathbf{q}^{\sharp^{k+1}} = \mathbf{q}^{\sharp^k} + \mathbf{\Delta q}^{\sharp^k}.
+\label{eq:q_next}
+\end{equation}
 
 \subsection{Iterative process for magnetization estimation}
 
-The estimation of the magnetic moments $\mathbf{p}^{\sharp}$ and the magnetization direction $\mathbf{q}^{\sharp}$ is formulated as an inverse problem of minimizing the difference between the observed data $ \mathbf{\Delta T}^o $ and the predicted data $\mathbf{\Delta T} (\mathbf{s})$. As we can notice, the solution of the inversion is given by solving two linear systems, one shown in equation \ref{eq:linear_sys_p} and other in equation \ref{eq:linear_sys_q}. For this reason, we propose a nested algorithm for solving the inverse problem in two steps.           
+The magnetic moments $\mathbf{p}^{\sharp}$ and the magnetization direction $\mathbf{q}^{\sharp}$ are obtained through an inverse problem of minimizing the difference between the observed data $ \mathbf{\Delta T}^o $ and the predicted data $\mathbf{\Delta T} (\mathbf{s})$. As we can notice, the solution of the inversion is given by solving two linear systems shown in equation \ref{eq:linear_sys_p} and equation \ref{eq:linear_sys_q}. For this reason, we propose a nested algorithm for solving the inverse problem in two steps.           
 
-Our iterative algorithm starts with an initial guess for the magnetization direction $\mathbf{q}_0$. At the $k$th iteration, we  calculated a set of magnetic moment $\mathbf{p}^k$ by imposing a positivity constraint on equation \ref{eq:linear_sys_p}. After estimating the magnetic-moment distribution $\mathbf{p}^k$ at the $k$th iteration using the previous estimate $\mathbf{q}^{k}$ for the magnetization direction, we estimate a new vector $\mathbf{q}^{k+1}$ by solving an unconstrained nonlinear inverse problem an applying the correction $\mathbf{\Delta q}^k$ using the equation \ref{eq:linear_sys_q}. The iterative process stops when the minimum of the goal function (equation \ref{eq:positivity_goal_function}a) is reached. An overview of the algorith is shown in figure \ref{fig:scheme_LM_NNLS} and in the algorithm \ref{cd: LM_NNLS}. 
+Our iterative algorithm starts with an initial guess for the magnetization direction $\mathbf{q}_0$. At the $k$th iteration, we estimate a set of magnetic moment $\mathbf{p}^{\sharp^{k+1}}$ by imposing a positivity constraint on equation \ref{eq:linear_sys_p}. After estimating the magnetic-moment distribution $\mathbf{p}^{\sharp^{k+1}}$ within the equivalent layer at the $k$th iteration using the previous estimate $\mathbf{q}^{\sharp^k}$ for the magnetization direction, we estimate the corrections of magnetization direction vector $\mathbf{\Delta q}^{\sharp^k}$ by solving the unconstrained nonlinear inverse problem (equation \ref{eq:linear_sys_q}) and update the magnetization direction by equation \ref{eq:q_next}. The iterative process stops when the goal function (equation \ref{eq:positivity_goal_function}a) is invariant along successive iterations. An overview of the algorithm is shown in Figure \ref{fig:scheme_LM_NNLS} and in the algorithm \ref{cd: LM_NNLS}. 
 
 \begin{algorithm}[H]
 	%\DontPrintSemicolon
@@ -250,14 +255,14 @@ Our iterative algorithm starts with an initial guess for the magnetization direc
 	
 	\While{(not converge)  or ($i<i_{max}$) }
 	{ \textbf{step 1}: Solve equation \ref{eq:linear_sys_p} using NNLS \;
-	  \textbf{step 2}: Compute goal function (\ref{eq:positivity_goal_function}) \; 
+	  \textbf{step 2}: Compute goal function (equation \ref{eq:positivity_goal_function}a) \; 
 	  \While{(not converge)  or ($j<j_{max}$) }
 		{ \textbf{step 3}:  Initialize the Levenberg-Marquardt algorithm \;  
-		  \textbf{step 4}: Compute goal function (\ref{eq:positivity_goal_function})\;
+		  \textbf{step 4}: Compute goal function (equation \ref{eq:positivity_goal_function}a)\;
 			\While{ $k<k_{marq}$ } {
 				\textbf{step 5}:  Solve equation \ref{eq:linear_sys_q} \;
-				\textbf{step 6}:  Apply the correction for magnetization direction \;
-				\textbf{step 7}: Compute goal function (\ref{eq:positivity_goal_function})\;
+				\textbf{step 6}:  Update the magnetization direction estimate (equation \ref{eq:q_next}) \;
+				\textbf{step 7}: Compute goal function (equation \ref{eq:positivity_goal_function})\;
 			}
 			\textbf{step 8}:  Analysis of convergence for inner loop.}
 			\textbf{step 9}:  Analysis of convergence for outer loop.}
@@ -268,8 +273,8 @@ Our iterative algorithm starts with an initial guess for the magnetization direc
 
 \subsection{The choice of layer depth $\mathbf{z_c}$ and regularization parameter $\mathbf{\mu}$}
 
-The procedure for the use of our methodology for estimating the total magnetization require the choice of two main parameters. The first one is the layer depth $z_c$ as shown in figure \ref{fig:eqlayer_figure} and the second is the regularization parameter $\mu$ shown in equation \ref{eq:linear_sys_p}.
+The procedure for the use of our methodology for estimating the total magnetization require the choice of two main parameters. The first one is the layer depth $z_c$ as shown in Figure \ref{fig:eqlayer_figure} and the second is the regularization parameter $\mu$ shown in equation \ref{eq:linear_sys_p}.
 
 The method of the choice of layer is based on a classical approach proposed by \cite{dampney1969}. The author pointed out that the layer depth should satisfy an interval from $2.5$ to $6$ times the grid spacing. It should be notice that this rule was applied on an evenly spaced data. However, the choice for applying our method should correspond to an interval from $2$ to $3$ times the greater grid spacing. It is necessarily to point out that this range of values was found empirically due to the application on a irregular grid data.
 
-To solve the equation \ref{eq:linear_sys_p} we have to choose a reliable regularization parameter $\mu$. For this purpose, we use the L-curve method \citep{hansen1992}. This approach is widely used in the literature to find a regularizing parameter, which filtering out enough noise whithout loosing to much information in the final solution. The procedure of finding the parameter is basically to plot a curve of optimal values between the solution norm and residual norm. The corner of the curve is the final result which gives a threshold between the regularization function and the data misfit.
+To solve the equation \ref{eq:linear_sys_p} we have to choose a reliable regularization parameter $\mu$. For this purpose, we use the L-curve method \citep{hansen1992}. This approach is widely used in the literature to find a regularizing parameter, which filtering out enough noise without loosing to much information in the final solution. The procedure of finding the parameter plot a curve of optimal values between the solution norm and residual norm. The corner of the curve is the optimal regularization parameter which gives a threshold between the regularizing function and the data misfit.
