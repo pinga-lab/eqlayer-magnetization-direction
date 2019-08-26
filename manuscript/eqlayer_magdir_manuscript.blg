@@ -40,6 +40,10 @@ Repeated entry---line 617 of file references.bib
  : @article {lima2013
  :                   ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 663 of file references.bib
+ : @article{siqueira_etal_2017
+ :                            ,
+I'm skipping whatever remains of this entry
 A bad cross reference---entry "dutra_etal_2014"
 refers to entry "10.5327/Z2317-4889201400030003", which doesn't exist
 Warning--I didn't find a database entry for "10.5327/Z2317-4889201400030003"
@@ -53,45 +57,45 @@ Name 3 in "A. C. Dutra and Y. Marangoni and R. I. F. Trindade," has a comma at t
 while executing---line 1586 of file seg.bst
 Name 1 in "H. Goldstein, C. P. Poole Jr., and J. L. Safko" has a comma at the end for entry goldstein1980
 while executing---line 1586 of file seg.bst
-You've used 45 entries,
+You've used 46 entries,
             2639 wiz_defined-function locations,
-            1011 strings with 14884 characters,
-and the built_in function-call counts, 18591 in all, are:
-= -- 1988
-> -- 738
-< -- 26
-+ -- 266
-- -- 245
-* -- 1683
-:= -- 3198
-add.period$ -- 48
-call.type$ -- 45
-change.case$ -- 349
-chr.to.int$ -- 44
-cite$ -- 45
-duplicate$ -- 626
-empty$ -- 1342
-format.name$ -- 328
-if$ -- 3837
+            1017 strings with 14979 characters,
+and the built_in function-call counts, 18777 in all, are:
+= -- 2013
+> -- 719
+< -- 27
++ -- 256
+- -- 237
+* -- 1695
+:= -- 3224
+add.period$ -- 49
+call.type$ -- 46
+change.case$ -- 351
+chr.to.int$ -- 45
+cite$ -- 46
+duplicate$ -- 640
+empty$ -- 1372
+format.name$ -- 323
+if$ -- 3883
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 49
-newline$ -- 142
-num.names$ -- 134
-pop$ -- 250
+missing$ -- 50
+newline$ -- 145
+num.names$ -- 136
+pop$ -- 249
 preamble$ -- 1
-purify$ -- 349
+purify$ -- 351
 quote$ -- 0
-skip$ -- 449
+skip$ -- 459
 stack$ -- 0
-substring$ -- 1470
-swap$ -- 41
+substring$ -- 1501
+swap$ -- 42
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 262
+type$ -- 268
 warning$ -- 0
-while$ -- 134
+while$ -- 136
 width$ -- 0
-write$ -- 500
-(There were 13 error messages)
+write$ -- 511
+(There were 14 error messages)

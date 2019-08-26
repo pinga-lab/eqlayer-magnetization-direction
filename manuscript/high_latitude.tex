@@ -1,22 +1,22 @@
 \append{Consequences of high-latitude estimation}
 
-One critical limitation for estimating the magnetization direction results of the case of estimating magnetization direction in high latitudes. In this appendix, we prove the existence of high latitude difficulties providing a theoretical basis and testing it on extreme cases.
+A limitation for estimating the magnetization direction using our method is its application to high-latitude anomalies. In this appendix, we prove the existence of high latitude difficulties providing a theoretical basis and testing it on extreme cases.
 
-The process of estimating magnetization direction using equivalent-layer technique is divided into two inversions. One by solving a constrained linear problem using positivity for magnetic-moment distribution and the other an unconstrained nonlinear estimation for magnetization direction. A way to extract infomations about the rank-deficiency and ill-conditioning of linear systems is exploring the singular value decomposition. This procedure allows an $N \times M$ matrix can be rewritten as the product of three matrices, one of them formed by the set of singular values arranged in order of decreasing size. The context of decomposing a matrix in singular values is to obtain pieces of information that can be estimated. It can also be useful to dictate which rows or columns of the matrix are linear independent. The fact is that, if a row or a column of a matrix is all null, it impacts directly on the linear dependence. Consequently, it leads to a rank-deficiency and an ill-conditioning of a linear system. Moreover, it is associated with zero singular values. Thus, the construction of the $N \times 2$ sensitivity matrix $\mathbf{G}_{p}^{k}$ is explicitly given by
+The process of estimating magnetization direction using equivalent-layer technique is divided into two inversions. One solves a constraining linear inversion using positivity and minimum-norm constraints on the magnetic-moment distribution and the second one comprises an unconstrained nonlinear inversion for estimating the magnetization direction. A way to extract infomation about the rank-deficiency and ill-conditioned linear systems is exploring the singular value decomposition. This procedure allows an $N \times M$ matrix can be rewritten as the product of three matrices, one of them formed by a set of singular values arranged in descending order. From linear algebra, if there is a row or a column of a matrix entirely formed by zeros then then it means that the linear equations are linearly dependent. Consequently, it leads to a rank-deficiency, ill-conditioned linear system and zero singular values. Here, the ill-posed system of linear equations is given in equation \ref{eq:linear_sys_q} for estimating the correction of the magnetization direction ($\mathbf{\Delta q}^{\sharp^k}$). This system is based on 2 variables (inclination and declination) where the $N \times 2$ sensitivity matrix $\mathbf{G}_{q}^{k}$ is explicitly given by
 
 \begin{equation}
-\mathbf{G}_{p}^{k} =
+\mathbf{G}_{q}^{k} =
 \left[ \begin{array}{cc}
-\mathbf{p}^{k^T} \partial_{\tilde{\i}} \mathbf{g}_{1} (\mathbf{q}^k) & \mathbf{p}^{k^T} \partial_{\tilde{d}} \mathbf{g}_{1}(\mathbf{q}^k) \\
+\mathbf{p}^{\sharp^{k^T}} \partial_{\tilde{\i}} \mathbf{g}_{1} (\mathbf{q}^k) & \mathbf{p}^{\sharp^{k^T}} \partial_{\tilde{d}} \mathbf{g}_{1}(\mathbf{q}^k) \\
 \vdots & \vdots  \\
-\mathbf{p}^{k^T} \partial_{\tilde{\i}} \mathbf{g}_{N} (\mathbf{q}^k) & \mathbf{p}^{k^T} \partial_{\tilde{d}} \mathbf{g}_{N} (\mathbf{q}^k)
+\mathbf{p}^{\sharp^{k^T}} \partial_{\tilde{\i}} \mathbf{g}_{N} (\mathbf{q}^k) & \mathbf{p}^{\sharp^{k^T}} \partial_{\tilde{d}} \mathbf{g}_{N} (\mathbf{q}^k)
 \end{array} \right] ,
 \label{eq:gp}
 \end{equation}
-in which $\mathbf{p}^{k^T} \partial_{\alpha} \mathbf{g}_{i} (\mathbf{q}^k)$, $\alpha =\tilde{\i}, \tilde{d}$, is a derivative in relation to inclination (first column) and the declination (second column) evaluated at the $i$th observation point. That is, by calculating the derivative of equation \ref{eq:f_i} in relation to magnetization direction is in fact the derivative of the vector $\hat{\mathbf{m}}(\mathbf{q})$ (equation \ref{eq:mag_vec}). The derivative of the vector $\hat{\mathbf{m}}(\mathbf{q})$ in relation to inclination is given by
+in which $\mathbf{p}^{\sharp^{k^T}}$ is the estimated magnetic-moment distribution on the equivalent layer by solving the linear system given in equation \ref{eq:linear_sys_p} with positivity constraint and $\partial_{\alpha}\mathbf{g}_{i} (\mathbf{q}^k)$, where $\alpha= \tilde{\i}, \tilde{d}$, a derivative of equation \ref{eq:f_i} with respect to inclination (first column) and the declination (second column) evaluated at the $i$th observation point, respectively. That is, by calculating the derivative of equation \ref{eq:f_i} in relation to magnetization direction is in fact the derivative of the vector $\hat{\mathbf{m}}(\mathbf{q})$ (equation \ref{eq:mag_vec}). The derivative of the vector $\hat{\mathbf{m}}(\mathbf{q})$ in relation to inclination and declination is given, respectively, by 
 
 \begin{equation}
-	\dfrac{\partial \hat{\mathbf{m}}(\mathbf{q})}{\partial {\tilde{\i}}} =
+	 \partial_{\tilde{\i}} \hat{\mathbf{m}}(\mathbf{q}) =
 	\left[ \begin{array}{c}
 		-\sin \tilde{\i} \cos \tilde{d} \\
 		-\sin \tilde{\i} \sin \tilde{d}\\
@@ -24,10 +24,10 @@ in which $\mathbf{p}^{k^T} \partial_{\alpha} \mathbf{g}_{i} (\mathbf{q}^k)$, $\a
 	\end{array} \right], 
 	\label{eq:mag_vec_inc}
 \end{equation}
-and analogously for the declination is equal to 
+and 
 
 \begin{equation}
-	\dfrac{\partial \hat{\mathbf{m}}(\mathbf{q})}{\partial {\tilde{d}}} =
+	 \partial_{\tilde{d}} \hat{\mathbf{m}}(\mathbf{q}) =
 	\left[ \begin{array}{c}
 		-\cos \tilde{\i} \sin \tilde{d} \\
 		\cos \tilde{\i} \cos \tilde{d}\\
@@ -36,11 +36,11 @@ and analogously for the declination is equal to
 	\label{eq:mag_vec_dec}
 \end{equation}
 
-Hence, for the case whose the magnetization direction of the true magnetic source has inclination $90^\circ$ and declination $0^\circ$, the equation \ref{eq:mag_vec_inc} and \ref{eq:mag_vec_dec} is, respectively, equal to 
+Hence, for the case whose magnetization direction of the true magnetic source has inclination $90^\circ$ and declination $0^\circ$, the equation \ref{eq:mag_vec_inc} and \ref{eq:mag_vec_dec} is, respectively, equal to 
 
  
 \begin{equation}
-	\dfrac{\partial \hat{\mathbf{m}}(\mathbf{q})}{\partial {\tilde{\i}}} =
+\partial_{\tilde{\i}} \hat{\mathbf{m}}(\mathbf{q}) =
 	\left[ \begin{array}{c}
 		-1 \\
 		 0 \\
@@ -51,7 +51,7 @@ Hence, for the case whose the magnetization direction of the true magnetic sourc
 and 
 
 \begin{equation}
-	\dfrac{\partial \hat{\mathbf{m}}(\mathbf{q})}{\partial {\tilde{d}}} =
+	\partial_{\tilde{d}} \hat{\mathbf{m}}(\mathbf{q}) =
 	\left[ \begin{array}{c}
 		0 \\
 		0 \\
@@ -59,7 +59,7 @@ and
 	\end{array} \right]. 
 	\label{eq:mag_vec_dec_0}
 \end{equation}
-We can notice from all these reasoning that the second row of the sensitivity matrix \ref{eq:gp} is all null for a vertical magnetization direction. Consequently, it leads to a rank-deficiency and the ill-conditioning of a linear system in this situation. However, its different for the extreme case of low latitude in which the magnetization direction has the inclination $0^\circ$ and declination $0^\circ$. 
+We can notice in this case that the second column of the sensitivity matrix in equation \ref{eq:gp} has all zero elements when the magnetization direction is vertical, leading to ill-posed inversion.
 
            
 
