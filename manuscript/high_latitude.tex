@@ -7,16 +7,18 @@ The process of estimating magnetization direction using equivalent-layer techniq
 \begin{equation}
 \mathbf{G}_{q}^{k} =
 \left[ \begin{array}{cc}
-\mathbf{p}^{\sharp^{k^T}} \partial_{\tilde{\i}} \mathbf{g}_{1} (\mathbf{q}^k) & \mathbf{p}^{\sharp^{k^T}} \partial_{\tilde{d}} \mathbf{g}_{1}(\mathbf{q}^k) \\
+\partial_{\tilde{\i}} \mathbf{g}_{1}^{k^T} \mathbf{p}^{\sharp^{k}}   & \partial_{\tilde{d}} \mathbf{g}_{1}^{k^T} \mathbf{p}^{\sharp^{k}} \\
 \vdots & \vdots  \\
-\mathbf{p}^{\sharp^{k^T}} \partial_{\tilde{\i}} \mathbf{g}_{N} (\mathbf{q}^k) & \mathbf{p}^{\sharp^{k^T}} \partial_{\tilde{d}} \mathbf{g}_{N} (\mathbf{q}^k)
+\partial_{\tilde{\i}} \mathbf{g}_{N}^{k^T} \mathbf{p}^{\sharp^{k}}   & \partial_{\tilde{d}} \mathbf{g}_{N}^{k^T} \mathbf{p}^{\sharp^{k}} 
 \end{array} \right] ,
 \label{eq:gp}
 \end{equation}
-in which $\mathbf{p}^{\sharp^{k^T}}$ is the estimated magnetic-moment distribution on the equivalent layer by solving the linear system given in equation \ref{eq:linear_sys_p} with positivity constraint and $\partial_{\alpha}\mathbf{g}_{i} (\mathbf{q}^k)$, where $\alpha= \tilde{\i}, \tilde{d}$, a derivative of equation \ref{eq:f_i} with respect to inclination (first column) and the declination (second column) evaluated at the $i$th observation point, respectively. That is, by calculating the derivative of equation \ref{eq:f_i} in relation to magnetization direction is in fact the derivative of the vector $\hat{\mathbf{m}}(\mathbf{q})$ (equation \ref{eq:mag_vec}). The derivative of the vector $\hat{\mathbf{m}}(\mathbf{q})$ in relation to inclination and declination is given, respectively, by 
+in which $\mathbf{p}^{\sharp^{k^T}}$ is the estimated magnetic-moment distribution on the equivalent layer by solving the linear system given in equation \ref{eq:linear_sys_p} with positivity constraint and $\partial_{\alpha}\mathbf{g}_{i} (\mathbf{q}^k)$, where $\alpha= \tilde{\i}, \tilde{d}$, a derivative of equation \ref{eq:f_i} with respect to inclination (first column) and the declination (second column) evaluated at the $i$th observation point, respectively. That is, by calculating the derivative of equation \ref{eq:f_i} in relation to magnetization direction is in fact the derivative of the equation \ref{eq:g_ij} in relation to each element of the vector $\hat{\mathbf{m}}(\mathbf{q})$ (equation \ref{eq:mag_vec}). That is, one element of the vector $\partial_{\alpha}\mathbf{g}_{i} (\mathbf{q}^k)$ is equal to 
+
+
 
 \begin{equation}
-	 \partial_{\tilde{\i}} \hat{\mathbf{m}}(\mathbf{q}) =
+\partial_{\tilde{\i}} g_{ij} (\mathbf{q})  \equiv \gamma_m \hat{\mathbf{F}}_0^T \mathbf{M}_{ij}  \partial_{\tilde{\i}} \hat{\mathbf{m}}(\mathbf{q}) =  \gamma_m \hat{\mathbf{F}}_0^T \mathbf{M}_{ij} 
 	\left[ \begin{array}{c}
 		-\sin \tilde{\i} \cos \tilde{d} \\
 		-\sin \tilde{\i} \sin \tilde{d}\\
@@ -27,7 +29,7 @@ in which $\mathbf{p}^{\sharp^{k^T}}$ is the estimated magnetic-moment distributi
 and 
 
 \begin{equation}
-	 \partial_{\tilde{d}} \hat{\mathbf{m}}(\mathbf{q}) =
+	\partial_{\tilde{d}} g_{ij} (\mathbf{q})  \equiv \gamma_m \hat{\mathbf{F}}_0^T \mathbf{M}_{ij}  \partial_{\tilde{d}} \hat{\mathbf{m}}(\mathbf{q}) =  \gamma_m \hat{\mathbf{F}}_0^T \mathbf{M}_{ij} 
 	\left[ \begin{array}{c}
 		-\cos \tilde{\i} \sin \tilde{d} \\
 		\cos \tilde{\i} \cos \tilde{d}\\
@@ -40,7 +42,7 @@ Hence, for the case whose magnetization direction of the true magnetic source ha
 
  
 \begin{equation}
-\partial_{\tilde{\i}} \hat{\mathbf{m}}(\mathbf{q}) =
+\partial_{\tilde{\i}} g_{ij} (\mathbf{q})  \equiv \gamma_m \hat{\mathbf{F}}_0^T \mathbf{M}_{ij}  \partial_{\tilde{\i}} \hat{\mathbf{m}}(\mathbf{q}) =  \gamma_m \hat{\mathbf{F}}_0^T \mathbf{M}_{ij} 
 	\left[ \begin{array}{c}
 		-1 \\
 		 0 \\
@@ -51,7 +53,7 @@ Hence, for the case whose magnetization direction of the true magnetic source ha
 and 
 
 \begin{equation}
-	\partial_{\tilde{d}} \hat{\mathbf{m}}(\mathbf{q}) =
+	\partial_{\tilde{d}} g_{ij} (\mathbf{q})  \equiv \gamma_m \hat{\mathbf{F}}_0^T \mathbf{M}_{ij}  \partial_{\tilde{d}} \hat{\mathbf{m}}(\mathbf{q}) =  \gamma_m \hat{\mathbf{F}}_0^T \mathbf{M}_{ij}
 	\left[ \begin{array}{c}
 		0 \\
 		0 \\

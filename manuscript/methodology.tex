@@ -129,7 +129,7 @@ In practical situations, it is not possible to determine a continuous magnetic-m
 where $\Delta T_i$ is the $i$th element of the $N$-dimensional vector of predicted total-field anomaly $\mathbf{\Delta T}(\mathbf{s})$. The function $f_i$ maps the unknown parameters onto the data, in which the parameter vector $\mathbf{s}$ is formed by an $M$-dimensional vector $\mathbf{p}$ whose $j$th element $p_j$ is the magnetic moment of the $j$th dipole with a single magnetization direction $\mathbf{q}$ (equation \ref{eq:q_vector}) assigned to all dipoles (Figure \ref{fig:eqlayer_figure}). Explicitly, the function $f_i$ is described as 
 
 \begin{equation}
-f_i (\mathbf{s}) = \sum_{j=1}^{M} p_j g_{ij} (\mathbf{q}),
+f_i (\mathbf{s}) = \sum_{j=1}^{M} g_{ij}(\mathbf{q}) p_j  = \mathbf{g}_{i}^T(\mathbf{q}) \mathbf{p},
 \label{eq:f_i}
 \end{equation}
 where

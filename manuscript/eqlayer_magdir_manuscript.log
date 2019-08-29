@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  26 AUG 2019 13:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  29 AUG 2019 11:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -448,10 +448,10 @@ LaTeX Warning: Command \i invalid in math mode on input line 16.
 
 ]
 
-LaTeX Warning: Command \i invalid in math mode on input line 19.
+LaTeX Warning: Command \i invalid in math mode on input line 21.
 
 
-LaTeX Warning: Command \i invalid in math mode on input line 19.
+LaTeX Warning: Command \i invalid in math mode on input line 21.
 
 
 LaTeX Warning: Command \i invalid in math mode on input line 21.
@@ -460,34 +460,46 @@ LaTeX Warning: Command \i invalid in math mode on input line 21.
 LaTeX Warning: Command \i invalid in math mode on input line 21.
 
 
-LaTeX Warning: Command \i invalid in math mode on input line 22.
-
-
-LaTeX Warning: Command \i invalid in math mode on input line 22.
-
-
 LaTeX Warning: Command \i invalid in math mode on input line 23.
 
 
 LaTeX Warning: Command \i invalid in math mode on input line 23.
 
 
-LaTeX Warning: Command \i invalid in math mode on input line 32.
+LaTeX Warning: Command \i invalid in math mode on input line 24.
 
 
-LaTeX Warning: Command \i invalid in math mode on input line 32.
+LaTeX Warning: Command \i invalid in math mode on input line 24.
 
 
-LaTeX Warning: Command \i invalid in math mode on input line 33.
+LaTeX Warning: Command \i invalid in math mode on input line 25.
 
 
-LaTeX Warning: Command \i invalid in math mode on input line 33.
+LaTeX Warning: Command \i invalid in math mode on input line 25.
 
 
-LaTeX Warning: Command \i invalid in math mode on input line 43.
+LaTeX Warning: Command \i invalid in math mode on input line 34.
 
 
-LaTeX Warning: Command \i invalid in math mode on input line 43.
+LaTeX Warning: Command \i invalid in math mode on input line 34.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 35.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 35.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 45.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 45.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 45.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 45.
 
 [28]) [29] (./eqlayer_magdir_manuscript.bbl
 Missing character: There is no â in font cmr10!
@@ -537,18 +549,13 @@ agRM.eps>
 (epstopdf)                    size: 1071112 bytes
 (epstopdf)             Output file: <Fig/unidir_test/results_compiled_LM_NNLS_m
 agRM-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-08-26 13:12:03
+(epstopdf)                    size: 186540 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig/unidir_test/results_co
 mpiled_LM_NNLS_magRM-eps-converted-to.pdf Fig/unidir_test/results_compiled_LM_N
 NLS_magRM.eps>
 (epstopdf)             \includegraphics on input line 23.
-runsystem(repstopdf --outfile=Fig/unidir_test/results_compiled_LM_NNLS_magRM-ep
-s-converted-to.pdf Fig/unidir_test/results_compiled_LM_NNLS_magRM.eps)...execut
-ed safely (allowed).
-
-Package epstopdf Info: Result file: <Fig/unidir_test/results_compiled_LM_NNLS_m
-agRM-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-08-26 13:12:03
-(epstopdf)                    size: 186540 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Fig/unidir_test/results_compiled_LM_N
@@ -570,18 +577,13 @@ M_NNLS_magRM.eps>
 (epstopdf)                    size: 847472 bytes
 (epstopdf)             Output file: <Fig/unidir_shallow_test/results_compiled_L
 M_NNLS_magRM-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-08-26 13:12:04
+(epstopdf)                    size: 149305 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig/unidir_shallow_test/re
 sults_compiled_LM_NNLS_magRM-eps-converted-to.pdf Fig/unidir_shallow_test/resul
 ts_compiled_LM_NNLS_magRM.eps>
 (epstopdf)             \includegraphics on input line 30.
-runsystem(repstopdf --outfile=Fig/unidir_shallow_test/results_compiled_LM_NNLS_
-magRM-eps-converted-to.pdf Fig/unidir_shallow_test/results_compiled_LM_NNLS_mag
-RM.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <Fig/unidir_shallow_test/results_compiled_L
-M_NNLS_magRM-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-08-26 13:12:04
-(epstopdf)                    size: 149305 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Fig/unidir_shallow_test/results_compi
@@ -604,18 +606,13 @@ led_LM_NNLS_magRM.eps>
 (epstopdf)                    size: 698914 bytes
 (epstopdf)             Output file: <Fig/unidir_shallow_diff_test/results_compi
 led_LM_NNLS_magRM-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-08-26 13:12:04
+(epstopdf)                    size: 125864 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig/unidir_shallow_diff_te
 st/results_compiled_LM_NNLS_magRM-eps-converted-to.pdf Fig/unidir_shallow_diff_
 test/results_compiled_LM_NNLS_magRM.eps>
 (epstopdf)             \includegraphics on input line 37.
-runsystem(repstopdf --outfile=Fig/unidir_shallow_diff_test/results_compiled_LM_
-NNLS_magRM-eps-converted-to.pdf Fig/unidir_shallow_diff_test/results_compiled_L
-M_NNLS_magRM.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <Fig/unidir_shallow_diff_test/results_compi
-led_LM_NNLS_magRM-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-08-26 13:12:04
-(epstopdf)                    size: 125864 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Fig/unidir_shallow_diff_test/results_
@@ -638,18 +635,13 @@ _compiled_LM_NNLS_magRM.eps>
 (epstopdf)                    size: 816346 bytes
 (epstopdf)             Output file: <Fig/field_data_montes_claros/montes_claros
 _compiled_LM_NNLS_magRM-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-08-26 13:12:05
+(epstopdf)                    size: 177491 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig/field_data_montes_clar
 os/montes_claros_compiled_LM_NNLS_magRM-eps-converted-to.pdf Fig/field_data_mon
 tes_claros/montes_claros_compiled_LM_NNLS_magRM.eps>
 (epstopdf)             \includegraphics on input line 45.
-runsystem(repstopdf --outfile=Fig/field_data_montes_claros/montes_claros_compil
-ed_LM_NNLS_magRM-eps-converted-to.pdf Fig/field_data_montes_claros/montes_claro
-s_compiled_LM_NNLS_magRM.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <Fig/field_data_montes_claros/montes_claros
-_compiled_LM_NNLS_magRM-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-08-26 13:12:05
-(epstopdf)                    size: 177491 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Fig/field_data_montes_claros/montes_c
@@ -672,18 +664,13 @@ es_claros.eps>
 (epstopdf)                    size: 118862 bytes
 (epstopdf)             Output file: <Fig/field_data_montes_claros/RTP_data_mont
 es_claros-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-08-26 13:12:05
+(epstopdf)                    size: 34827 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig/field_data_montes_clar
 os/RTP_data_montes_claros-eps-converted-to.pdf Fig/field_data_montes_claros/RTP
 _data_montes_claros.eps>
 (epstopdf)             \includegraphics on input line 52.
-runsystem(repstopdf --outfile=Fig/field_data_montes_claros/RTP_data_montes_clar
-os-eps-converted-to.pdf Fig/field_data_montes_claros/RTP_data_montes_claros.eps
-)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <Fig/field_data_montes_claros/RTP_data_mont
-es_claros-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-08-26 13:12:05
-(epstopdf)                    size: 34827 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Fig/field_data_montes_claros/RTP_data
@@ -731,7 +718,7 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on eqlayer_magdir_manuscript.pdf (41 pages, 931214 bytes).
+Output written on eqlayer_magdir_manuscript.pdf (41 pages, 931633 bytes).
 PDF statistics:
  821 PDF objects out of 1000 (max. 8388607)
  388 compressed objects within 4 object streams
