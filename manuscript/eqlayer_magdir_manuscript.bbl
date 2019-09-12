@@ -44,6 +44,11 @@ Dampney, C. N.~G.,  1969, The equivalent source technique: GEOPHYSICS, {\bf
 Dannemiller, N., and Y. Li,  2006, A new method for determination of
   magnetization direction: GEOPHYSICS, {\bf 71}, L69--L73.
 
+\bibitem[Dias et~al., 2007]{silvadias_etal_2010}
+Dias, F. J.~S., V.~C. Barbosa, and J.~B. Silva,  2007, 2d gravity inversion of
+  a complex interface in the presence of interfering sources: GEOPHYSICS, {\bf
+  72}, I13--I22.
+
 \bibitem[Dutra et~al., 2014]{dutra_etal_2014}
 Dutra, A.~C., Y. Marangoni, and R.~I.~F. Trindade,  2014, {Aeromagnetic and
   physical-chemical properties of some complexes from Goi\~A!`s Alkaline
@@ -158,15 +163,14 @@ Medeiros, W.~E., and J.~B.~C. Silva,  1995, Simultaneous estimation of total
   magnetization direction and 3-d spatial orientation: GEOPHYSICS, {\bf 60},
   1365--1377.
 
+\bibitem[Medeiros and Silva, 1996]{medeiros_silva1996}
+--------, 1996, Geophysical inversion using approximate equality constraints:
+  GEOPHYSICS, {\bf 61}, 1678--1688.
+
 \bibitem[Mendon\c{c}a and Silva, 1994]{mendonca-silva_1994}
 Mendon\c{c}a, C.~A., and J.~B.~C. Silva,  1994, The equivalent data concept
   applied to the interpolation of potential field data: GEOPHYSICS, {\bf 59},
   722--732.
-
-\bibitem[Nabighian et~al., 2005]{nabighian_etal_2005}
-Nabighian, M.~N., V.~J.~S. Grauch, R.~O. Hansen, T.~R. LaFehr, Y. Li, J.~W.
-  Peirce, J.~D. Phillips, and M.~E. Ruder,  2005, The historical development of
-  the magnetic method in exploration: GEOPHYSICS, {\bf 70}, 33ND--61ND.
 
 \bibitem[Oliveira{ }Jr. et~al., 2013]{oliveirajr-etal_2013}
 Oliveira{ }Jr., V.~C., V.~C.~F. Barbosa, and L. Uieda,  2013, Polynomial
