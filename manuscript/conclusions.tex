@@ -1,6 +1,28 @@
 \section{Conclusion}
 \label{sec:conclusion}
 
-We have presented a new method for estimating the total magnetization direction of 3D magnetic sources from the total-field anomaly by using the equivalent-layer technique. Our method is formulated as an iterative least-squares problem and imposes a positivity constraint on the magnetic moments over the layer. Prior knowledge about the shape and depth of magnetic sources are not required, neither the use of an evenly spaced data. This methodology can be applied for determining the magnetization direction within multiple sources, considering all of them with the same magnetization direction. Moreover, we theoretically prove that a positive magnetic-moment distribution within an equivalent layer exists if it has the same magnetization direction of the true magnetic source, even if its purely induced or not.
-
-By imposing the positivity constraint on the estimate of the magnetic-moment distribution over an equivalent-layer allows our method estimating the magnetization direction of magnetic sources. The results obtained with the synthetic data produced by unidirectional magnetized sources have shown the good performance of our method in retrieving the true magnetization direction. Tests simulating multiple sources and in the presence of shallow-seated source with a single or multiple magnetization directions produce good estimate of the total magnetization direction of magnetic sources, although they yield a large data misfit above the shallow source. Application to field data over the Goias alkaline province (GAP), center of Brazil, has confirmed that our method can be a reliable tool for interpreting real complex geological scenarios. The result over the alkaline complex giving rise to the Montes Claros de Goi\'as anomalies suggests the presence of a strong remanent magnetization component, in accordance to previous studies. Moreover, the all-positive magnetic moment over the layer leads to very acceptable RTP anomalies. WWe consider that the locally large data-misfit in the real data application is due to shallow sources. Despite reliable magnetization direction estimate, we cannot infer if the shallow source has the same magnetization direction of other bodies.   
+We have shown mathematically that the total-field anomaly data caused by a set of magnetic sources
+with uniform magnetization direction can be exactly reproduced by a continuous and planar layer of 
+dipoles having an all-positive magnetic-moment distribution. 
+This theoretical property holds true for the case in which the layer has the same
+magnetization direction as that of the true sources, regardless of whether they have 
+a purely induced magnetization or not.
+By using this generalized positivity constraint, we have presented a new iterative method for 
+estimating the total magnetization direction of 3D magnetic sources based on the equivalent-layer technique. 
+At each iteration, we impose a positivity constraint on the estimated magnetic-moment distribution of the layer 
+and solves a non-linear inverse problem for estimating the magnetization direction of the equivalent sources. 
+Prior knowledge about the shape and depth of magnetic sources are not required, neither the use of an evenly spaced 
+data set. This methodology can be applied for determining the magnetization direction of multiple sources, 
+considering all of them with the same magnetization direction. 
+Results obtained with synthetic data produced by multiple sources have shown that the estimated magnetization direction 
+obtained by our iterative method successfully retrieves the true one.
+Tests with synthetic data have also illustrated how the presence of a relatively shallow-seated source affects the 
+result obtained by our method for the cases in which it has a magnetization direction equal to and different from that of
+the other sources. They have shown that, in the second case, the shallow source may negatively impact the estimated magnetization 
+direction. In both cases, the equivalent layer yielded large data misfits above the shallow source. 
+An application to field data over the Goi{\' a}s alkaline province (GAP), center of Brazil, has confirmed that our method can 
+be a reliable tool for interpreting complex geological scenarios. The result over the Montes Claros complex suggests the presence 
+of a strong remanent magnetization component and corroborates a previous study conducted independently at the same area. 
+The estimated magnetic-moment distribution over the layer has led to a very acceptable reduction to the pole, but have also 
+produced large data-misfits at some isolated regions. We presume that these locally large data-misfits are due to shallow sources, 
+however we cannot infer if they have the same magnetization direction of the other bodies.   
