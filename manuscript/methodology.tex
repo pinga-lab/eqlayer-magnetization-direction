@@ -17,8 +17,8 @@ $D_{0}$ throughout the study area, so that its direction can be defined by the u
 \end{bmatrix} \: .
 \label{eq:main_field}
 \end{equation}
-Additionally, consider that the magnetic sources have a constant magnetization direction
-defined by the unit vector
+Additionally, consider that the magnetic sources have a constant total magnetization 
+direction defined by the unit vector
 \begin{equation}
 \hat{\mathbf{m}}(\mathbf{q}) = \begin{bmatrix}
 \cos {I} \cos {D} \\
@@ -27,7 +27,7 @@ defined by the unit vector
 \end{bmatrix} \: ,
 \label{eq:mag_vec}
 \end{equation}
-where the constants $I$ and $D$ represent the inclination and declination, respectively,
+where the constants $I$ and $D$ represent its inclination and declination, respectively,
 and $\mathbf{q}$ is a $2 \times 1$ vector given by:
 \begin{equation}
 \mathbf{q} = \begin{bmatrix}
@@ -56,7 +56,7 @@ given by
 		\partial_{xz} \Gamma(x, y, z) & 
 		\partial_{yz} \Gamma(x, y, z) &
 		\partial_{zz} \Gamma(x, y, z)
-	\end{bmatrix}
+	\end{bmatrix} \: ,
 	\label{eq:M-matrix}
 \end{equation}
 with elements
@@ -71,48 +71,20 @@ function
 \label{eq:Gamma-volume-integral}
 \end{equation}
 In this equation, $x^{\prime}$, $y^{\prime}$ and $z^{\prime}$ are the coordinates 
-of a volume element $d \upsilon^{\prime}$ with total-magnetization intensity
-$m(x^{\prime}, y^{\prime}, z^{\prime})$ (in $A/m$) within the magnetic sources.
-
-Let ...
-
-
-\begin{equation}
-\Delta \tilde{T}(x, y, z) = \gamma_{m} \, \hat{\mathbf{F}}_{0}^{\top} \mathbf{H}(x, y, z) \: 
-\hat{\mathbf{m}}(\mathbf{q}) \: ,
-\label{eq:tfanomaly-eqlayer}
-\end{equation}
-where
-\begin{equation}
-	\mathbf{H}(x, y, z) = \begin{bmatrix}
-		\partial_{xx} \Phi(x, y, z) & 
-		\partial_{xy} \Phi(x, y, z) &
-		\partial_{xz} \Phi(x, y, z) \\
-		\partial_{xy} \Phi(x, y, z) & 
-		\partial_{yy} \Phi(x, y, z) &
-		\partial_{yz} \Phi(x, y, z) \\
-		\partial_{xz} \Phi(x, y, z) & 
-		\partial_{yz} \Phi(x, y, z) &
-		\partial_{zz} \Phi(x, y, z)
-	\end{bmatrix}
-	\label{eq:H-matrix}
-\end{equation}
-where 
-$\partial_{\alpha\beta} \Phi(x, y, z)$, $\alpha, \beta = x, y, z$,
-\begin{equation}
-	\Phi(x, y, z) = \int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
-	\frac{p(x'', y'', z_{c}) \: dx''dy''}
-	{\left[ (x-x'')^2 + (y-y'')^2 + (z-z_{c})^2 \right]^{\frac{1}{2}}} \: ,
-	\quad z_{c} > z
-	\label{eq:Phi-surface-integral}
-\end{equation}
-
-% Impose that the equivalent layer fit the total-field anomaly data
-Consider that a function $p(x'', y'', z_{c})$ (equation \ref{eq:Phi-surface-integral}) 
-exists so that the condition
-$\Delta T(x, y, z) = \Delta \tilde{T}(x, y, z)$ holds true for all points $(x, y, z)$
-outside the magnetic sources. 
-
+of the volume element $d \upsilon^{\prime}$, which has total-magnetization intensity
+$m(x^{\prime}, y^{\prime}, z^{\prime})$ (in $A/m$) and is located within the 
+volume $\upsilon$ of the magnetic sources.
+From the physical point of view, $\Gamma(x, y, z)$ (equation \ref{eq:Gamma-volume-integral})
+represents the gravitational potential that would be produced by the magnetic sources,
+at the point $(x, y, z)$, if they had a density distribution proportional to 
+$m(x^{\prime}, y^{\prime}, z^{\prime})$.
+As a consequence, matrix $\mathbf{M}(x, y, z)$ (equation \ref{eq:M-matrix}) is symmetric,
+its trace is identically zero at all points $(x, y, z)$ outside the magnetic sources
+and it has five independent components that are themselves harmonic functions. More details
+about this matrix can be found at \cite{pedersen_rasmussen1990}.
+By exploring these properties of $\mathbf{M}(x, y, z)$, we can conveniently rewrite the 
+total-field anomaly $\Delta T(x, y, z)$ (equation \ref{eq:tfanomaly}) as a linear combination 
+of five independent harmonic functions as follows:
 \begin{equation}
 \begin{split}
 \Delta T(x, y, z) = 
@@ -124,7 +96,7 @@ a_{yz} \, \partial_{yz} \Gamma(x, y, z)
 \end{split}
 \label{eq:tfanomaly-alternative}
 \end{equation}
-where 
+where
 \begin{equation}
 \begin{split}
 a_{xx} &= m_{x} F_{x} - m_{z} F_{z} \\
@@ -139,8 +111,75 @@ are constants defined by the elements $F_{\alpha}$ and $m_{\beta}$,
 $\alpha = x, y, z$, $\beta = x, y, z$, 
 of the vectors $\hat{\mathbf{F}}_{0}$ (equation \ref{eq:main_field}) and
 $\hat{\mathbf{m}}(\mathbf{q})$ (equation \ref{eq:mag_vec}), respectively.
-The dependence of the coefficients $m_{\beta}$ and $a_{\alpha\beta}$ on the 
-vector $\mathbf{q}$ (equation \ref{eq:q_vector}) was omitted for simplicity.
+For simplicity, the dependence of $m_{\beta}$ and $a_{\alpha\beta}$ on the 
+vector $\mathbf{q}$ (equation \ref{eq:q_vector}) was omitted.
+
+Let $\Delta \tilde{T}(x, y, z)$ be the total-field anomaly produced by a 
+continuous layer of dipoles that have constant magnetization direction defined by
+the unit vector $\mathbf{m}(\mathbf{q})$ (equation \ref{eq:q_vector})
+and are located at the constant depth $z_{c}$. The total-field anomaly produced
+by this fictitious layer may be defined as
+\begin{equation}
+\Delta \tilde{T}(x, y, z) = \gamma_{m} \, \hat{\mathbf{F}}_{0}^{\top} \mathbf{H}(x, y, z) \: 
+\hat{\mathbf{m}}(\mathbf{q}) \: ,
+\label{eq:tfanomaly-eqlayer}
+\end{equation}
+where $\mathbf{H}(x, y, z)$ is a matrix given by
+\begin{equation}
+	\mathbf{H}(x, y, z) = \begin{bmatrix}
+		\partial_{xx} \Phi(x, y, z) & 
+		\partial_{xy} \Phi(x, y, z) &
+		\partial_{xz} \Phi(x, y, z) \\
+		\partial_{xy} \Phi(x, y, z) & 
+		\partial_{yy} \Phi(x, y, z) &
+		\partial_{yz} \Phi(x, y, z) \\
+		\partial_{xz} \Phi(x, y, z) & 
+		\partial_{yz} \Phi(x, y, z) &
+		\partial_{zz} \Phi(x, y, z)
+	\end{bmatrix}
+	\label{eq:H-matrix}
+\end{equation}
+with elements
+$\partial_{\alpha\beta} \Phi(x, y, z) \equiv 
+\frac{\partial^{2} \Phi(x, y, z)}{\partial \alpha \partial \beta}$, 
+$\alpha, \beta = x, y, z$, representing the second derivatives of the harmonic
+function
+\begin{equation}
+	\Phi(x, y, z) = \int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
+	\frac{p(x'', y'', z_{c}) \: dS''}
+	{\left[ (x-x'')^2 + (y-y'')^2 + (z-z_{c})^2 \right]^{\frac{1}{2}}} \: ,
+	\quad z_{c} > z \: .
+	\label{eq:Phi-surface-integral}
+\end{equation}
+In this equation, $x''$, $y''$ and $z_{c}$ are the coordinates 
+of the area element $dS''$ with magnetic moment per unit area
+$p(x'', y'', z_{c})$ (in $A$).
+Similarly to matrix $\mathbf{M}(x, y, z)$ (equation \ref{eq:M-matrix}),
+$\mathbf{H}(x, y, z)$ (equation \ref{eq:H-matrix}) is symmetric,
+its trace is identically zero at all points $(x, y, z)$ with $z < z_{c}$ 
+and it has five independent components that are themselves harmonic functions. 
+These properties also permit to rewrite $\Delta \tilde{T}(x, y, z)$ 
+(equation \ref{eq:tfanomaly-eqlayer}) as a linear combination of independent
+harmonic function given by
+\begin{equation}
+\begin{split}
+\Delta \tilde{T}(x, y, z) = 
+&a_{xx} \, \partial_{xx} \Phi(x, y, z) + 
+a_{xy} \, \partial_{xy} \Phi(x, y, z) + 
+a_{xz} \, \partial_{xz} \Phi(x, y, z) + \\
+&a_{yy} \, \partial_{yy} \Phi(x, y, z) + 
+a_{yz} \, \partial_{yz} \Phi(x, y, z)
+\end{split} \: ,
+\label{eq:tfanomaly-eqlayer-alternative}
+\end{equation}
+with coefficients $a_{\alpha\beta}$, $\alpha = x, y$, $\beta = x, y, z$, defined by
+equation \ref{eq:a-coefficients}.
+
+% Impose that the equivalent layer fit the total-field anomaly data
+Consider that a function $p(x'', y'', z_{c})$ (equation \ref{eq:Phi-surface-integral}) 
+exists so that the condition
+$\Delta T(x, y, z) = \Delta \tilde{T}(x, y, z)$ holds true for all points $(x, y, z)$
+outside the magnetic sources. 
 
 \begin{equation}
 	\partial_{zz} \Gamma(x, y, z) = \partial_{zz} \Phi(x, y, z)
