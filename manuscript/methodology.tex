@@ -74,15 +74,15 @@ In this equation, $x^{\prime}$, $y^{\prime}$ and $z^{\prime}$ are the coordinate
 of the volume element $d \upsilon^{\prime}$, which has total-magnetization intensity
 $m(x^{\prime}, y^{\prime}, z^{\prime})$ (in $A/m$) and is located within the 
 volume $\upsilon$ of the magnetic sources.
-From the physical point of view, $\Gamma(x, y, z)$ (equation \ref{eq:Gamma-volume-integral})
-represents the gravitational potential that would be produced by the magnetic sources,
-at the point $(x, y, z)$, if they had a density distribution proportional to 
-$m(x^{\prime}, y^{\prime}, z^{\prime})$.
-As a consequence, matrix $\mathbf{M}(x, y, z)$ (equation \ref{eq:M-matrix}) is symmetric,
-its trace is identically zero at all points $(x, y, z)$ outside the magnetic sources
-and it has five independent components that are themselves harmonic functions. More details
-about this matrix can be found at \cite{pedersen_rasmussen1990}.
-By exploring these properties of $\mathbf{M}(x, y, z)$, we can conveniently rewrite the 
+From the physical point of view, $\mathbf{M}(x, y, z)$ (equation \ref{eq:M-matrix})
+and $\Gamma(x, y, z)$ (equation \ref{eq:Gamma-volume-integral}) represent, respectively, 
+the gradient tensor and the corresponding gravitational potential that would be produced by 
+the magnetic sources, at the point $(x, y, z)$, if they had a density distribution proportional 
+to $m(x^{\prime}, y^{\prime}, z^{\prime})$.
+Notice that $\mathbf{M}(x, y, z)$ is symmetric, its trace is identically zero at all points 
+$(x, y, z)$ outside the magnetic sources and it has five independent components that are 
+themselves harmonic functions \citep{pedersen_rasmussen1990}.
+By exploring these properties, we can conveniently rewrite the 
 total-field anomaly $\Delta T(x, y, z)$ (equation \ref{eq:tfanomaly}) as a linear combination 
 of five independent harmonic functions as follows:
 \begin{equation}
@@ -111,8 +111,9 @@ are constants defined by the elements $F_{\alpha}$ and $m_{\beta}$,
 $\alpha = x, y, z$, $\beta = x, y, z$, 
 of the vectors $\hat{\mathbf{F}}_{0}$ (equation \ref{eq:main_field}) and
 $\hat{\mathbf{m}}(\mathbf{q})$ (equation \ref{eq:mag_vec}), respectively.
-For simplicity, the dependence of $m_{\beta}$ and $a_{\alpha\beta}$ on the 
-vector $\mathbf{q}$ (equation \ref{eq:q_vector}) was omitted.
+For simplicity, we have omitted the dependence on the 
+parameters $I_{0}$ and $D_{0}$ (equation \ref{eq:main_field}) and 
+$I$ and $D$ (equation \ref{eq:mag_vec}).
 
 Let $\Delta \tilde{T}(x, y, z)$ be the total-field anomaly produced by a 
 continuous layer of dipoles that have constant magnetization direction defined by
@@ -154,13 +155,13 @@ function
 In this equation, $x''$, $y''$ and $z_{c}$ are the coordinates 
 of the area element $dS''$ with magnetic moment per unit area
 $p(x'', y'', z_{c})$ (in $A$).
-Similarly to matrix $\mathbf{M}(x, y, z)$ (equation \ref{eq:M-matrix}),
-$\mathbf{H}(x, y, z)$ (equation \ref{eq:H-matrix}) is symmetric,
-its trace is identically zero at all points $(x, y, z)$ with $z < z_{c}$ 
-and it has five independent components that are themselves harmonic functions. 
-These properties also permit to rewrite $\Delta \tilde{T}(x, y, z)$ 
+Notice that $\mathbf{H}(x, y, z)$ (equation \ref{eq:H-matrix}) also represents
+a gradient tensor \citep{pedersen_rasmussen1990} and, consequently, it is symmetric, 
+its trace is identically zero at all points $(x, y, z)$ above the layer (with $z < z_{c}$) 
+and it has five independent components that are themselves harmonic functions.
+These properties also permit rewrite $\Delta \tilde{T}(x, y, z)$ 
 (equation \ref{eq:tfanomaly-eqlayer}) as a linear combination of independent
-harmonic function given by
+harmonic functions given by
 \begin{equation}
 \begin{split}
 \Delta \tilde{T}(x, y, z) = 
@@ -176,15 +177,63 @@ with coefficients $a_{\alpha\beta}$, $\alpha = x, y$, $\beta = x, y, z$, defined
 equation \ref{eq:a-coefficients}.
 
 % Impose that the equivalent layer fit the total-field anomaly data
-Consider that a function $p(x'', y'', z_{c})$ (equation \ref{eq:Phi-surface-integral}) 
-exists so that the condition
+We known from potential theory that it is possible to find a function $p(x'', y'', z_{c})$
+(equation \ref{eq:Phi-surface-integral}) so that the condition
 $\Delta T(x, y, z) = \Delta \tilde{T}(x, y, z)$ holds true for all points $(x, y, z)$
-outside the magnetic sources. 
-
+located above the fictitious layer of dipoles. 
+In this case, the layer is called equivalent layer. 
+By imposing this condition and using equations \ref{eq:tfanomaly-alternative} and
+\ref{eq:tfanomaly-eqlayer-alternative}, we obtain
 \begin{equation}
-	\partial_{zz} \Gamma(x, y, z) = \partial_{zz} \Phi(x, y, z)
-	\label{eq:equality-partial-derivatives-zz}
+\begin{split}
+a_{xx} \, &\left[\partial_{xx} \Phi(x, y, z) - \partial_{xx} \Gamma(x, y, z) \right] + \\
+a_{xy} \, &\left[\partial_{xy} \Phi(x, y, z) - \partial_{xy} \Gamma(x, y, z) \right] + \\
+a_{xz} \, &\left[\partial_{xz} \Phi(x, y, z) - \partial_{xz} \Gamma(x, y, z) \right] + \\
+a_{yy} \, &\left[\partial_{yy} \Phi(x, y, z) - \partial_{yy} \Gamma(x, y, z) \right] + \\
+a_{yz} \, &\left[\partial_{yz} \Phi(x, y, z) - \partial_{yz} \Gamma(x, y, z) \right] = 0
+\: , \quad z < z_{c} \: ,
+\end{split}
+\label{eq:tfanomaly-alternative-equality}
 \end{equation}
+for coefficients $a_{\alpha\beta}$ (equation \ref{eq:a-coefficients}), 
+$\alpha = x, y, z$, $\beta = x, y, z$, defined by arbitrary values of 
+$I_{0}$ and $D_{0}$ (equation \ref{eq:main_field}) and 
+$I$ and $D$ (equation \ref{eq:mag_vec}).
+By noting that equation \ref{eq:tfanomaly-alternative-equality} represents a linear 
+combination of independent harmonic functions, we conclude that the five terms
+in brackets must be identically zero for all points $(x, y, z)$ above the equivalent 
+layer, where $z < z_{c}$. As a consequence
+\begin{equation}
+	\partial_{\alpha\beta} \Gamma(x, y, z) = \partial_{\alpha\beta} \Phi(x, y, z)
+	\: , \quad z_{c} > z \: .
+	\label{eq:D_alpha_beta_Gamma-Phi}
+\end{equation}
+By properly replacing the second derivatives of the surface integral 
+$\Phi(x, y, z)$ (equation \ref{eq:Phi-surface-integral}) into the right 
+side of equation \ref{eq:D_alpha_beta_Gamma-Phi} we obtain
+\begin{equation}
+	\partial_{\alpha\beta} \Gamma(x, y, z) = 
+	\int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
+	p(x'', y'', z_{c}) \: \partial_{\alpha\beta} \frac{1}{r} \:\: dS'' \: ,
+	\quad z_{c} > z \: ,
+	\label{eq:D_alpha_beta_Gamma}
+\end{equation}
+where $\partial_{\alpha\beta} \frac{1}{r}$ represents the second derivative,
+with respect to $\alpha = x, y, z$ and $\beta = x, y, z$, of the inverse distance 
+function
+\begin{equation}
+	\frac{1}{r} \equiv 
+	\frac{1}{\left[ (x-x'')^2 + (y-y'')^2 + (z-z_{c})^2 \right]^{\frac{1}{2}}} \: .
+	\label{eq:inverse-distance}
+\end{equation}
+
+
+Green's function of second kind \citep{roy1962}
+
+\citep[][ p. 246]{kellogg1967}
+
+
+
 
 \begin{equation}
 	\partial_{z} \Gamma(x, y, z) = \int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
