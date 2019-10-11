@@ -289,30 +289,55 @@ total-magnetization of the sources, whether it is purely induced or not and
 In practical situations, it is not possible to determine a continuous magnetic-moment
 distribution $p(x',y',z_c)$ (equation \ref{eq:positivity_prop}) over the 
 equivalent layer. 
-For this reason, the layer is approximated by a discrete set of dipoles with unit 
-volume located at the constant depth $z = z_c$. 
-
-PAREI AQUI
-
-so that the predicted total-field anomaly at the point $(x_i,y_i,z_i)$ is given by 
-
+For this reason, the layer has to be approximated by a discrete set of dipoles with unit 
+volume located at the constant depth $z = z_c$.
+The total-field anomaly produced by this discrete layer (the predicted total-field anomaly) 
+at a given point $(x_{i}, y_{i}, z_{i})$, $i = 1, \dots, N$, is given by
 \begin{equation}
-\Delta T_i = f_i(\mathbf{s}) ,
+\Delta T_{i}(\mathbf{s}) = \mathbf{g}_{i}(\mathbf{q})^{\top} \mathbf{p},
 \label{eq:tfa_pred_i}
-\end{equation}    
-where $\Delta T_i$ is the $i$th element of the $N$-dimensional vector of predicted total-field anomaly $\mathbf{\Delta T}(\mathbf{s})$. The function $f_i$ maps the unknown parameters onto the data, in which the parameter vector $\mathbf{s}$ is formed by an $M$-dimensional vector $\mathbf{p}$ whose $j$th element $p_j$ is the magnetic moment of the $j$th dipole with a single magnetization direction $\mathbf{q}$ (equation \ref{eq:q_vector}) assigned to all dipoles (Figure \ref{fig:eqlayer_figure}). Explicitly, the function $f_i$ is described as 
-
-\begin{equation}
-f_i (\mathbf{s}) = \sum_{j=1}^{M} g_{ij}(\mathbf{q}) p_j  = \mathbf{g}_{i}^T(\mathbf{q}) \mathbf{p},
-\label{eq:f_i}
 \end{equation}
-where $\mathbf{g}_{i} (\mathbf{q})$ is a $M$-dimensional vector whose $ij$th element is given by
-
+where $\mathbf{p}$ is an $M \times 1$ vector whose $j$th element, $j = 1, \dots, M$, is the 
+magnetic moment intensity $p_{j}$ of the $j$th dipole, $\mathbf{s}$ is an $(M + 2) \times 1$ 
+vector (the parameter vector) given by 
 \begin{equation}
-g_{ij} (\mathbf{q})  = \gamma_m \hat{\mathbf{F}}_0^T \mathbf{M}_{ij} \hat{\mathbf{m}}(\mathbf{q})
+	\mathbf{s} = \begin{bmatrix}
+		\mathbf{p} \\
+		\mathbf{q}
+	\end{bmatrix}
+\end{equation}
+and $\mathbf{g}_{i} (\mathbf{q})$ is another $M \times 1$ vector whose $j$th element is defined 
+by the harmonic function
+\begin{equation}
+g_{ij} (\mathbf{q})  = \gamma_m \hat{\mathbf{F}}_{0}^T \, 
+\mathbf{H}_{ij} \, \hat{\mathbf{m}}(\mathbf{q}) \: .
 \label{eq:g_ij}
 \end{equation}
-and it is a harmonic function representing the total-field anomaly at the $i$th position $(x_i,y_i,z_i)$ yielded by a $j$th dipole located at $(x_j,y_j,z_c)$ with unit magnetic-moment intensity. The matrix $\mathbf{M}_{ij}$ is formed by the second derivatives of a function $\phi_{ij}$ that depends on the inverse of the scalar function $r_{ij} = [(x_i-x_j)^2 + (y_i-y_j)^2 + (z_i-z_c)^2]^{1/2}$, analogously to equations \ref{eq:H} and \ref{eq:phi}. From equations \ref{eq:tfa_pred_i}-\ref{eq:g_ij}, we can notice that the predicted total-field anomaly $\mathbf{\Delta T} (\mathbf{s})$ has a linear relation with the magnetic moment $\mathbf{p}$ and a nonlinear relation with the magnetizaion direction $\mathbf{q}$.    
+In this equation, $\mathbf{H}_{ij}$ is a $3 \times 3$ matrix given by
+\begin{equation}
+\mathbf{H}_{ij} = \begin{bmatrix}
+\partial_{xx} \frac{1}{r} & 
+\partial_{xy} \frac{1}{r} &
+\partial_{xz} \frac{1}{r} \\
+\partial_{xy} \frac{1}{r} & 
+\partial_{yy} \frac{1}{r} &
+\partial_{yz} \frac{1}{r} \\
+\partial_{xz} \frac{1}{r} & 
+\partial_{yz} \frac{1}{r} &
+\partial_{zz} \frac{1}{r}
+\end{bmatrix} \quad ,
+\label{eq:Hij-matrix}
+\end{equation}
+where $\partial_{\alpha\beta} \frac{1}{r}$ represents the second derivative,
+with respect to $\alpha = x, y, z$ and $\beta = x, y, z$, of the inverse distance 
+$\frac{1}{r}$ (equation \ref{eq:inverse-distance}) between the points 
+$(x, y, z) = (x_{i}, y_{i}, z_{i})$ and 
+$(x'', y'', z_{c}) = (x_{j}, y_{j}, z_{c})$.
+These equations show that the predicted total-field anomaly 
+$\Delta T_{i}(\mathbf{s})$ (equation \ref{eq:tfa_pred_i}) has a linear relation with 
+the magnetic moment $\mathbf{p}$ and a nonlinear relation with the vector 
+$\mathbf{q}$ (equation \ref{eq:q_vector}).
+
 
 \subsection{Inverse problem}
 
