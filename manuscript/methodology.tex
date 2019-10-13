@@ -207,8 +207,8 @@ By noting that equation \ref{eq:tfanomaly-alternative-equality} represents a lin
 combination of independent harmonic functions, we conclude that the five terms
 in brackets must be identically zero for all points $(x, y, z)$ above the equivalent 
 layer, where $z < z_{c}$. 
-By equaling each term to zero, we obtain the following surface integral depending 
-on the second derivative of $\Phi(x, y, z)$ (equation \ref{eq:Phi-surface-integral}):
+By equaling each term to zero and rewriting the second derivatives of the surface 
+integral $\Phi(x, y, z)$ (equation \ref{eq:Phi-surface-integral}):
 \begin{equation}
 	\partial_{\alpha\beta} \Gamma(x, y, z) = 
 	\int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
@@ -216,7 +216,9 @@ on the second derivative of $\Phi(x, y, z)$ (equation \ref{eq:Phi-surface-integr
 	\quad z_{c} > z \: ,
 	\label{eq:D_alpha_beta_Gamma}
 \end{equation}
-where $\partial_{\alpha\beta} \frac{1}{r}$ represents the second derivative,
+where $\partial_{\alpha\beta} \frac{1}{r} \equiv 
+\frac{\partial^{2}}{\partial \alpha \partial \beta} \frac{1}{r}$ 
+represents the second derivative,
 with respect to $\alpha = x, y$ and $\beta = x, y, z$, of the inverse distance 
 function
 \begin{equation}
@@ -298,18 +300,18 @@ at a given point $(x_{i}, y_{i}, z_{i})$, $i = 1, \dots, N$, is given by
 \Delta T_{i}(\mathbf{s}) = \mathbf{g}_{i}(\mathbf{q})^{\top} \mathbf{p},
 \label{eq:tfa_pred_i}
 \end{equation}
-where $\mathbf{p}$ is an $M \times 1$ vector (the magnetic-moment vector) 
-whose $j$th element, $j = 1, \dots, M$, is the 
-magnetic moment intensity $p_{j}$ of the $j$th dipole, $\mathbf{s}$ is an $(M + 2) \times 1$ 
-vector (the parameter vector) given by 
+where $\mathbf{s}$ is an $(M + 2) \times 1$ partitioned vector (the parameter vector) given by 
 \begin{equation}
 	\mathbf{s} = \begin{bmatrix}
 		\mathbf{p} \\
 		\mathbf{q}
-	\end{bmatrix}
+	\end{bmatrix} \: ,
 	\label{eq:parameter-vector}
 \end{equation}
-and $\mathbf{g}_{i} (\mathbf{q})$ is another $M \times 1$ vector whose $j$th element is defined 
+$\mathbf{q}$ is the direction vector (equation \ref{eq:q_vector}), $\mathbf{p}$ is an 
+$M \times 1$ vector (the magnetic-moment vector) whose $j$th element, $j = 1, \dots, M$, is the 
+magnetic moment intensity $p_{j}$ (in $A \, m^{2}$) of the $j$th dipole and 
+$\mathbf{g}_{i} (\mathbf{q})$ is another $M \times 1$ vector whose $j$th element is defined 
 by the harmonic function
 \begin{equation}
 g_{ij} (\mathbf{q})  = \gamma_m \hat{\mathbf{F}}_{0}^T \, 
@@ -331,15 +333,14 @@ In this equation, $\mathbf{M}_{ij}$ is a $3 \times 3$ matrix given by
 \end{bmatrix} \quad ,
 \label{eq:Mij-matrix}
 \end{equation}
-where $\partial_{\alpha\beta} \frac{1}{r}$ represents the second derivative,
+where $\partial_{\alpha\beta} \frac{1}{r}$ represent the second derivatives,
 with respect to $\alpha = x, y, z$ and $\beta = x, y, z$, of the inverse distance 
 $\frac{1}{r}$ (equation \ref{eq:inverse-distance}) between the points 
 $(x, y, z) = (x_{i}, y_{i}, z_{i})$ and 
-$(x'', y'', z_{c}) = (x_{j}, y_{j}, z_{c})$.
-These equations show that the predicted total-field anomaly 
-$\Delta T_{i}(\mathbf{s})$ (equation \ref{eq:tfa_pred_i}) has a linear relation with 
-the magnetic-moment vector $\mathbf{p}$ and a nonlinear relation with the direction vector 
-$\mathbf{q}$ (equation \ref{eq:q_vector}).
+$(x'', y'', z_{c}) = (x_{j}, y_{j}, z_{c})$, which is located on the equivalent layer.
+Equations $\ref{eq:tfa_pred_i}$-$\ref{eq:g_ij}$ show that the predicted total-field anomaly 
+$\Delta T_{i}(\mathbf{s})$ has a linear relation with the magnetic-moment vector $\mathbf{p}$ 
+and a nonlinear relation with the direction vector $\mathbf{q}$ (equation \ref{eq:q_vector}).
 
 
 \subsection{Inverse problem}
@@ -350,7 +351,7 @@ $i$th elements $\Delta T_{i}^{o}$ and $\Delta T_{i}(\mathbf{s})$ (equation \ref{
 are the total-field anomalies produced, respectively, by the magnetic sources and the
 discrete equivalent layer at the point $(x_{i},y_{i},z_{i})$, $i = 1, \dots, N$. 
 For convenience, $\mathbf{\Delta T}^{o}$ and $\mathbf{\Delta T} (\mathbf{s})$ are called
-observed and predicted data vector, respectively. In order to estimate the uniform 
+observed- and predicted-data vector, respectively. In order to estimate the uniform 
 magnetization direction of the sources, we solve the following inverse problem:
 \begin{subequations}
 	\begin{align}
@@ -408,70 +409,103 @@ We approximate this linear system by
 \end{array} \right] ,
 \label{eq:linear_sys_GN_block}
 \end{equation}
-in which $\mathbf{0}$ is a matrix containing all elements equal to zero, 
+in which $\mathbf{0}$ is an $M \times 2$ matrix containing all elements equal to zero, 
 $\bar{\mathbf{\Delta p}}^{k} = \bar{\mathbf{p}}^{k+1} - \bar{\mathbf{p}}^{k}$ 
 is a correction on the magnetic-moment vector $\mathbf{p}$,
 $\bar{\mathbf{\Delta q}}^{k} = \bar{\mathbf{q}}^{k+1} - \bar{\mathbf{q}}^{k}$ 
 is a correction on the direction vector $\mathbf{q}$ and the terms 
 $\mathbf{J}_{\alpha}^{k}$ and $\mathbf{H}_{\alpha \alpha}^{k}$, $\alpha = p,q$, 
 are the gradient vector and the Hessian matrix calculated with respect to the elements of 
-$\mathbf{p}$ and $\mathbf{q}$, respectively. 
+$\mathbf{p}$ and $\mathbf{q}$, respectively.%, both evaluated at the estimated 
+%magnetic-moment vector $\bar{\mathbf{p}}^{k}$. 
 Notice that we use an approximated Hessian matrix having null cross-derivatives. 
 
-The gradient vector $\mathbf{J}_{q}^{k}$ and the Hessian matrix $\mathbf{H}_{pp}^{k}$ 
+The gradient vector $\mathbf{J}_{p}^{k}$ and the Hessian matrix $\mathbf{H}_{pp}^{k}$ 
 (equation \ref{eq:linear_sys_GN_block}) are, respectively,
 \begin{equation}
-\mathbf{J}_{p}^{k} = -2 \mathbf{G}_{p}^{k^T} [ \mathbf{\Delta T}^{o} - 
-\mathbf{\Delta T} (\mathbf{s}^k) ] + 2\mu f_{0}^{k} \mathbf{p}^{k} 
+\mathbf{J}_{p}^{k} = -2 {\mathbf{G}_{p}^{k}}^{\top} 
+\left[ \mathbf{\Delta T}^{o} - \mathbf{\Delta T} (\bar{\mathbf{s}}^{k}) \right] + 
+2\mu f_{0}^{k} \bar{\mathbf{p}}^{k} 
 \label{eq:grad_p}
 \end{equation}   
 and   
 \begin{equation}
-\mathbf{H}_{pp}^{k} = 2 \mathbf{G}_{p}^{k^T} \mathbf{G}_{p}^{k} + 2 \mu f_{0}^{k} \mathbf{I} \: ,
+\mathbf{H}_{pp}^{k} = 2 {\mathbf{G}_{p}^{k}}^{\top} \mathbf{G}_{p}^{k} + 
+2 \mu f_{0}^{k} \mathbf{I} \: ,
 \label{eq:hess_p}
 \end{equation}
 where $\mathbf{G}_p^{k}$ is an $N \times M$ matrix whose $ij$th element is given by the harmonic 
-function $g_{ij}(\mathbf{s}^{k})$ (equation \ref{eq:g_ij}), 
-$\mathbf{I}$ is the $M \times M$ identity matrix and $f_{0}^{k}$ is a  normalizing factor 
-equal to
+function $g_{ij}(\bar{\mathbf{q}}^{k})$ (equation \ref{eq:g_ij}) evaluated at the estimated
+direction vector $\bar{\mathbf{q}}^{k}$, $\mathbf{I}$ is the $M \times M$ identity matrix and 
+$f_{0}^{k}$ is a  normalizing factor equal to
 \begin{equation}
-f_{0}^{k} = \dfrac{trace \left(\mathbf{G}_{p}^{k^T} \mathbf{G}_{p}^{k} \right)}{M} \, ,
+f_{0}^{k} = \dfrac{trace \left({\mathbf{G}_{p}^{k}}^{\top} \mathbf{G}_{p}^{k} \right)}{M} \, ,
 \label{eq:norm_factor}
 \end{equation}
 and $M$ is the total number of dipoles composing the equivalent layer. 
 
-PAREI AQUI
-
-From the correction $\bar{\mathbf{\Delta p}}^{k} = \bar{\mathbf{p}}^{k+1} - \bar{\mathbf{p}}^{k}$, we can conclude that the linear system to be solved is given by
-
+The gradient vector $\mathbf{J}_{q}^{k}$ and the Hessian matrix $\mathbf{H}_{qq}^{k}$ 
+(equation \ref{eq:linear_sys_GN_block}) are, respectively,
 \begin{equation}
-\left[ \mathbf{G}_{p}^{k^T} \mathbf{G}_{p}^{k} + \mu f_{0}^{k} \mathbf{I} \right] \bar{\mathbf{p}}^{k+1} = \mathbf{G}_{p}^{k^T} \mathbf{\Delta T}^o.
-\label{eq:linear_sys_p}
-\end{equation} 
-Owing to nonlinear relation of the magnetization direction $\mathbf{q}^k$ with the predicted total-field anomaly, the gradient vector and the Hessian matrix at the $k$th for this case are, respectively,
-
-\begin{equation}
-\mathbf{J}_{q}^{k} = -2 \mathbf{G}_{q}^{k^T} [ \mathbf{\Delta T}^o -  \mathbf{\Delta T} (\mathbf{s}^k) ] 
+\mathbf{J}_{q}^{k} = -2 {\mathbf{G}_{q}^{k}}^{\top} 
+\left[ \mathbf{\Delta T}^{o} - \mathbf{\Delta T} (\bar{\mathbf{s}}^{k}) \right]
 \label{eq:grad_q}
 \end{equation}   
 and   
-
 \begin{equation}
-\mathbf{H}_{qq}^{k} \approx 2 \mathbf{G}_{q}^{k^T} \mathbf{G}_{q}^{k} 
+\mathbf{H}_{qq}^{k} \approx 2 {\mathbf{G}_{q}^{k}}{^\top} \mathbf{G}_{q}^{k} \: ,
 \label{eq:hess_q}
 \end{equation}
-in which $\mathbf{G}_q^k$ is a $N \times 2$ sensitivity matrix, whose elements are composed by derivative of equation \ref{eq:f_i} in relation of each element of the vector $\mathbf{q}^k$, that are the inclination and declination. Nevertheless, to calculate the correction $\bar{\mathbf{\Delta q}}^{k}$ at the $k$th iteration, we use the Levernberg-Marquardt method \citep{aster2005} by solving the linear system
-
+in which $\mathbf{G}_{q}^{k}$ is a $N \times 2$ matrix given by 
 \begin{equation}
-\left[ \mathbf{G}_{q}^{k^T} \mathbf{G}_{q}^{k} + \lambda^k \mathbf{I} \right] \bar{\mathbf{\Delta q}}^{k} = \mathbf{G}_{q}^{k^T}[ \mathbf{\Delta T}^o -  \mathbf{\Delta T} (\mathbf{s}^k) ],
-\label{eq:linear_sys_q}
+\mathbf{G}_{q}^{k} = \begin{bmatrix}
+\partial_{I} \mathbf{g}_{1}(\bar{\mathbf{q}}^{k})^{\top} \bar{\mathbf{p}}^{k} & 
+\partial_{D} \mathbf{g}_{1}(\bar{\mathbf{q}}^{k})^{\top} \bar{\mathbf{p}}^{k} \\
+\vdots & \vdots  \\
+\partial_{I} \mathbf{g}_{N}(\bar{\mathbf{q}}^{k})^{\top} \bar{\mathbf{p}}^{k} & 
+\partial_{D} \mathbf{g}_{N}(\bar{\mathbf{q}}^{k})^{\top} \bar{\mathbf{p}}^{k} 
+\end{bmatrix} \: ,
+\label{eq:Gq}
 \end{equation}
-where $\lambda$ is the Marquardt parameter that is updated along the iterative process and $\mathbf{I}$ is an indentity matrix. After estimating the parameter correction $\bar{\mathbf{\Delta q}}^{k}$ at the $k$th iteration, we update the magnetization direction such that 
+where 
+$\partial_{\alpha} \mathbf{g}_{i}(\bar{\mathbf{q}}^{k}) \equiv 
+\frac{\partial \mathbf{g}_{i}(\bar{\mathbf{q}}^{k})}{\partial \alpha}$, $\alpha= I, D$, 
+represent the first derivatives of vector 
+$\mathbf{g}_{i}(\bar{\mathbf{q}}^{k})$ (equation \ref{eq:tfa_pred_i}) with respect to the 
+inclination $I$ and the declination $D$ of the sources total magnetization.
 
-\begin{equation}
-\bar{\mathbf{q}}^{k+1} = \bar{\mathbf{q}}^{k} + \bar{\mathbf{\Delta q}}^{k}.
-\label{eq:q_next}
-\end{equation}
+PAREI AQUI
+
+%From the correction $\bar{\mathbf{\Delta p}}^{k} = \bar{\mathbf{p}}^{k+1} - \bar{\mathbf{p}}^{k}$, we can conclude that the linear system to be solved is given by
+%
+%\begin{equation}
+%\left[ \mathbf{G}_{p}^{k^T} \mathbf{G}_{p}^{k} + \mu f_{0}^{k} \mathbf{I} \right] \bar{\mathbf{p}}^{k+1} = \mathbf{G}_{p}^{k^T} \mathbf{\Delta T}^o.
+%\label{eq:linear_sys_p}
+%\end{equation} 
+%Owing to nonlinear relation of the magnetization direction $\mathbf{q}^k$ with the predicted total-field anomaly, the gradient vector and the Hessian matrix at the $k$th for this case are, respectively,
+%
+%\begin{equation}
+%\mathbf{J}_{q}^{k} = -2 \mathbf{G}_{q}^{k^T} [ \mathbf{\Delta T}^o -  \mathbf{\Delta T} (\mathbf{s}^k) ] 
+%\label{eq:grad_q}
+%\end{equation}   
+%and   
+%
+%\begin{equation}
+%\mathbf{H}_{qq}^{k} \approx 2 \mathbf{G}_{q}^{k^T} \mathbf{G}_{q}^{k} 
+%\label{eq:hess_q}
+%\end{equation}
+%in which $\mathbf{G}_q^k$ is a $N \times 2$ sensitivity matrix, whose elements are composed by derivative of equation \ref{eq:f_i} in relation of each element of the vector $\mathbf{q}^k$, that are the inclination and declination. Nevertheless, to calculate the correction $\bar{\mathbf{\Delta q}}^{k}$ at the $k$th iteration, we use the Levernberg-Marquardt method \citep{aster2005} by solving the linear system
+%
+%\begin{equation}
+%\left[ \mathbf{G}_{q}^{k^T} \mathbf{G}_{q}^{k} + \lambda^k \mathbf{I} \right] \bar{\mathbf{\Delta q}}^{k} = \mathbf{G}_{q}^{k^T}[ \mathbf{\Delta T}^o -  \mathbf{\Delta T} (\mathbf{s}^k) ],
+%\label{eq:linear_sys_q}
+%\end{equation}
+%where $\lambda$ is the Marquardt parameter that is updated along the iterative process and $\mathbf{I}$ is an indentity matrix. After estimating the parameter correction $\bar{\mathbf{\Delta q}}^{k}$ at the $k$th iteration, we update the magnetization direction such that 
+%
+%\begin{equation}
+%\bar{\mathbf{q}}^{k+1} = \bar{\mathbf{q}}^{k} + \bar{\mathbf{\Delta q}}^{k}.
+%\label{eq:q_next}
+%\end{equation}
 
 \subsection{Iterative process for magnetization estimation}
 
