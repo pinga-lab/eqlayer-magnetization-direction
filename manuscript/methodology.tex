@@ -274,10 +274,6 @@ Under these assumptions, \cite{pedersen1991} and \cite{li_etal_2014}
 concluded that the magnetic-moment distribution within the continuous equivalent layer 
 is all positive and proportional to the pseudogravity anomaly produced by the source 
 on the plane of the equivalent layer.
-%By following different approaches using magnetic microscopy data, 
-%\cite{baratchart2013} and \cite{lima_weiss_2016} pointed out that, by imposing a 
-%positivity constraint, the solution to the inverse problem is a unique 
-%magnetic-moment distribution. 
 Here, we do not follow the same wavenumber-domain 
 reasoning used by those authors. Moreover, equation \ref{eq:positivity_prop} 
 generalizes this positivity condition because (1) it holds true for all cases in which 
@@ -515,34 +511,6 @@ and use it as input for estimating a new positive magnetic-moment distribution
 with equation \ref{eq:linear_sys_p}.
 The iterative process stops when the goal function (equation \ref{eq:positivity_goal_function}a) 
 is invariant along successive iterations. 
-An overview of the algorithm is shown below:
-
-
-\begin{algorithm}[H]
-	%\DontPrintSemicolon
-	%\SetAlgoLined
-	\SetKwInOut{Input}{Input}
-	\SetKwInOut{Output}{Output}
-	\Input{$\mathbf{\Delta T}^{o}$, $\bar{\mathbf{q}}^{0}$}
-	\Output{$\bar{\mathbf{p}}$,$\bar{\mathbf{q}}$}
-	
-	\While{(not converge)  or ($i<i_{max}$) }
-	{ \textbf{step 1}: Solve equation \ref{eq:linear_sys_p} using NNLS \;
-	  \textbf{step 2}: Compute goal function (equation \ref{eq:positivity_goal_function}a) \; 
-	  \While{(not converge)  or ($j<j_{max}$) }
-		{ \textbf{step 3}:  Initialize the Levenberg-Marquardt algorithm \;  
-		  \textbf{step 4}: Compute goal function (equation \ref{eq:positivity_goal_function}a)\;
-			\While{ $k<k_{marq}$ } {
-				\textbf{step 5}:  Solve equation \ref{eq:linear_sys_q} \;
-				\textbf{step 6}:  Update the magnetization direction estimate (equation \ref{eq:q_next}) \;
-				\textbf{step 7}: Compute goal function (equation \ref{eq:positivity_goal_function})\;
-			}
-			\textbf{step 8}:  Analysis of convergence for inner loop.}
-			\textbf{step 9}:  Analysis of convergence for outer loop.}
-		
-		\caption{Nested NNLS and Levenberg-Marquardt method}
-		\label{cd: LM_NNLS}
-	\end{algorithm}
 
 \subsection{The choice of layer depth $\mathbf{z_{c}}$ and regularization parameter $\mathbf{\mu}$}
 
