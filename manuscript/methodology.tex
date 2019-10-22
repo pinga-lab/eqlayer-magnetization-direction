@@ -485,7 +485,7 @@ By using this $\bar{\mathbf{q}}^{k}$, the upper part of equation
 vector:
 \begin{equation}
 \left[ {\mathbf{G}_{p}^{k}}^{\top} \mathbf{G}_{p}^{k} + 
-\mu f_{0}^{k} \mathbf{I} \right] \bar{\mathbf{p}}^{k+1} = {\mathbf{G}_{p}^{k}}^{\top} \mathbf{\Delta T}^{o} \: .
+\mu f_{0}^{k} \mathbf{I} \right] \bar{\mathbf{p}}^{k} = {\mathbf{G}_{p}^{k}}^{\top} \mathbf{\Delta T}^{o} \: .
 \label{eq:linear_sys_p}
 \end{equation}
 To impose the positivity constraint (equation \ref{eq:positivity_goal_function}b) on the 
@@ -500,15 +500,15 @@ unconstrained nonlinear system via Levenberg-Marquardt method \citep{aster2005}:
 \left[ \mathbf{\Delta T}^{o} - \mathbf{\Delta T} (\mathbf{s}^{k}) \right] \: ,
 \label{eq:linear_sys_q}
 \end{equation}
-where $\lambda$ is the Marquardt parameter and $\mathbf{I}$ is the indentity matrix. 
+where $\lambda$ is the Marquardt parameter and $\mathbf{I}$ is the identity matrix. 
 After estimating the $\bar{\mathbf{\Delta q}}^{k}$ 
 at the $k$th iteration, we update the magnetization direction as follows
 \begin{equation}
 \bar{\mathbf{q}}^{k+1} = \bar{\mathbf{q}}^{k} + \bar{\mathbf{\Delta q}}^{k} \: ,
 \label{eq:q_next}
 \end{equation}
-and use it as input for estimating a new positive magnetic-moment distribution 
-with equation \ref{eq:linear_sys_p}.
+use it as input for estimating a new positive magnetic-moment distribution 
+with equation \ref{eq:linear_sys_p} and so on.
 The iterative process stops when the goal function (equation \ref{eq:positivity_goal_function}a) 
 is invariant along successive iterations. 
 
