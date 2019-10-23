@@ -357,7 +357,8 @@ $\mathbf{\Delta T}(\mathbf{s})$, we solve the following inverse problem:
 \begin{subequations}
 	\begin{align}
 	& \text{minimizing}
-	& &\Psi(\mathbf{s}) =\lVert \mathbf{\Delta T}^{o} - \mathbf{\Delta T} (\mathbf{s}) \rVert_{2}^{2} + \, \mu f_0 \parallel \mathbf{p} \parallel_{2}^{2} \: , \\
+	& &\Psi(\mathbf{s}) =\lVert \mathbf{\Delta T}^{o} - \mathbf{\Delta T} (\mathbf{s}) 
+	\rVert_{2}^{2} + \, \mu f_0 \parallel \mathbf{p} \parallel_{2}^{2} \: , \\
 	& \text{subject to}
 	& & \mathbf{p} \geqslant \mathbf{0} \: .
 	\end{align}
@@ -496,12 +497,13 @@ This positive magnetic-moment distribution is then used to estimate a correction
 $\bar{\mathbf{\Delta q}}^{k}$ on the magnetization direction by solving the following 
 unconstrained nonlinear system via Levenberg-Marquardt method \citep{aster2005}:
 \begin{equation}
-\left[ {\mathbf{G}_{q}^{k}}^{\top} \mathbf{G}_{q}^{k} + \lambda \, \mathbf{I} \right] \bar{\mathbf{\Delta q}}^{k} = {\mathbf{G}_{q}^{k}}^{\top} 
+\left[ {\mathbf{G}_{q}^{k}}^{\top} \mathbf{G}_{q}^{k} + \lambda \, \mathbf{I} \right] 
+\bar{\mathbf{\Delta q}}^{k} = {\mathbf{G}_{q}^{k}}^{\top} 
 \left[ \mathbf{\Delta T}^{o} - \mathbf{\Delta T} (\mathbf{s}^{k}) \right] \: ,
 \label{eq:linear_sys_q}
 \end{equation}
 where $\lambda$ is the Marquardt parameter and $\mathbf{I}$ is the identity matrix. 
-After estimating the $\bar{\mathbf{\Delta q}}^{k}$ 
+After estimating the correction $\bar{\mathbf{\Delta q}}^{k}$ 
 at the $k$th iteration, we update the magnetization direction as follows
 \begin{equation}
 \bar{\mathbf{q}}^{k+1} = \bar{\mathbf{q}}^{k} + \bar{\mathbf{\Delta q}}^{k} \: ,
