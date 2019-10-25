@@ -203,10 +203,9 @@ where the coefficients $a_{\alpha\beta}$ (equation \ref{eq:a-coefficients}),
 $\alpha = x, y$, $\beta = x, y, z$, are defined by arbitrary values of 
 $I_{0}$ and $D_{0}$ (equation \ref{eq:main_field}) and 
 $I$ and $D$ (equation \ref{eq:mag_vec}).
-By noting that equation \ref{eq:tfanomaly-alternative-equality} represents a linear 
-combination of independent harmonic functions, we conclude that the five terms
-in brackets must be identically zero for all points $(x, y, z)$ above the equivalent 
-layer, where $z < z_{c}$. 
+Because the coefficients $a_{\alpha\beta}$ are not zero, we conclude that the five 
+linearly independent harmonic functions in brackets must be identically zero for all points 
+$(x, y, z)$ above the equivalent layer, where $z < z_{c}$. 
 By equaling each term to zero and rewriting the second derivatives of the surface 
 integral $\Phi(x, y, z)$ (equation \ref{eq:Phi-surface-integral}), we get
 \begin{equation}
@@ -216,7 +215,8 @@ integral $\Phi(x, y, z)$ (equation \ref{eq:Phi-surface-integral}), we get
 	\quad z_{c} > z \: ,
 	\label{eq:D_alpha_beta_Gamma}
 \end{equation}
-where $\partial_{\alpha\beta} \frac{1}{r} \equiv 
+where $(x'', y'', z_{c})$ is a point on the equivalent layer and 
+$\partial_{\alpha\beta} \frac{1}{r} \equiv 
 \frac{\partial^{2}}{\partial \alpha \partial \beta} \frac{1}{r}$ 
 represents the second derivative,
 with respect to $\alpha = x, y$ and $\beta = x, y, z$, of the inverse distance 
@@ -288,8 +288,8 @@ total-magnetization of the sources, whether it is purely induced or not and
 In practical situations, it is not possible to determine a continuous magnetic-moment
 distribution $p(x'',y'',z_{c})$ (equation \ref{eq:positivity_prop}) over the 
 equivalent layer. 
-For this reason, the layer has to be approximated by a discrete set of dipoles with unit 
-volume located at the constant depth $z = z_c$.
+For this reason, the layer has to be approximated by a discrete set of dipoles 
+(the equivalent sources) with unit volume located at the constant depth $z = z_c$.
 The total-field anomaly produced by this discrete layer (the predicted total-field anomaly) 
 at a given point $(x_{i}, y_{i}, z_{i})$, $i = 1, \dots, N$, is given by
 \begin{equation}
@@ -333,10 +333,10 @@ where $\partial_{\alpha\beta} \frac{1}{r} \equiv
 \frac{\partial^{2}}{\partial \alpha \partial \beta} \frac{1}{r}$ 
 represent the second derivatives,
 with respect to $\alpha = x, y, z$ and $\beta = x, y, z$, of the inverse distance 
-$\frac{1}{r}$ (equation \ref{eq:inverse-distance}) between the points 
-$(x, y, z) = (x_{i}, y_{i}, z_{i})$ and 
-$(x'', y'', z_{c}) = (x_{j}, y_{j}, z_{c})$, which is located on the equivalent layer.
-Equations $\ref{eq:tfa_pred_i}$-$\ref{eq:g_ij}$ show that the predicted total-field anomaly 
+$\frac{1}{r}$ (equation \ref{eq:inverse-distance}) between the coordinates of the 
+observation points $(x, y, z) = (x_{i}, y_{i}, z_{i})$ and the coordinates of the 
+equivalent sources $(x'', y'', z_{c}) = (x_{j}, y_{j}, z_{c})$.
+Equations $\ref{eq:tfa_pred_i}$-$\ref{eq:Mij-matrix}$ show that the predicted total-field anomaly 
 $\Delta T_{i}(\mathbf{s})$ has a linear relation with the magnetic-moment vector $\mathbf{p}$ 
 and a nonlinear relation with the magnetization direction vector $\mathbf{q}$ 
 (equation \ref{eq:q_vector}).
@@ -367,9 +367,9 @@ $\mathbf{\Delta T}(\mathbf{s})$, we solve the following inverse problem:
 On the right side of equation \ref{eq:positivity_goal_function}a, the first and second terms are 
 the data-misfit function and the zeroth-order Tikhonov regularization function, $\mu$ is the 
 regularizing parameter, $\| \cdot \|_{2}^{2}$ represents the squared Euclidean norm and $f_0$ is a 
-normalizing factor. In the inequality \ref{eq:positivity_goal_function}b, $\mathbf{0}$ is vector 
-with all elements equal to zero and the inequality sign is applied element by element. This 
-positivity constraint on the magnetic-moment vector $\mathbf{p}$ 
+normalizing factor. In the inequality \ref{eq:positivity_goal_function}b, $\mathbf{0}$ is an 
+$M \times 1$ vector with all elements equal to zero and the inequality sign is applied element 
+by element. This positivity constraint on the magnetic-moment vector $\mathbf{p}$ 
 is incorporated by using the nonnegative least squares (NNLS) proposed by 
 \cite{lawson_hanson_1974}. 
 
@@ -386,7 +386,7 @@ around $\mathbf{s} = \mathbf{s}^{k}$ (equation \ref{eq:parameter-vector}):
 where $\mathbf{\Delta s}^{k}$ is a perturbation on the parameter vector 
 and the terms $\mathbf{J}^{k}$ and $\mathbf{H}^{k}$ are, respectively, the gradient vector 
 and the Hessian matrix evaluated at $\mathbf{s}^{k}$.
-Then we estimate the perturbation vector $\bar{\mathbf{\Delta s}}^k$ that minimizes the 
+Then, we estimate the perturbation vector $\bar{\mathbf{\Delta s}}^k$ that minimizes the 
 expanded function (equation \ref{eq:sec_ord_goal}) by taking the gradient with respect 
 to $\mathbf{\Delta s}^k$ and setting the result equal to the null vector.
 This procedure leads to the linear system
@@ -492,7 +492,7 @@ vector:
 To impose the positivity constraint (equation \ref{eq:positivity_goal_function}b) on the 
 magnetic-moment distribution $\bar{\mathbf{p}}^{k+1}$ within the equivalent layer, 
 we solve this linear system (equation \ref{eq:linear_sys_p}) by using the nonnegative least 
-squares (NNLS) method \citep{lawson_hanson_1974}.
+squares (NNLS) method \citep{lawson_hanson_1974, silvadias_etal_2007}.
 This positive magnetic-moment distribution is then used to estimate a correction 
 $\bar{\mathbf{\Delta q}}^{k}$ on the magnetization direction by solving the following 
 unconstrained nonlinear system via Levenberg-Marquardt method \citep{aster2005}:
@@ -513,6 +513,7 @@ use it as input for estimating a new positive magnetic-moment distribution
 with equation \ref{eq:linear_sys_p} and so on.
 The iterative process stops when the goal function (equation \ref{eq:positivity_goal_function}a) 
 is invariant along successive iterations. 
+We show in Appendix B that our method fails if the sources are vertically magnetized.
 
 \subsection{The choice of layer depth $\mathbf{z_{c}}$ and regularization parameter $\mathbf{\mu}$}
 
