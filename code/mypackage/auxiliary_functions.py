@@ -322,8 +322,72 @@ def sensitivity_dir(x,y,z,xs,ys,zs,sinc,sdec,p,inc,dec):
 
 ############################# Implementing the inverse problem ########################################
 
-def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,imax,itext,itmarq,eps_e,eps_i,mu):
+def levenberg_marquardt(dobs,x,y,z,xs,ys,zs,sinc,sdec,p,inc0,dec0,lamb,dlamb,itext,itmarq,eps_i,mu,f0):
     '''
+    Apply the Levenberg-Marquardt Method to solve a non-linear problem.
+
+    input
+
+    dobs: numpy array - Observed Total field anomaly vector
+    x,y,z : numpy arrays - Cartesian coordinates of observations
+    xs,ys,zs : numpy arrays - Cartesian coordinates of equivalent sources
+    sinc,sdec : float - Direction of Main field
+    p : numpy array - magnetic moment of equivalent sources
+    inc0,dec0: float - magnetization direction of equivalent sources
+    itmax : integer - number of iterations
+
+    return
+
+    inc,dec : float - magnetization direction
+
+    '''
+    
+    for i in range(itext):
+            tf0 = tfa_layer(x,y,z,xs,ys,zs,sinc,sdec,p,inc0,dec0)
+            r0 = dobs - tf0
+            phi0 = np.linalg.norm(r0) + mu*f0*np.linalg.norm(p)
+
+            G_dir = sensitivity_dir(x,y,z,xs,ys,zs,sinc,sdec,p,inc0,dec0)
+            J = -np.dot(G_dir.T,r0)
+            H =  np.dot(G_dir.T,G_dir)
+            
+            for j in range(itmarq):
+                dp = np.linalg.solve(H + lamb*np.identity(2),-J)
+
+                dp_inc = np.rad2deg(dp[0])
+                dp_dec = np.rad2deg(dp[1])
+
+                inc = inc0 + dp_inc
+                dec = dec0 + dp_dec
+
+                tf = tfa_layer(x,y,z,xs,ys,zs,sinc,sdec,p,inc,dec)
+                r = dobs - tf
+                phi = np.linalg.norm(r) + mu*f0*np.linalg.norm(p)
+
+                dphi = phi-phi0
+
+                if (dphi > 0.):
+                    lamb *= dlamb
+                else:
+                    lamb /= dlamb
+                    break
+
+            condition_1 = np.abs(dphi)/phi0
+            if (condition_1 < eps_i):
+                break
+            else:
+                r0[:] = r[:]
+                phi0 = phi
+                tf0[:] = tf[:]
+                inc0 = inc
+                dec0 = dec
+    
+    return inc,dec,phi0
+          
+
+def LM_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,imax,itext,itmarq,eps_e,eps_i,mu):
+    '''
+    (REFAZER ESTA DESCRICAO)
     Apply the Levenberg-Marquardt Method to solve a non-linear problem.
 
     input
@@ -346,7 +410,7 @@ def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,
     null = np.zeros(M)
     I = np.identity(M)
     do = np.hstack([dobs,null])
-
+    
     phi_it = []
     iteration = []
     pest = []
@@ -362,63 +426,25 @@ def levenberg_marquardt_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,
         p0,_ = nnls(GI,do)
         tf_ext = tfa_layer(x,y,z,xs,ys,zs,sinc,sdec,p0,inc0,dec0)
         r_ext = dobs - tf_ext
-
         phi_ext = np.linalg.norm(r_ext) + mu*f0*np.linalg.norm(p0)
         
-        for j in range(itext):
-            tf0 = tfa_layer(x,y,z,xs,ys,zs,sinc,sdec,p0,inc0,dec0)
-            r0 = dobs - tf0
-            phi0 = np.linalg.norm(r0) + mu*f0*np.linalg.norm(p0)
-
-            G_dir = sensitivity_dir(x,y,z,xs,ys,zs,sinc,sdec,p0,inc0,dec0)
-            J = -np.dot(G_dir.T,r0)
-            H =  np.dot(G_dir.T,G_dir)
-            
-            for k in range(itmarq):
-                dp = np.linalg.solve(H + lamb*np.identity(2),-J)
-
-                dp_inc = np.rad2deg(dp[0])
-                dp_dec = np.rad2deg(dp[1])
-
-                inc = inc0 + dp_inc
-                dec = dec0 + dp_dec
-
-                tf = tfa_layer(x,y,z,xs,ys,zs,sinc,sdec,p0,inc,dec)
-                r = dobs - tf
-                phi = np.linalg.norm(r) + mu*f0*np.linalg.norm(p0)
-
-                dphi = phi-phi0
-
-                if (dphi > 0.):
-                    lamb *= dlamb
-                else:
-                    lamb /= dlamb
-                    break
-
-            condition_1 = np.abs(dphi)/phi0
-            if (condition_1 < eps_i):
-                break
-            else:
-                r0[:] = r[:]
-                phi0 = phi
-                tf0[:] = tf[:]
-                inc0 = inc
-                dec0 = dec
-                        
+        ## Levenberg-Marquardt method ##
+        inc0,dec0,phi0 = levenberg_marquardt(dobs,x,y,z,xs,ys,zs,sinc,sdec,p0,inc0,dec0,lamb,dlamb,itext,itmarq,eps_i,mu,f0)
+        ################################
+        print inc0,dec0
+        
         phi_it.append(phi0)
         iteration.append(i)
         pest.append(p0)
         incs.append(inc0)
         decs.append(dec0)
-
-        print inc0,dec0
         
         dphi_ext = phi_ext - phi0
         condition_2 = np.abs(dphi_ext)/phi0
         print condition_2
         if (condition_2 < eps_e):
             break
-
+                       
     return p0,inc0,dec0,phi_it,i,pest,incs,decs
 
 def residual(do,dp):
