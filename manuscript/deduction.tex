@@ -1,0 +1,65 @@
+\append{Deduction of equation \ref{eq:positivity_prop}}
+\label{append:proof-positive-p}
+
+In this appendix, we prove the existence of an all-positive magnetic-moment 
+distribution $p(x'', y'', z_{c})$ that solve the integral shown in equation 
+\ref{eq:Gamma_integral_equation}.
+
+Consider a closed surface located above the magnetic sources, formed by the plane $z = z_{c}$ containing the equivalent layer and a hemisphere with infinite radius
+(Figure \ref{fig:surface_Green}).
+This surface encloses a region where $\Gamma(x'', y'', z_{c})$ 
+(equation \ref{eq:Gamma-volume-integral}) is harmonic at all points.
+By using the Green's second identity \citep[][ p. 215]{kellogg1967}, we can show that
+\begin{equation}
+0 = \frac{1}{4\pi}
+\int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
+\partial_{z} \Gamma(x'', y'', z_{c}) \: \frac{1}{\ell} - 
+\Gamma(x'', y'', z_{c}) \: \partial_{z} \frac{1}{\ell}
+\:\: dS'' \: , \quad z_{c} > z \: ,
+\label{eq:Greens_2nd_identity}
+\end{equation}
+where $\Gamma(x'', y'', z_{c})$ is the volume integral defined by equation 
+\ref{eq:Gamma-volume-integral} and
+\begin{equation}
+\frac{1}{\ell} \equiv \frac{1}{\sqrt{(x - x'')^{2} +
+		(y - y'')^{2} +
+		(z_{s} - z_{c})^{2}}}
+\label{eq:inv-l}
+\end{equation}
+is the inverse distance between the fixed point $(x'', y'', z_{c})$, located on the
+equivalent layer, and the point $(x, y, z_{s})$, with $z_{s} = z_{c} + \Delta z$,
+$\Delta z > 0$.
+The point $(x, y, z_{s})$ is conveniently defined as the mirror of $(x, y, z)$,
+located at $z = z_{c} - \Delta z$, with respect to the plane $z = z_{c}$ containing
+the equivalent layer (Figure \ref{fig:surface_Green}).
+Equation \ref{eq:Greens_2nd_identity} combined with the 
+Green's third identity \citep[][ p. 219]{kellogg1967} gives rise to
+\begin{equation}
+\Gamma(x, y, z) = \frac{1}{4\pi}
+\int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
+\partial_{z} \Gamma(x'', y'', z_{c}) \: 
+\left( \frac{1}{r} + \frac{1}{\ell} \right)
+\Gamma(x'', y'', z_{c}) \: 
+\left( \partial_{z} \frac{1}{r} + \partial_{z} \frac{1}{\ell} \right)
+\:\: dS'' \: , \quad z_{c} > z \: ,
+\label{eq:Greens_3rd_identity}
+\end{equation}
+where $\frac{1}{r}$ is defined by equation \ref{eq:inverse-distance}.
+The term $\left( \frac{1}{r} + \frac{1}{\ell} \right)$ represents the 
+\textit{Green's function of second kind} \citep[][ p. 246]{kellogg1967} 
+associated with this integral.
+We can verify that $\frac{1}{r} = \frac{1}{\ell}$, $\partial_{z} (1/r) = -\partial_{z} (1/\ell)$
+and, consequently, 
+\begin{equation}
+\Gamma(x, y, z) = \frac{1}{2\pi}
+\int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
+\partial_{z} \Gamma(x'', y'', z_{c}) \: \frac{1}{r} 
+\:\: dS'' \: , \quad z_{c} > z \: .
+\label{eq:Neumann_bvp}
+\end{equation}
+This equation shows the inherent ambiguity of potential field methods
+\citep{roy1962} and solves the \textit{Neumann's problem} or the 
+\textit{second boundary value problem of potential theory} \citep[][ p. 246]{kellogg1967}.
+In the present case, this problem consists in defining the harmonic function $\Gamma(x, y, z)$ 
+(equation \ref{eq:Gamma-volume-integral}) at the region above the equivalent layer,
+from the values of its vertical derivative on the plane containing the equivalent layer. 
