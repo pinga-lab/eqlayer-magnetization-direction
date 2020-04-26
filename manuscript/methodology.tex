@@ -78,8 +78,8 @@ volume $\upsilon$ of the magnetic sources.
 We consider that the total-magnetization intensity $m(x^{\prime}, y^{\prime}, z^{\prime})$
 is strictly positive at all points within the magnetic sources. Consequently,
 $\Gamma(x, y, z)$ is positive at all points located outside the magnetic sources.
-From the physical point of view, $\mathbf{M}(x, y, z)$ (equation \ref{eq:M-matrix})
-and $\Gamma(x, y, z)$ (equation \ref{eq:Gamma-volume-integral}) represent, respectively, 
+From the mathematical point of view, $\mathbf{M}(x, y, z)$ (equation \ref{eq:M-matrix})
+and $\Gamma(x, y, z)$ (equation \ref{eq:Gamma-volume-integral}) resembles, respectively, 
 the gradient tensor and the corresponding gravitational potential that would be produced by 
 the magnetic sources, at the point $(x, y, z)$, if they had a density distribution proportional 
 to $m(x^{\prime}, y^{\prime}, z^{\prime})$.
@@ -203,20 +203,27 @@ where the coefficients $a_{\alpha\beta}$ (equation \ref{eq:a-coefficients}),
 $\alpha = x, y$, $\beta = x, y, z$, are defined by arbitrary values of 
 $I_{0}$ and $D_{0}$ (equation \ref{eq:main_field}) and 
 $I$ and $D$ (equation \ref{eq:mag_vec}).
-Because the coefficients $a_{\alpha\beta}$ are not zero, we conclude that the five 
+Because the coefficients $a_{\alpha\beta}$ are always valid for any value, we conclude that the five 
 linearly independent harmonic functions in brackets must be identically zero for all points 
-$(x, y, z)$ above the equivalent layer, where $z < z_{c}$. 
-By equaling each term to zero and rewriting the second derivatives of the surface 
-integral $\Phi(x, y, z)$ (equation \ref{eq:Phi-surface-integral}), we get
+$(x, y, z)$ above the equivalent layer, where $z < z_{c}$. By assuming that, in the case which the equivalent layer has the same magnetization direction of the magnetic sources, the scalar functions $\Gamma(x, y, z)$ and $\Phi(x, y, z)$ are equal. Thus, a possible solution for equation \ref{eq:tfanomaly-alternative-equality} can be given by 
+
+\begin{equation}
+\Gamma(x, y, z) = 
+\int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
+p(x'', y'', z_{c}) \: \frac{1}{r} \:\: dS'' \: ,
+\quad z_{c} > z \: ,
+\label{eq:Gamma_integral_equation}
+\end{equation}
+where $(x'', y'', z_{c})$ is a point on the equivalent layer. Consequently, the second derivative of the equation \ref{eq:Gamma_integral_equation} is equal to 
+
 \begin{equation}
 	\partial_{\alpha\beta} \Gamma(x, y, z) = 
 	\int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
 	p(x'', y'', z_{c}) \: \partial_{\alpha\beta} \frac{1}{r} \:\: dS'' \: ,
 	\quad z_{c} > z \: ,
 	\label{eq:D_alpha_beta_Gamma}
-\end{equation}
-where $(x'', y'', z_{c})$ is a point on the equivalent layer and 
-$\partial_{\alpha\beta} \frac{1}{r} \equiv 
+\end{equation} 
+where $\partial_{\alpha\beta} \frac{1}{r} \equiv 
 \frac{\partial^{2}}{\partial \alpha \partial \beta} \frac{1}{r}$ 
 represents the second derivative,
 with respect to $\alpha = x, y$ and $\beta = x, y, z$, of the inverse distance 
@@ -226,15 +233,7 @@ function
 	\frac{1}{\left[ (x-x'')^2 + (y-y'')^2 + (z-z_{c})^2 \right]^{\frac{1}{2}}} \: .
 	\label{eq:inverse-distance}
 \end{equation}
-Note that equation \ref{eq:D_alpha_beta_Gamma} is obtained by properly deriving both sides of
-\begin{equation}
-\Gamma(x, y, z) = 
-\int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
-p(x'', y'', z_{c}) \: \frac{1}{r} \:\: dS'' \: ,
-\quad z_{c} > z \: .
-\label{eq:Gamma_integral_equation}
-\end{equation}
-It can be shown (see Appendix A) that this integral equation has a solution
+It can be shown (see Appendix A) that the integral equation \ref{eq:Gamma_integral_equation} has a solution
 \begin{equation}
 p(x'', y'', z_{c}) = \frac{1}{2\pi} \partial_{z} \Gamma(x'', y'', z_{c}) \: ,
 \label{eq:positivity_prop}
@@ -445,7 +444,7 @@ $f_{0}^{k}$ is a  normalizing factor equal to
 f_{0}^{k} = \dfrac{trace \left({\mathbf{G}_{p}^{k}}^{\top} \mathbf{G}_{p}^{k} \right)}{M} \, .
 \label{eq:norm_factor}
 \end{equation}
-The gradient vector $\mathbf{J}_{q}^{k}$ and the Hessian matrix $\mathbf{H}_{qq}^{k}$ 
+This factor is used with the purpose to make a trade-off between the two terms on the right side of equation \ref{eq:positivity_goal_function}a along the iterative process. The gradient vector $\mathbf{J}_{q}^{k}$ and the Hessian matrix $\mathbf{H}_{qq}^{k}$ 
 (equation \ref{eq:linear_sys_GN_block}) related to the magnetization direction 
 $\mathbf{q}$ (equation \ref{eq:q_vector}) are, respectively,
 \begin{equation}
@@ -519,6 +518,6 @@ We show in Appendix B that our method fails if the sources are vertically magnet
 
 The procedure for the use of our methodology for estimating the total magnetization require the choice of two main parameters. The first one is the layer depth $z_c$ as shown in Figure \ref{fig:eqlayer_figure} and the second is the regularization parameter $\mu$ shown in equation \ref{eq:linear_sys_p}.
 
-The method of the choice of layer is based on a classical approach proposed by \cite{dampney1969}. The author pointed out that the layer depth should satisfy an interval from $2.5$ to $6$ times the grid spacing. It should be noticed that this rule was applied on an evenly spaced data. However, the choice for applying our method should correspond to an interval from $2$ to $3$ times the greater grid spacing. It is necessarily to point out that this range of values was found empirically due to the application on a irregular grid data.
+The method of the choice of layer depth is based on a classical approach proposed by \cite{dampney1969}. This author pointed out that the layer depth should satisfy an interval from $2.5$ to $6$ times the grid spacing. It should be noticed that the rule proposed by \cite{dampney1969} was applied on an evenly spaced data. However, in this work, the interval was found empirically and the range can vary from $2$ to $3$ times the greater grid spacing using simulated flight lines of an airborne survey.
 
 To solve the equation \ref{eq:linear_sys_p} we have to choose a reliable regularization parameter $\mu$. For this purpose, we use the L-curve method \citep{hansen1992}. This approach is widely used in the literature to find a regularizing parameter, which filtering out enough noise without loosing too much information in the final solution. The procedure of finding the parameter plot a curve of optimal values between the solution norm and residual norm. The corner of the curve is the optimal regularization parameter which gives a threshold between the regularizing function and the data misfit.
