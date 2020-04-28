@@ -39,13 +39,11 @@ D
 For convenience, we call $\mathbf{q}$ as magnetization direction vector.
 In this case, the total-field anomaly $\Delta T(x, y, z)$ can be written as follows:
 \begin{equation}
-\Delta T(x, y, z) = \gamma_{m} \, \hat{\mathbf{F}}_{0}^{\top} \mathbf{M}(x, y, z) \: 
+\Delta T(x, y, z) = \hat{\mathbf{F}}_{0}^{\top} \mathbf{M}(x, y, z) \: 
 \hat{\mathbf{m}}(\mathbf{q}) \: ,
 \label{eq:tfanomaly}
 \end{equation}
-where $\gamma_{m} = 10^{-9} \frac{\mu_{0}}{4 \pi}$ (in $n \, H / m $), 
-$\mu_{0}$ is the vacuum magnetic permeability and $\mathbf{M}(x, y, z)$ is a matrix 
-given by
+where $\mathbf{M}(x, y, z)$ is a matrix given by
 \begin{equation}
 	\mathbf{M}(x, y, z) = \begin{bmatrix}
 		\partial_{xx} \Gamma(x, y, z) & 
@@ -66,12 +64,14 @@ $\partial_{\alpha\beta} \Gamma(x, y, z) \equiv
 $\alpha, \beta = x, y, z$, representing the second derivatives of the harmonic
 function
 \begin{equation}
-\Gamma(x, y, z) = \iiint\limits_{\upsilon} 
+\Gamma(x, y, z) = \gamma_{m} \, \iiint\limits_{\upsilon} 
 \frac{m(x^{\prime}, y^{\prime}, z^{\prime}) \: d\upsilon^{\prime}}
 {\left[ (x-x^{\prime})^2 + (y-y^{\prime})^2 + (z-z^{\prime})^2 \right]^{\frac{1}{2}}} \: .
 \label{eq:Gamma-volume-integral}
 \end{equation}
-In this equation, $x^{\prime}$, $y^{\prime}$ and $z^{\prime}$ are the coordinates 
+In this equation, $\gamma_{m} = 10^{9} \frac{\mu_{0}}{4 \pi}$ (in $H / m $), 
+$\mu_{0}$ is the vacuum magnetic permeability and 
+$x^{\prime}$, $y^{\prime}$ and $z^{\prime}$ are the coordinates 
 of the volume element $d \upsilon^{\prime}$, which has total-magnetization intensity
 $m(x^{\prime}, y^{\prime}, z^{\prime})$ (in $A/m$) and is located within the 
 volume $\upsilon$ of the magnetic sources.
@@ -125,7 +125,7 @@ the unit vector $\hat{\mathbf{m}}(\mathbf{q})$ (equation \ref{eq:q_vector})
 and are located at the constant depth $z_{c}$. The total-field anomaly produced
 by this fictitious layer may be defined as
 \begin{equation}
-	\Delta \tilde{T}(x, y, z) = \gamma_{m} \, \hat{\mathbf{F}}_{0}^{\top} 
+	\Delta \tilde{T}(x, y, z) = \hat{\mathbf{F}}_{0}^{\top} 
 	\tilde{\mathbf{M}}(x, y, z) \: \hat{\mathbf{m}}(\mathbf{q}) \: ,
 	\label{eq:tfanomaly-eqlayer}
 \end{equation}
@@ -150,7 +150,8 @@ $\partial_{\alpha\beta} \Phi(x, y, z) \equiv
 $\alpha, \beta = x, y, z$, representing the second derivatives of the harmonic
 function
 \begin{equation}
-	\Phi(x, y, z) = \int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
+	\Phi(x, y, z) = \gamma_{m} \, 
+	\int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
 	\frac{p(x'', y'', z_{c}) \: dS''}
 	{\left[ (x-x'')^2 + (y-y'')^2 + (z-z_{c})^2 \right]^{\frac{1}{2}}} \: ,
 	\quad z_{c} > z \: .
@@ -378,7 +379,8 @@ On the right side of equation \ref{eq:positivity_goal_function}a, the first
 and second terms are 
 the data-misfit function and the zeroth-order Tikhonov regularization 
 function, $\mu$ is the regularizing parameter, $\| \cdot \|_{2}^{2}$ represents 
-the squared Euclidean norm and $f_0$. This factor makes a trade-off 
+the squared Euclidean norm and $f_0$ is a normalizing factor. 
+This factor makes a trade-off 
 between the data-misfit and zeroth-order Tikhonov regularization functions.
 In the inequality \ref{eq:positivity_goal_function}b, $\mathbf{0}$ is an 
 $M \times 1$ vector with all elements equal to zero and the inequality sign 
@@ -552,4 +554,11 @@ Notice that the range we found empirically is smaller than that proposed by
 Dampney. Apparently, this is due to the fact that, in an airborne survey, 
 the data spacing along lines is smaller than the space between lines.
 
-To solve the equation \ref{eq:linear_sys_p} we have to choose a reliable regularization parameter $\mu$. For this purpose, we use the L-curve method \citep{hansen1992}. This approach is widely used in the literature to find a regularizing parameter, which filtering out enough noise without loosing too much information in the final solution. The procedure of finding the parameter plot a curve of optimal values between the solution norm and residual norm. The corner of the curve is the optimal regularization parameter which gives a threshold between the regularizing function and the data misfit.
+To solve the equation \ref{eq:linear_sys_p} we have to choose a reliable 
+regularization parameter $\mu$. For this purpose, we use the L-curve method 
+\citep{hansen1992}. This approach is widely used in the literature to find a 
+regularizing parameter, which filtering out enough noise without loosing too much 
+information in the final solution. The procedure of finding the parameter plot a 
+curve of optimal values between the solution norm and residual norm. The corner of 
+the curve is the optimal regularization parameter which establishes a trade-off 
+between the regularizing function and the data-misfit function. 
