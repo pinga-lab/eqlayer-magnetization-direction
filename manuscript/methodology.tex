@@ -39,13 +39,11 @@ D
 For convenience, we call $\mathbf{q}$ as magnetization direction vector.
 In this case, the total-field anomaly $\Delta T(x, y, z)$ can be written as follows:
 \begin{equation}
-\Delta T(x, y, z) = \gamma_{m} \, \hat{\mathbf{F}}_{0}^{\top} \mathbf{M}(x, y, z) \: 
+\Delta T(x, y, z) = \hat{\mathbf{F}}_{0}^{\top} \mathbf{M}(x, y, z) \: 
 \hat{\mathbf{m}}(\mathbf{q}) \: ,
 \label{eq:tfanomaly}
 \end{equation}
-where $\gamma_{m} = 10^{-9} \frac{\mu_{0}}{4 \pi}$ (in $n \, H / m $), 
-$\mu_{0}$ is the vacuum magnetic permeability and $\mathbf{M}(x, y, z)$ is a matrix 
-given by
+where $\mathbf{M}(x, y, z)$ is a matrix given by
 \begin{equation}
 	\mathbf{M}(x, y, z) = \begin{bmatrix}
 		\partial_{xx} \Gamma(x, y, z) & 
@@ -66,20 +64,22 @@ $\partial_{\alpha\beta} \Gamma(x, y, z) \equiv
 $\alpha, \beta = x, y, z$, representing the second derivatives of the harmonic
 function
 \begin{equation}
-\Gamma(x, y, z) = \iiint\limits_{\upsilon} 
+\Gamma(x, y, z) = \gamma_{m} \, \iiint\limits_{\upsilon} 
 \frac{m(x^{\prime}, y^{\prime}, z^{\prime}) \: d\upsilon^{\prime}}
 {\left[ (x-x^{\prime})^2 + (y-y^{\prime})^2 + (z-z^{\prime})^2 \right]^{\frac{1}{2}}} \: .
 \label{eq:Gamma-volume-integral}
 \end{equation}
-In this equation, $x^{\prime}$, $y^{\prime}$ and $z^{\prime}$ are the coordinates 
+In this equation, $\gamma_{m} = 10^{9} \frac{\mu_{0}}{4 \pi}$ (in $H / m $), 
+$\mu_{0}$ is the vacuum magnetic permeability and 
+$x^{\prime}$, $y^{\prime}$ and $z^{\prime}$ are the coordinates 
 of the volume element $d \upsilon^{\prime}$, which has total-magnetization intensity
 $m(x^{\prime}, y^{\prime}, z^{\prime})$ (in $A/m$) and is located within the 
 volume $\upsilon$ of the magnetic sources.
 We consider that the total-magnetization intensity $m(x^{\prime}, y^{\prime}, z^{\prime})$
 is strictly positive at all points within the magnetic sources. Consequently,
 $\Gamma(x, y, z)$ is positive at all points located outside the magnetic sources.
-From the physical point of view, $\mathbf{M}(x, y, z)$ (equation \ref{eq:M-matrix})
-and $\Gamma(x, y, z)$ (equation \ref{eq:Gamma-volume-integral}) represent, respectively, 
+From the mathematical point of view, $\mathbf{M}(x, y, z)$ (equation \ref{eq:M-matrix})
+and $\Gamma(x, y, z)$ (equation \ref{eq:Gamma-volume-integral}) resemble, respectively, 
 the gradient tensor and the corresponding gravitational potential that would be produced by 
 the magnetic sources, at the point $(x, y, z)$, if they had a density distribution proportional 
 to $m(x^{\prime}, y^{\prime}, z^{\prime})$.
@@ -125,7 +125,7 @@ the unit vector $\hat{\mathbf{m}}(\mathbf{q})$ (equation \ref{eq:q_vector})
 and are located at the constant depth $z_{c}$. The total-field anomaly produced
 by this fictitious layer may be defined as
 \begin{equation}
-	\Delta \tilde{T}(x, y, z) = \gamma_{m} \, \hat{\mathbf{F}}_{0}^{\top} 
+	\Delta \tilde{T}(x, y, z) = \hat{\mathbf{F}}_{0}^{\top} 
 	\tilde{\mathbf{M}}(x, y, z) \: \hat{\mathbf{m}}(\mathbf{q}) \: ,
 	\label{eq:tfanomaly-eqlayer}
 \end{equation}
@@ -150,7 +150,8 @@ $\partial_{\alpha\beta} \Phi(x, y, z) \equiv
 $\alpha, \beta = x, y, z$, representing the second derivatives of the harmonic
 function
 \begin{equation}
-	\Phi(x, y, z) = \int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
+	\Phi(x, y, z) = \gamma_{m} \, 
+	\int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
 	\frac{p(x'', y'', z_{c}) \: dS''}
 	{\left[ (x-x'')^2 + (y-y'')^2 + (z-z_{c})^2 \right]^{\frac{1}{2}}} \: ,
 	\quad z_{c} > z \: .
@@ -203,17 +204,20 @@ where the coefficients $a_{\alpha\beta}$ (equation \ref{eq:a-coefficients}),
 $\alpha = x, y$, $\beta = x, y, z$, are defined by arbitrary values of 
 $I_{0}$ and $D_{0}$ (equation \ref{eq:main_field}) and 
 $I$ and $D$ (equation \ref{eq:mag_vec}).
-Because the coefficients $a_{\alpha\beta}$ are not zero, we conclude that the five 
-linearly independent harmonic functions in brackets must be identically zero for all points 
-$(x, y, z)$ above the equivalent layer, where $z < z_{c}$. 
-By equaling each term to zero and rewriting the second derivatives of the surface 
+Because equation \ref{eq:tfanomaly-alternative-equality} is valid 
+for any possible values of $a_{\alpha\beta}$, which are defined for any 
+values of $I_{0}$, $D_{0}$, $I$ and $D$, the five linearly independent 
+harmonic functions in brackets must be identically zero for all points 
+$(x, y, z)$ above the equivalent layer, where $z < z_{c}$.
+By equaling each independent function to zero and rewriting the 
+second derivatives of the surface 
 integral $\Phi(x, y, z)$ (equation \ref{eq:Phi-surface-integral}), we get
 \begin{equation}
-	\partial_{\alpha\beta} \Gamma(x, y, z) = 
-	\int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
-	p(x'', y'', z_{c}) \: \partial_{\alpha\beta} \frac{1}{r} \:\: dS'' \: ,
-	\quad z_{c} > z \: ,
-	\label{eq:D_alpha_beta_Gamma}
+\partial_{\alpha\beta} \Gamma(x, y, z) = 
+\int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
+p(x'', y'', z_{c}) \: \partial_{\alpha\beta} \frac{1}{r} \:\: dS'' \: ,
+\quad z_{c} > z \: ,
+\label{eq:D_alpha_beta_Gamma}
 \end{equation}
 where $(x'', y'', z_{c})$ is a point on the equivalent layer and 
 $\partial_{\alpha\beta} \frac{1}{r} \equiv 
@@ -222,11 +226,12 @@ represents the second derivative,
 with respect to $\alpha = x, y$ and $\beta = x, y, z$, of the inverse distance 
 function
 \begin{equation}
-	\frac{1}{r} \equiv 
-	\frac{1}{\left[ (x-x'')^2 + (y-y'')^2 + (z-z_{c})^2 \right]^{\frac{1}{2}}} \: .
-	\label{eq:inverse-distance}
+\frac{1}{r} \equiv 
+\frac{1}{\left[ (x-x'')^2 + (y-y'')^2 + (z-z_{c})^2 \right]^{\frac{1}{2}}} \: .
+\label{eq:inverse-distance}
 \end{equation}
-Note that equation \ref{eq:D_alpha_beta_Gamma} is obtained by properly deriving both sides of
+A possible solution for equation \ref{eq:D_alpha_beta_Gamma} can be obtained 
+by properly deriving both sides of
 \begin{equation}
 \Gamma(x, y, z) = 
 \int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}
@@ -234,16 +239,21 @@ p(x'', y'', z_{c}) \: \frac{1}{r} \:\: dS'' \: ,
 \quad z_{c} > z \: .
 \label{eq:Gamma_integral_equation}
 \end{equation}
-It can be shown (see Appendix A) that this integral equation has a solution
+Notice that the function $p(x'', y'', z_{c})$ that solves this 
+integral equation for $\Gamma(x, y, z)$ (equation \ref{eq:Gamma_integral_equation})
+also solves the integral equations for the second derivatives 
+$\partial_{\alpha\beta} \Gamma(x, y, z)$ (equation \ref{eq:D_alpha_beta_Gamma}). 
+It can be shown (see Appendix A) that equation \ref{eq:Gamma_integral_equation} 
+has a solution
 \begin{equation}
 p(x'', y'', z_{c}) = \frac{1}{2\pi} \partial_{z} \Gamma(x'', y'', z_{c}) \: ,
 \label{eq:positivity_prop}
 \end{equation}
 where, according to equation \ref{eq:Gamma-volume-integral},
 \begin{equation}
-\partial_{z} \Gamma(x'', y'', z_{c}) = \iiint\limits_{\upsilon} 
+\partial_{z} \Gamma(x'', y'', z_{c}) = \gamma_{m} \, \iiint\limits_{\upsilon} 
 \frac{m(x^{\prime}, y^{\prime}, z^{\prime}) (z^{\prime} - z_{c}) \: 
-d\upsilon^{\prime}}
+	d\upsilon^{\prime}}
 {\left[ (x''-x^{\prime})^2 + (y''-y^{\prime})^2 + (z_{c}-z^{\prime})^2 \right]^{\frac{3}{2}}} \: , \quad z^{\prime} > z_{c} \: .
 \label{eq:DzGamma-volume-integral}
 \end{equation}
@@ -271,15 +281,16 @@ vertically magnetized by induction.
 They also considered a planar equivalent layer located below and parallel to a 
 horizontal plane containing the observed total-field anomaly data. 
 Under these assumptions, \cite{pedersen1991} and \cite{li_etal_2014} 
-concluded that the magnetic-moment distribution within the continuous equivalent layer 
-is all positive and proportional to the pseudogravity anomaly produced by the source 
-on the plane of the equivalent layer.
+concluded that the magnetic-moment distribution within the continuous equivalent 
+layer is all positive and proportional to the pseudogravity anomaly produced by 
+the source on the plane of the equivalent layer.
 Here, we do not follow the same wavenumber-domain 
 reasoning used by those authors. Moreover, equation \ref{eq:positivity_prop} 
-generalizes this positivity condition because (1) it holds true for all cases in which 
-the magnetization of the equivalent layer has the same direction as the true 
-total-magnetization of the sources, whether it is purely induced or not and 
-(2) it does not require that the observed total-field anomaly data be on a plane. 
+generalizes this positivity condition because (1) it holds true for all cases 
+in which the magnetization of the equivalent layer has the same direction as 
+the true total-magnetization of the sources, whether it is purely induced or not 
+and (2) it does not require that the observed total-field anomaly data be on 
+a plane. 
 
 
 %% Discretizing layer
@@ -364,11 +375,16 @@ $\mathbf{\Delta T}(\mathbf{s})$, we solve the following inverse problem:
 	\end{align}
 	\label{eq:positivity_goal_function}
 \end{subequations}
-On the right side of equation \ref{eq:positivity_goal_function}a, the first and second terms are 
-the data-misfit function and the zeroth-order Tikhonov regularization function, $\mu$ is the 
-regularizing parameter, $\| \cdot \|_{2}^{2}$ represents the squared Euclidean norm and $f_0$ is a 
-normalizing factor. In the inequality \ref{eq:positivity_goal_function}b, $\mathbf{0}$ is an 
-$M \times 1$ vector with all elements equal to zero and the inequality sign is applied element 
+On the right side of equation \ref{eq:positivity_goal_function}a, the first 
+and second terms are 
+the data-misfit function and the zeroth-order Tikhonov regularization 
+function, $\mu$ is the regularizing parameter, $\| \cdot \|_{2}^{2}$ represents 
+the squared Euclidean norm and $f_0$ is a normalizing factor. 
+This factor makes a trade-off 
+between the data-misfit and zeroth-order Tikhonov regularization functions.
+In the inequality \ref{eq:positivity_goal_function}b, $\mathbf{0}$ is an 
+$M \times 1$ vector with all elements equal to zero and the inequality sign 
+is applied element 
 by element. This positivity constraint on the magnetic-moment vector $\mathbf{p}$ 
 is incorporated by using the nonnegative least squares (NNLS) proposed by 
 \cite{lawson_hanson_1974}. 
@@ -445,7 +461,11 @@ $f_{0}^{k}$ is a  normalizing factor equal to
 f_{0}^{k} = \dfrac{trace \left({\mathbf{G}_{p}^{k}}^{\top} \mathbf{G}_{p}^{k} \right)}{M} \, .
 \label{eq:norm_factor}
 \end{equation}
-The gradient vector $\mathbf{J}_{q}^{k}$ and the Hessian matrix $\mathbf{H}_{qq}^{k}$ 
+This factor is used with the purpose of making a trade-off between the terms 
+forming the gradient vector $\mathbf{J}_{p}^{k}$ (equation \ref{eq:grad_p}) and 
+the Hessian matrix $\mathbf{H}_{pp}^{k}$ (equation \ref{eq:hess_p}) 
+along the iterative process. The gradient vector $\mathbf{J}_{q}^{k}$ and 
+the Hessian matrix $\mathbf{H}_{qq}^{k}$ 
 (equation \ref{eq:linear_sys_GN_block}) related to the magnetization direction 
 $\mathbf{q}$ (equation \ref{eq:q_vector}) are, respectively,
 \begin{equation}
@@ -517,8 +537,28 @@ We show in Appendix B that our method fails if the sources are vertically magnet
 
 \subsection{The choice of layer depth $\mathbf{z_{c}}$ and regularization parameter $\mathbf{\mu}$}
 
-The procedure for the use of our methodology for estimating the total magnetization require the choice of two main parameters. The first one is the layer depth $z_c$ as shown in Figure \ref{fig:eqlayer_figure} and the second is the regularization parameter $\mu$ shown in equation \ref{eq:linear_sys_p}.
+The procedure for the use of our methodology for estimating the total magnetization 
+require the choice of two main parameters. The first one is the layer depth $z_c$ 
+(Figure \ref{fig:eqlayer_figure}) and the second is the regularization parameter 
+$\mu$ (equation \ref{eq:linear_sys_p}).
 
-The method of the choice of layer is based on a classical approach proposed by \cite{dampney1969}. The author pointed out that the layer depth should satisfy an interval from $2.5$ to $6$ times the grid spacing. It should be notice that this rule was applied on an evenly spaced data. However, the choice for applying our method should correspond to an interval from $2$ to $3$ times the greater grid spacing. It is necessarily to point out that this range of values was found empirically due to the application on a irregular grid data.
+There is a classical criterion proposed by \cite{dampney1969} to define the layer 
+depth based on the horizontal data spacing. This criterion states that the 
+distance between the plane containing the data and the  
+plane defining the layer should vary from $2.5$ to $6$ times the horizontal 
+data spacing. This criterion, however, is valid for evenly spaced data. 
+Here, we define the layer depth $z_c$ by using the horizontal space between 
+adjacent flight lines of an airborne survey. We found empirically that $z_c$ 
+can vary from $2$ to $3$ times the spacing between adjacent flight lines.
+Notice that the range we found empirically is smaller than that proposed by 
+Dampney. Apparently, this is due to the fact that, in an airborne survey, 
+the data spacing along lines is smaller than the space between lines.
 
-To solve the equation \ref{eq:linear_sys_p} we have to choose a reliable regularization parameter $\mu$. For this purpose, we use the L-curve method \citep{hansen1992}. This approach is widely used in the literature to find a regularizing parameter, which filtering out enough noise without loosing to much information in the final solution. The procedure of finding the parameter plot a curve of optimal values between the solution norm and residual norm. The corner of the curve is the optimal regularization parameter which gives a threshold between the regularizing function and the data misfit.
+To solve the equation \ref{eq:linear_sys_p} we have to choose a reliable 
+regularization parameter $\mu$. For this purpose, we use the L-curve method 
+\citep{hansen1992}. This approach is widely used in the literature to find a 
+regularizing parameter, which filtering out enough noise without loosing too much 
+information in the final solution. The procedure of finding the parameter plot a 
+curve of optimal values between the solution norm and residual norm. The corner of 
+the curve is the optimal regularization parameter which establishes a trade-off 
+between the regularizing function and the data-misfit function. 
