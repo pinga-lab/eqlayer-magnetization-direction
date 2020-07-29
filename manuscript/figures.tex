@@ -3,8 +3,13 @@
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\textwidth]{Fig/figure1.pdf}
-	\caption{Schematic representation of an equivalent layer. The layer is positioned over the horizontal plane at a depth of $z=z_c$. $\Delta T_i =  f_i (\mathbf{s})$ is the predicted total-field anomaly at the point $(x_i,y_i,z_i)$ produced by the set of $M$ equivalent sources (black dots). Each source is located at the point $(x_j,y_j,z_c)$, $j = 1,\hdots, M$, and represented by a dipole with unity volume $\upsilon$ with magnetization direction $\hat{\mathbf{m}}(\mathbf{q})$ and magnetic moment $p_j$.    }
+	\includegraphics[width=0.7\textwidth]{Fig/Fig1.png}
+	\caption{Schematic representation of an equivalent layer. The layer is positioned over the 
+	 horizontal plane at a depth of $z = z_c$ (represented in gray), below the 
+	 observation points $(x_{i},y_{i},z_{i})$, $i = 1,\hdots, N$. Each source 
+	 is located at a point $(x_{j},y_{j},z_{c})$, $j = 1,\hdots, M$, and represented by a dipole 
+	 with unit volume, magnetization direction $\hat{\mathbf{m}}(\mathbf{q})$ 
+	 (equation \ref{eq:mag_vec}) and magnetic moment $p_{j}$ (equation \ref{eq:tfa_pred_i}).}
 	\label{fig:eqlayer_figure}
 \end{figure}
 
@@ -13,21 +18,21 @@
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.85\textwidth]{Fig/unidir_test/figure2.eps}
+	\includegraphics[width=0.85\textwidth]{Fig/unidir_test/Fig2.png}
 	\caption{Application to synthetic data for multiple sources with unidirectional magnetization. (a) Noise-corrupted total-field anomaly. (b) Predicted data produced by equivalent layer. (c) Difference between the data shown in panels a and b. (d) Histogram of residuals. (e) All-positive magnetic-moment distribution. (f) Goal function value (equation \ref{eq:positivity_goal_function}a) per iteration showing the convergence.}
 	\label{fig:unidir_test}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.85\textwidth]{Fig/unidir_shallow_test/figure3.eps}
+	\includegraphics[width=0.85\textwidth]{Fig/unidir_shallow_test/Fig3.png}
 	\caption{Multiple synthetic sources with a shallow-seated body under unidirectional magnetization . (a) Noise-corrupted total-field anomaly. (b) Predicted data produced by equivalent layer. (c) Difference between the data shown in panels a and b. (d) Histogram of residuals. (e) All-positive magnetic-moment distribution. (f) Goal function value (equation \ref{eq:positivity_goal_function}a) per iteration showing the convergence.}
 	\label{fig:unidir_shallow_test}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.85\textwidth]{Fig/unidir_shallow_diff_test/figure4.eps}
+	\includegraphics[width=0.85\textwidth]{Fig/unidir_shallow_diff_test/Fig4.png}
 	\caption{Multiple synthetic sources with a shallow-seated body under different magnetization directions. (a) Noise-corrupted total-field anomaly. (b) Predicted data produced by equivalent layer. (c) Difference between the data shown in panels a and b. (d) Histogram of residuals. (e) All-positive magnetic-moment distribution. (f) Goal function value (equation \ref{eq:positivity_goal_function}a) per iteration showing the convergence.}
 	\label{fig:unidir_shallow_diff_test}
 \end{figure}
@@ -35,14 +40,14 @@
 %% Real data application 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.85\textwidth]{Fig/field_data_montes_claros/figure5.eps}
+	\includegraphics[width=0.85\textwidth]{Fig/field_data_montes_claros/Fig5.png}
 	\caption{Application to field data from alkaline complex of Montes Claros (Brazil). (a) Observed total-field anomaly. (b) Predicted data produced by equivalent layer. (c) Difference between the data shown in panels a and b. (d) Histogram of residuals. (e) All-positive magnetic-moment distribution. (f) Goal function value (equation \ref{eq:positivity_goal_function}a) per iteration showing the convergence.}
 	\label{fig:mc_data_application}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.75\textwidth]{Fig/field_data_montes_claros/figure6.eps}
+	\includegraphics[width=0.75\textwidth]{Fig/field_data_montes_claros/Fig6.png}
 	\caption{Application to field data from alkaline complex of Montes Claros (Brazil). RTP anomaly computed by using the estimated magnetization distribution shown in Figure \ref{fig:mc_data_application}e.}
 	\label{fig:rtp_mc_data}
 \end{figure}
@@ -51,7 +56,7 @@
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.75\textwidth]{Fig/figure7}
+	\includegraphics[width=0.75\textwidth]{Fig/Fig7.png}
 	\caption{2D representation of the surface used for applying the Green's 
 	identities. The surface is formed by a hemisphere (dashed line) with infinite
 	radius and the plane $z = z_{c}$ containing the equivalent layer. 

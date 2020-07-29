@@ -301,7 +301,8 @@ equivalent layer.
 For this reason, the layer has to be approximated by a discrete set of dipoles 
 (the equivalent sources) with unit volume located at the constant depth $z = z_c$.
 The total-field anomaly produced by this discrete layer (the predicted total-field anomaly) 
-at a given point $(x_{i}, y_{i}, z_{i})$, $i = 1, \dots, N$, is given by
+at a given point $(x_{i}, y_{i}, z_{i})$, $i = 1, \dots, N$ (Figure \ref{fig:eqlayer_figure}), 
+is given by
 \begin{equation}
 \Delta T_{i}(\mathbf{s}) = \mathbf{g}_{i}(\mathbf{q})^{\top} \mathbf{p},
 \label{eq:tfa_pred_i}
@@ -316,7 +317,7 @@ where $\mathbf{s}$ is an $(M + 2) \times 1$ partitioned vector (the parameter ve
 \end{equation}
 $\mathbf{q}$ is the magnetization direction vector (equation \ref{eq:q_vector}), $\mathbf{p}$ is an 
 $M \times 1$ vector (the magnetic-moment vector) whose $j$th element, $j = 1, \dots, M$, is the 
-magnetic moment intensity $p_{j}$ (in $A \, m^{2}$) of the $j$th dipole and 
+magnetic moment intensity $p_{j}$ (in A \, m$^{2}$) of the $j$th dipole and 
 $\mathbf{g}_{i} (\mathbf{q})$ is another $M \times 1$ vector whose $j$th element is defined 
 by the harmonic function
 \begin{equation}
@@ -345,7 +346,8 @@ represent the second derivatives,
 with respect to $\alpha = x, y, z$ and $\beta = x, y, z$, of the inverse distance 
 $\frac{1}{r}$ (equation \ref{eq:inverse-distance}) between the coordinates of the 
 observation points $(x, y, z) = (x_{i}, y_{i}, z_{i})$ and the coordinates of the 
-equivalent sources $(x'', y'', z_{c}) = (x_{j}, y_{j}, z_{c})$.
+equivalent sources $(x'', y'', z_{c}) = (x_{j}, y_{j}, z_{c})$ 
+(Figure \ref{fig:eqlayer_figure}).
 Equations $\ref{eq:tfa_pred_i}$-$\ref{eq:Mij-matrix}$ show that the predicted total-field anomaly 
 $\Delta T_{i}(\mathbf{s})$ has a linear relation with the magnetic-moment vector $\mathbf{p}$ 
 and a nonlinear relation with the magnetization direction vector $\mathbf{q}$ 
@@ -357,7 +359,7 @@ and a nonlinear relation with the magnetization direction vector $\mathbf{q}$
 %%%% Defining the objective function
 Let $\mathbf{\Delta T}^{o}$ be the observed-data vector whose $i$th element $\Delta T_{i}^{o}$
 is the observed total-field anomaly produced by the magnetic sources at the point 
-$(x_{i},y_{i},z_{i})$, $i = 1, \dots, N$. 
+$(x_{i},y_{i},z_{i})$, $i = 1, \dots, N$ (Figure \ref{fig:eqlayer_figure}). 
 Similarly, let $\mathbf{\Delta T} (\mathbf{s})$ be the predicted-data vector whose $i$th element 
 $\Delta T_{i}(\mathbf{s})$ (equation \ref{eq:tfa_pred_i}) is the predicted total-field anomaly  
 produced by the discrete equivalent layer at the same point $(x_{i},y_{i},z_{i})$. 
@@ -560,4 +562,4 @@ regularizing parameter, which filters out enough noise without losing too much
 information in the final solution. The procedure of finding the parameter plot a 
 curve of optimal values between the solution and residual norms. The corner of 
 the curve is the optimal regularization parameter which establishes a trade-off 
-between the regularizing function and the data-misfit function. 
+between the regularizing and data-misfit functions. 
