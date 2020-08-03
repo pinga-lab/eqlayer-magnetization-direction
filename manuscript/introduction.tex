@@ -1,40 +1,42 @@
 \section{Introduction}
 
 %% The importance of magnetization direction and techniques
-Most of  magnetic methods require knowledge of the magnetization direction, otherwise 
-they yield unsatisfactory interpretations of the exploration targets. This fact has 
-been propelled the development of several techniques for estimating magnetization 
-direction over the last 50 years. The strategies for estimating this quantity can be 
-divided into two main groups. The first one comprises the methods which presume a prior 
+Most  magnetic methods require knowledge of the magnetization direction, and otherwise 
+yield unsatisfactory interpretations of the exploration targets. This fact has 
+propelled the development of several techniques for estimating magnetization 
+direction over the last 50 years. Strategies for estimating this quantity can be 
+divided into two main groups. The first one comprises the methods that presume a prior 
 information about the shape of geological sources. The iterative method presented by 
-\cite{bhattacharyya1966} presumed that the magnetic source has a rectangular prismatic shape. 
-\cite{emilia_massey_1974} approximated a seamount by a set of stacked 
+\cite{bhattacharyya1966} presumes that the magnetic source has a rectangular prismatic shape. 
+\cite{emilia_massey_1974} approximate a seamount by a set of stacked 
 prisms with uniform magnetization direction and variable magnetization intensity. 
-\cite{parker_etal_1987} approximated the geometry of a seamount by using a 
+\cite{parker_etal_1987} represent the geometry of a seamount by using a 
 covering of triangular facets and estimate the internal magnetization closest to 
 a uniform solution.
-\cite{medeiros_silva_1995} presented a method that estimates the total magnetization 
-direction and the spatial orientation of an isolated source having three othogonal planes of 
+\cite{medeiros_silva_1995} present a method that estimates the total magnetization 
+direction and the spatial orientation of an isolated source having three orthogonal planes of 
 symmetry. 
-\cite{kubota2005} also approximated a seamount by a set of juxtaposed prisms, but estimate a 
+\cite{kubota2005} also approximate a seamount by a set of juxtaposed prisms, but estimate a 
 magnetization direction for each one. 
-Finally, \cite{oliveirajr_etal_2015} approximated the magnetic sources by spherical bodies with 
+Finally, \cite{oliveirajr_etal_2015} approximate the magnetic sources by spherical bodies with 
 known centers for estimating their magnetization directions. 
-The second group is formed by methods which do not presume any information about the shape of the 
-magnetic sources. \cite{fedi_etal_1994}, for example, proposed a method that determines the best 
+
+The second group is formed by methods that do not presume any information about the shape of the 
+magnetic sources. \cite{fedi_etal_1994}, for example, propose a method that determines the best 
 magnetization direction among a set a tentative values used to perform 
-successive reductions-to-the-pole on Fourier domain. 
-\cite{phillips2005} used the Helbig's integral for estimating the components of the magnetic-moment vector. 
-\cite{tontini_pedersen_2008} extended the Phillips' method by using the same Helbig's integral 
+successive reductions to the pole in the Fourier domain. 
+\cite{phillips2005} uses the Helbig's integral for estimating the components of the magnetic-moment vector. 
+\cite{tontini_pedersen_2008} extend the Phillips' method by using the same Helbig's integral 
 to estimate the magnetization direction and its magnitude, also providing information about the position 
-of the center of magnetization distribution. \cite{lelievre_oldenburg_2009} developed a method for estimating 
+of the center of magnetization distribution. \cite{lelievre_oldenburg_2009} develop a method for estimating 
 the magnetization direction in complex geological scenarios. Their method approximates the subsurface 
 by a grid of juxtaposed prisms and estimates the components of the magnetization vector for each prism.
-In addition, there are methods based on the correlation of potential-field quantities \citep[e.g.,][]{dannemiller_li_2006,gerovska_etal_2009,liu_etal_2015,zhang_etal_2018}.
+In addition, there are methods based on the correlation of potential-field quantities \citep[e.g.,][]{dannemiller_li_2006,gerovska_etal_2009,liu_etal_2015,zhang_etal_2018,
+ribeiro_filho_etal2020}.
 
 %%The equivalent layer 
 Estimating the magnetization direction is extremely important not only for interpretation, 
-but also for processing the total-field anomaly data. One technique in spatial domain 
+but also for processing the total-field anomaly data. One technique in the spatial domain 
 commonly used for processing potential-field data is the equivalent layer. It was first introduced 
 in exploration geophysics by \cite{dampney1969} and \cite{emilia_massey_1974} for processing 
 gravity and magnetic data, respectively. After these pioneer works, this technique has been widely 
@@ -42,21 +44,21 @@ used for computing interpolation \citep{cordell_1992, mendonca-silva_1994, barne
 upward (or downward) continuation  \citep{cribb1976, hansen-miyazaki_1984, li-oldenburg_2010, mastellone_etal_2014}, reduction to the pole 
 \citep{silva_1986, leao-silva_1989, guspi-novara_2009, oliveirajr-etal_2013}, the amplitude of 
 anomalous field \citep{li_li_2014} and for denoising gradient data \citep{martinez_li_2016}. 
-The equivalent-layer technique consists in approximating the observed data by that produced by a 
+The equivalent-layer technique consists in approximating the observed data by those produced by a 
 layer of discrete sources (e.g., prisms, dipoles or point masses), which are commonly known as 
 equivalent sources. The data produced by this fictitious layer (the equivalent layer) are commonly
 called predicted data.
 
 %%  positivity constraints 
 In scanning magnetic microscopy, the equivalent-layer technique is generally used for interpreting 
-the magnetic-moment distribution within thin planar sections of rock samples. Notice that, in this case, 
+the magnetic-moment distribution within thin planar sections of rock samples. Note that, in this case, 
 the equivalent layer resembles the true source (a thin section of rock). 
-\cite{weiss2007} presented one of the first works using the equivalent-layer technique in scanning magnetic microscopy.
-They pointed out without proof that the estimated magnetic-moment distribution on the layer is all-positive if 
+\cite{weiss2007} present one of the first works using the equivalent-layer technique in scanning magnetic microscopy.
+They point out without proof that the estimated magnetic-moment distribution on the layer is all-positive when  
 the magnetization direction of the equivalent sources is equal to that used for artificially magnetizing the rock sample. 
-\cite{baratchart2013} showed mathematically that, assuming a uniform magnetization direction within the thin section, 
-the inverse problem of estimating the magnetic-moment distribution has uniqueness. 
-\cite{lima2013} proposed a method on the frequency domain to investigate solutions having a uniform magnetization 
+\cite{baratchart2013} show mathematically that, assuming a uniform magnetization direction within the thin section, 
+the inverse problem of estimating the magnetic-moment distribution has a unique solution. 
+\cite{lima2013} propose a method on the frequency domain to investigate solutions having a uniform magnetization 
 direction equal to that of a thin section of geological sample. They show empirically 
 that, in this case, the estimated magnetic-moment distribution on the layer is entirely positive. 
 
@@ -64,27 +66,27 @@ In the geophysical exploration, the equivalent-layer technique is predominantly 
 Under this perspective, there is no relationship between the physical-property distribution on the equivalent layer 
 and the true geological sources. Hence, the layer is just a mathematical abstraction devoid of geological meaning. 
 Few authors in geophysical exploration literature have been addressed the use of the equivalent-layer technique for interpreting
-the geological sources. \cite{pedersen1991}, for example, discussed the relationship between potential field and equivalent source. 
-\cite{medeiros_silva1996} and \cite{silva-etal2010} estimated an apparent-magnetization map on a layer by using Tikhonov and 
-entropic regularizations respectively. \cite{siqueira_etal_2017} established a relationship between the excess of mass estimated 
-over the equivalent layer and the true one. \cite{li_etal_2014} proved, by using an approach in the Fourier domain, 
+the geological sources. \cite{pedersen1991}, for example, discusses the relationship between potential field and equivalent source. 
+\cite{medeiros_silva1996} and \cite{silva-etal2010} estimate an apparent-magnetization map on a layer by using Tikhonov and 
+entropic regularizations respectively. \cite{siqueira_etal_2017} establish a relationship between the excess of mass estimated 
+over the equivalent layer and the true one. \cite{li_etal_2014} prove, by using a Fourier-domain  approach, 
 the existence of an all-positive magnetic-moment distribution over the layer and use this to overcome the reduction to the pole low-latitude instability. 
-However, these authors considered only the particular case in which the magnetic sources have a purely induced magnetization.
+However, this work considers only the particular case in which the magnetic sources have a purely induced magnetization.
 
 %% Joining techniques for estimating the magnetization direction 
-Here, we prove mathematically that exist an all-positive magnetic-moment 
+Here, we prove mathematically that there exists an all-positive magnetic-moment 
 distribution within the equivalent layer even in the 
 presence of geological sources with remanent magnetization. This all-positive 
 magnetic-moment distribution exists for 
-all cases in which the magnetization direction of the equivalent sources has the 
-same direction as that of the true geological sources, 
+all cases in which the magnetization directions of the equivalent sources have the 
+same orientation as that of the true geological sources, 
 regardless of whether the magnetization of the true sources is purely induced 
 or not. Grounded on this generalized positivity constraint, 
 we present a new iterative method that uses the equivalent-layer technique 
 for estimating the uniform magnetization direction of 
 arbitrary sources by inverting total-field anomaly data. Our method does not 
 presume any information about the shape of the sources. 
-At each iteration, our method solves (1) a linear inverse problem, subjected to 
+At each iteration, our method solves (1) a linear inverse problem, subject to 
 a positivity constraint, for estimating the magnetic-moment 
 distribution within a planar equivalent layer of dipoles, and (2) a 
 non-linear inverse problem for estimating the uniform magnetization 
@@ -92,8 +94,8 @@ direction of the equivalent sources. Tests with synthetic data generated
 by different geological scenarios show that the estimated magnetization
 direction converges to that of the true sources. We also applied our method to 
 field data from the Goi{\' a}s alkaline province (GAP), 
-over the Montes Claros complex, center of Brazil. Our result is in agreement 
-with that obtained independently by \cite{zhang_etal_2018} 
-at the same area, suggests the presence of a remarkable remanent magnetization 
-and shows the good performance of our method in interpreting 
+over the Montes Claros complex, center of Brazil. Our results are in agreement 
+with those obtained independently by \cite{zhang_etal_2018} 
+in the same area, suggest the presence of a remarkable remanent magnetization 
+and show the good performance of our method in interpreting 
 a complex geological scenario.

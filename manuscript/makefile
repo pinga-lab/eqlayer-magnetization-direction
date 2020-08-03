@@ -1,18 +1,21 @@
 help:
 	@echo "Available makes:"
-	@echo "manuscript - compile the latex files to build the manuscript"
+	@echo "figs - convert figures to TIF/CMYK"
 	@echo "clean - remove unused files"
 
 all:
-	make manuscript
+	make figs
 	make clean
 
-# Compile the manuscript
-manuscript:
-	pdflatex eqlayer_magdir_manuscript.tex
-	bibtex references
-	pdflatex eqlayer_magdir_manuscript.tex
-	pdflatex eqlayer_magdir_manuscript.tex
+# Convert and rename figures
+figs:
+	convert Fig/Fig1.png -colorspace CMYK -units PixelsPerInch Fig/Figure1.tiff
+	convert Fig/unidir_test/Fig2.png -colorspace CMYK -units PixelsPerInch Fig/Figure2.tiff
+	convert Fig/unidir_shallow_test/Fig3.png -colorspace CMYK -units PixelsPerInch Fig/Figure3.tiff
+	convert Fig/unidir_shallow_diff_test/Fig4.png -colorspace CMYK -units PixelsPerInch Fig/Figure4.tiff
+	convert Fig/field_data_montes_claros/Fig5.png -colorspace CMYK -units PixelsPerInch Fig/Figure5.tiff
+	convert Fig/field_data_montes_claros/Fig6.png -colorspace CMYK -units PixelsPerInch Fig/Figure6.tiff
+	convert Fig/Fig7.png -colorspace CMYK -units PixelsPerInch Fig/Figure7.tiff
 
 # Remove unused files
 clean:
