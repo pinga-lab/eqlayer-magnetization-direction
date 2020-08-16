@@ -10,8 +10,7 @@ The version of record
 
 > Reis, A.L.A, Oliveira Jr., V. C., & Barbosa, V. C. F., 2020. 
 > Generalized positivity constraint on magnetic equivalent layers, 
-> *Geophysics*, 
-> doi:[10.1190/geo2019-0706.1](https://doi.org/10.1190/geo2019-0706.1)
+> *Geophysics*, doi: 10.1190/geo2019-0706.1.
 
 is available online at: [10.1190/geo2019-0706.1](https://doi.org/10.1190/geo2019-0706.1)
 
