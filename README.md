@@ -95,8 +95,6 @@ dependencies in it:
 
     conda env create
 
-#### Manual installation
-
 You'll also need to install version 0.5 of the
 [Fatiando a Terra](http://www.fatiando.org/) library.
 See the install instructions on the website.
@@ -112,5 +110,5 @@ Data and the results of numerical tests are available under the
 
 The manuscript text and figures are not open source. The authors reserve the
 rights to the article content, which has been accepted for publication in
-Geophysical Journal International.
+Geophysics.
 
