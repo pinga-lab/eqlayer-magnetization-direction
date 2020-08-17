@@ -29,7 +29,8 @@ def sph2cart(mag,inc,dec):
 
 def derivative_inclination(mag,inc,dec):
     '''
-    Calculate the Cartesian coordinates of th derivative of a vector in respect to inclination
+    Calculate the Cartesian coordinates of the derivative of a vector
+    in respect to inclination
 
     input
 
@@ -54,7 +55,8 @@ def derivative_inclination(mag,inc,dec):
 
 def derivative_declination(mag,inc,dec):
     '''
-    Calculate the Cartesian coordinates of th derivative of a vector in respect to declination
+    Calculate the Cartesian coordinates of the derivative of a vector
+    in respect to declination
 
     input
 
@@ -275,7 +277,7 @@ def sensitivity_mag(x,y,z,xs,ys,zs,sinc,sdec,inc,dec):
 
 def sensitivity_dir(x,y,z,xs,ys,zs,sinc,sdec,p,inc,dec):
     '''
-    Calculate the sensitivity matrix
+    Calculate the sensitivity matrix of the direction part
 
     input
 
@@ -341,7 +343,7 @@ def levenberg_marquardt(dobs,x,y,z,xs,ys,zs,sinc,sdec,p,inc0,dec0,lamb,dlamb,ite
     inc,dec : float - magnetization direction
 
     '''
-    
+
     for i in range(itext):
             tf0 = tfa_layer(x,y,z,xs,ys,zs,sinc,sdec,p,inc0,dec0)
             r0 = dobs - tf0
@@ -350,7 +352,7 @@ def levenberg_marquardt(dobs,x,y,z,xs,ys,zs,sinc,sdec,p,inc0,dec0,lamb,dlamb,ite
             G_dir = sensitivity_dir(x,y,z,xs,ys,zs,sinc,sdec,p,inc0,dec0)
             J = -np.dot(G_dir.T,r0)
             H =  np.dot(G_dir.T,G_dir)
-            
+
             for j in range(itmarq):
                 dp = np.linalg.solve(H + lamb*np.identity(2),-J)
 
@@ -381,14 +383,14 @@ def levenberg_marquardt(dobs,x,y,z,xs,ys,zs,sinc,sdec,p,inc0,dec0,lamb,dlamb,ite
                 tf0[:] = tf[:]
                 inc0 = inc
                 dec0 = dec
-    
+
     return inc,dec,phi0
-          
+
 
 def LM_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,imax,itext,itmarq,eps_e,eps_i,mu):
     '''
-    (REFAZER ESTA DESCRICAO)
-    Apply the Levenberg-Marquardt Method to solve a non-linear problem.
+    Iterative process for estimating the magnetization direction and
+    positive magnetic-moment distribution.
 
     input
 
@@ -410,16 +412,16 @@ def LM_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,imax,itext,itmarq
     null = np.zeros(M)
     I = np.identity(M)
     do = np.hstack([dobs,null])
-    
+
     phi_it = []
     iteration = []
     pest = []
     incs = [inc0]
     decs = [dec0]
-    
+
     for i in range(imax):
         print 'i =', i
-        
+
         G_mag = sensitivity_mag(x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0)
         f0 = np.trace(np.dot(G_mag.T,G_mag))/M
         GI = np.vstack([G_mag,mu*f0*I])
@@ -427,24 +429,24 @@ def LM_NNLS(dobs,x,y,z,xs,ys,zs,sinc,sdec,inc0,dec0,lamb,dlamb,imax,itext,itmarq
         tf_ext = tfa_layer(x,y,z,xs,ys,zs,sinc,sdec,p0,inc0,dec0)
         r_ext = dobs - tf_ext
         phi_ext = np.linalg.norm(r_ext) + mu*f0*np.linalg.norm(p0)
-        
+
         ## Levenberg-Marquardt method ##
         inc0,dec0,phi0 = levenberg_marquardt(dobs,x,y,z,xs,ys,zs,sinc,sdec,p0,inc0,dec0,lamb,dlamb,itext,itmarq,eps_i,mu,f0)
         ################################
         print inc0,dec0
-        
+
         phi_it.append(phi0)
         iteration.append(i)
         pest.append(p0)
         incs.append(inc0)
         decs.append(dec0)
-        
+
         dphi_ext = phi_ext - phi0
         condition_2 = np.abs(dphi_ext)/phi0
         print condition_2
         if (condition_2 < eps_e):
             break
-                       
+
     return p0,inc0,dec0,phi_it,i,pest,incs,decs
 
 def residual(do,dp):
@@ -453,4 +455,3 @@ def residual(do,dp):
     r_std = np.std(r)
     r_norm = (r - r_mean)/r_std
     return r_norm, r_mean, r_std
-

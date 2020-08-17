@@ -56,9 +56,8 @@ sequentially in a way that can be reproduced.
         make figures
 
 
-## Notebooks
+## Notebooks 
 
-* [estimate-hawaii-trend.ipynb](http://nbviewer.jupyter.org/github/pinga-lab/paper-template/blob/master/code/notebooks/estimate-hawaii-trend.ipynb):
-  Calculate a linear trend for the temperature data of Hawaii.
-* [figure-hawaii-trend.ipynb](http://nbviewer.jupyter.org/github/pinga-lab/paper-template/blob/master/code/notebooks/figure-hawaii-trend.ipynb):
-  Make a figure of the estimated trend for the paper.
+(UNDER CONSTRUCTION: including description of the files)
+
+
